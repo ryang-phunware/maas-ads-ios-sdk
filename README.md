@@ -1,34 +1,59 @@
-#TapIt iOS SDK
---------------
+MaaSAdvertising iOS SDK
+================
 
 Version 3.0.10
 
-*This is the iOS SDK for the TapIt! mobile ad network.  Go to http://tapit.com/ for more details and to sign up.*
+This is the iOS SDK for the MaaS Advertising module. Visit http://maas.phunware.com/ for more details and to sign up.
 
 
-##Usage
---------------
-To install, unzip the sdk archive (*https://github.com/tapit/TapIt-iPhone-SDK/raw/master/dist/TapItSDK.zip*) into your Xcode project.
 
-**In the Build Settings for your target, you must include the following "Other Linker Flags:" -all_load**
+Getting Started
+---------------
+
+- [Download MaaSAdvertising](https://github.com/phunware/maas-ads-ios-sdk/archive/master.zip) and run the included sample app.
+- Continue reading below for installation and integration instructions.
+- Be sure to read the [documentation](http://phunware.github.io/maas-ads-ios-sdk/) for additional details.
+
+
+
+Installation
+------------
 
 The following frameworks are required:
 
-~~~~
+````
+MaaSCore.framework
 SystemConfiguration.framework
 QuartsCore.framework
 CoreTelephony.framework
 MessageUI.framework
 AdSupport.framework - enable support for IDFA
 StoreKit.framework - enable use of SKStoreProductViewController, displays app store ads without leaving your app
-CoreLocation.framework - Optional*
-~~~~
-*Note: CoreLocation is optional, and is used for Geo-targeting ads.  Apple mandates that your app have a good reason for enabling Location services... Apple will deny your app if location is not a core feature for your app.
+````
 
-You're all set!
+MaaSAdvertising has a dependency on MaaSCore.framework which is available here: https://github.com/phunware/maas-core-ios-sdk
 
-###Banner Usage
---------------
+It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and MaaSAdvertising.framework  as well as any other MaaS frameworks that you are using.
+
+**In the Build Settings for your target, you must include the following "Other Linker Flags:" -all_load**
+
+The following frameworks are optional:
+
+````
+CoreLocation.framework
+````
+CoreLocation is optional, and is used for Geo-targeting ads.  Apple mandates that your app have a good reason for enabling Location services... Apple will deny your app if location is not a core feature for your app.
+
+
+
+Overview
+-----------
+
+The MaaSAdvertising SDK allows developers to serve many types of ads, including Banner ads, Interstitial ads, AdPrompt Ads and Video ads.
+
+
+### Banner Usage
+
 ~~~~
 // in your .h file
 #import <MaaSAdvertising/PWAdsBannerAdView.h>
@@ -53,11 +78,11 @@ pwAd = [[PWAdsBannerAdView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
 [self.pwAd cancelAds];
 ~~~~
 
-*For a complete example, see https://github.com/tapit/TapIt-iPhone-SDK/blob/master/TapIt-iOS-Sample/BannerAdController.m*
 
-###AdPrompt Usage
---------------
-AdPrompts are a simple ad unit designed to have a native feel.  The user is given the option to download an app, and if they accept, they are taken to app store.
+
+### AdPrompt Usage
+
+AdPrompts are a simple ad unit designed to have a native feel.  The user is given the option to download an app/song/video, and if they accept, they are taken to app store.
 
 ~~~~
 // in your .m file
@@ -68,11 +93,11 @@ PWAdsAdPrompt *prompt = [[PWAdsAdPrompt alloc] initWithRequest:request];
 [prompt showAsAlert];
 ~~~~
 
-*For a complete example, see https://github.com/tapit/TapIt-iPhone-SDK/blob/master/TapIt-iOS-Sample/AdPromptDemoController.m*
 
-###Interstitial Usage
-------------------
-####Show Modally
+
+### Interstitial Usage
+
+#### Show Modally
 
 ~~~~
 // in your .h file
@@ -98,9 +123,9 @@ PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
     [self.interstitialAd presentFromViewController:self];
 }
 ~~~~
-*For a complete example, see https://github.com/tapit/TapIt-iPhone-SDK/blob/master/TapIt-iOS-Sample/InterstitialController.m*
 
-####Include in Paged Navigation
+
+#### Include in Paged Navigation
     
 ~~~~
 @property (retain, nonatomic) TapItInterstitialAd *interstitialAd;
@@ -120,10 +145,7 @@ if( self.interstitialAd.isLoaded ) {
 }
 ~~~~
 
-###Video Ads Usage
---------------
-
-*For sample video ads integration code, please see the VideoInterstitialViewController.m and VideoInterstitialViewController.m files for working example of video ads in an app.  You can find VideoInterstitialViewController in the TapIt-iOS-Sample directory of the iOS SDK package.*
+### Video Ads Usage
 
 In requesting for a video ad from the server, a TVASTAdsRequest object needs to be instantiated and its zoneId parameter specified.  This parameter is required for a successful
 retrieval of the ad.
@@ -142,7 +164,6 @@ If you want to specify the type of video ad you are requesting, use the call bel
 ~~~~
 
 Essentially, what needs to be included in the code is as follows:
-Note: the following uses Automatic Reference Counting so there will not be any object releases shown.
 
 ~~~~
 - (void)viewDidLoad
@@ -195,8 +216,8 @@ Note: the following uses Automatic Reference Counting so there will not be any o
 }
 ~~~~
 
-###Listen for location updates
---------------
+### Listen for location updates
+
 If you want to allow for geo-targeting, listen for location updates:
 
 ~~~~
