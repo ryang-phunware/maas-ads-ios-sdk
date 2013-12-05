@@ -75,6 +75,8 @@
 
 - (void)pwAdPrompt:(PWAdsAdPrompt *)adPrompt didFailWithError:(NSError *)error {
     NSLog(@"Error showing AdPrompt: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error showing AdPrompt" message:error.localizedDescription delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
     [self cleanupAdPrompt];
 }
 

@@ -58,6 +58,8 @@
 
 - (void)pwInterstitialAd:(PWAdsInterstitialAd *)interstitialAd didFailWithError:(NSError *)error {
     NSLog(@"Error: %@", error.localizedDescription);
+    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error showing AdPrompt" message:error.localizedDescription delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
     [self updateUIWithState:StateError];
 }
 
