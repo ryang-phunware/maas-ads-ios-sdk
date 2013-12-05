@@ -158,15 +158,15 @@ In requesting for a video ad from the server, a TVASTAdsRequest object needs to 
 retrieval of the ad.
 
 ~~~~    
-    // Create an adsRequest object and request ads from the ad server with your own kZoneIdVideo
-    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:kZoneIdVideo;
+    // Create an adsRequest object and request ads from the ad server with your own ZONE_ID
+    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:**YOUR ZONE ID**;
     [_videoAd requestAdsWithRequestObject:request];
 ~~~~
 
 If you want to specify the type of video ad you are requesting, use the call below.
 
 ~~~~    
-    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:kZoneIdVideo];
+    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:**YOUR ZONE ID**];
     [_videoAd requestAdsWithRequestObject:request andVideoType:TapItVideoTypeMidroll];
 ~~~~
 
@@ -191,8 +191,8 @@ Essentially, what needs to be included in the code is as follows:
 }
 
 - (void)requestAds {    
-    // Create an adsRequest object and request ads from the ad server with your own kZoneIdVideo
-    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:kZoneIdVideo];
+    // Create an adsRequest object and request ads from the ad server with your own ZONE_ID
+    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:**YOUR ZONE ID**];
     [_videoAd requestAdsWithRequestObject:request];
     
     //If you want to specify the type of video ad you are requesting, use the call below.
