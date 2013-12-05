@@ -450,8 +450,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/czornes/Downloads,
-					"/Users/czornes/Documents/GIT/MaaSAdvertising-iOS-Sample",
+					"$(SRCROOT)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MaaSAdvertising-iOS-Sample/MaaSAdvertising-iOS-Sample-Prefix.pch";
@@ -471,8 +470,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/czornes/Downloads,
-					"/Users/czornes/Documents/GIT/MaaSAdvertising-iOS-Sample",
+					"$(SRCROOT)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MaaSAdvertising-iOS-Sample/MaaSAdvertising-iOS-Sample-Prefix.pch";
