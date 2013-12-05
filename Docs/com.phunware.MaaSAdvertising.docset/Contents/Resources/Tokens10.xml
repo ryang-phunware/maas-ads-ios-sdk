@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/PWAdsInterstitialAdDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/PWAdsInterstitialAdDelegate</TokenIdentifier>
+			<Abstract type="html">PWAdsInterstitialAdDelegate is notified of changes from PWAdsInterstitialAd.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsInterstitialAdDelegate/pwInterstitialAd:didFailWithError:</TokenIdentifier>
+			<Abstract type="html">Called when an full-screen ad fails to load a new advertisement. (required)</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (void)pwInterstitialAd:(PWAdsInterstitialAd *)interstitialAd didFailWithError:(NSError *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>interstitialAd</Name>
+					<Abstract type="html">The full-screen ad that received the error.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error object that describes the problem.
+
+Although the error message informs your application about why the error occurred, normally your application does not need to display the error to the user.
+
+When an error occurs, your delegate should release the ad object.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwInterstitialAd:didFailWithError:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsInterstitialAdDelegate/pwInterstitialAdDidUnload:</TokenIdentifier>
+			<Abstract type="html">Called after a full-screen ad disposes of its content. (required)</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (void)pwInterstitialAdDidUnload:(PWAdsInterstitialAd *)interstitialAd</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>interstitialAd</Name>
+					<Abstract type="html">The interstitial ad that disposed of its content.
+
+An ad object may unload its content for a number of reasons, including such cases as when an error occurs, after a user dismisses
+an advertisement that was presented modally, or after an advertisement’s contents have been loaded for a long period of time.
+The ad object automatically removes its contents from the screen if it was already presented to the user.
+Your implementation of this method should release the ad object.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwInterstitialAdDidUnload:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsInterstitialAdDelegate/pwInterstitialAdWillLoad:</TokenIdentifier>
+			<Abstract type="html">Called before the advertisement loads its content.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (void)pwInterstitialAdWillLoad:(PWAdsInterstitialAd *)interstitialAd</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>interstitialAd</Name>
+					<Abstract type="html">The ad object that is about to load a new advertisement.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwInterstitialAdWillLoad:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsInterstitialAdDelegate/pwInterstitialAdDidLoad:</TokenIdentifier>
+			<Abstract type="html">Called after the advertisement loads its content.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (void)pwInterstitialAdDidLoad:(PWAdsInterstitialAd *)interstitialAd</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>interstitialAd</Name>
+					<Abstract type="html">The ad object that loaded a new advertisement.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwInterstitialAdDidLoad:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsInterstitialAdDelegate/pwInterstitialAdActionShouldBegin:willLeaveApplication:</TokenIdentifier>
+			<Abstract type="html">Called before a banner view executes an action.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)pwInterstitialAdActionShouldBegin:(PWAdsInterstitialAd *)interstitialAd willLeaveApplication:(BOOL)willLeave</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>interstitialAd</Name>
+					<Abstract type="html">The full-screen ad that the user tapped.</Abstract>
+				</Parameter><Parameter>
+					<Name>willLeave</Name>
+					<Abstract type="html">YES if another application will be launched to execute the action; NO if the action is going to be executed inside your appliaction.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Your delegate returns YES if the banner action should execute; NO to prevent the banner action from executing.
+
+When the user taps a presented advertisement, the ad’s delegate is called to inform your application that the user wants to interact with the ad.
+To allow the action to be triggered, your method should return YES; to suppress the action, your method returns NO. Your application should almost
+always allow actions to be triggered; preventing actions may alter the advertisements your application sees and reduce the revenue your application earns through PWAds.
+
+If the value of the willLeave parameter is YES and your delegate allows the advertisement to execute its action, then your application is moved to
+the background shortly after the call to this method completes.
+
+If the value of the willLeave parameter is NO, the advertisement’s interactive experience will run inside your application. To accomodate the advertisement,
+your application should disable activities that require user interaction as well as disabling any tasks or behaviors that may interfere with the advertisement.
+For example, a game might pause its game play and turn off sound effects until the user finishes interacting with the advertisement. Further, while the
+action is running, your application should also be prepared to respond to low-memory warnings by disposing of objects it can easily recreate after the
+advertisement completes its action.</Abstract></ReturnValue>
+			<Anchor>//api/name/pwInterstitialAdActionShouldBegin:willLeaveApplication:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsInterstitialAdDelegate/pwInterstitialAdActionWillFinish:</TokenIdentifier>
+			<Abstract type="html">Called just before uncovering your app after once a cover action has occured.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (void)pwInterstitialAdActionWillFinish:(PWAdsInterstitialAd *)interstitialAd</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>interstitialAd</Name>
+					<Abstract type="html">The full-screen ad that finished executing an action and will soon oncover your app.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwInterstitialAdActionWillFinish:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsInterstitialAdDelegate/pwInterstitialAdActionDidFinish:</TokenIdentifier>
+			<Abstract type="html">Called after a banner view finishes executing an action that covered your application&apos;s user interface.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (void)pwInterstitialAdActionDidFinish:(PWAdsInterstitialAd *)interstitialAd</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>interstitialAd</Name>
+					<Abstract type="html">The full-screen ad that finished executing an action.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwInterstitialAdActionDidFinish:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

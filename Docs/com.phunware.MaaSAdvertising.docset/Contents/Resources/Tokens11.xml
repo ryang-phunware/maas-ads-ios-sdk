@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/PWAdsVideoInterstitialAdDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/PWAdsVideoInterstitialAdDelegate</TokenIdentifier>
+			<Abstract type="html">PWAdsVideoInterstitialAdDelegate is notified of changes from PWAdsVideoInterstitialAd`.</Abstract>
+			<DeclaredIn>PWAdsVideoInterstitialAd.h</DeclaredIn>
+            
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsVideoInterstitialAdDelegate/pwVideoInterstitialAdDidLoad:</TokenIdentifier>
+			<Abstract type="html">Called when an the adsLoader receives a video and is ready to play. (required)</Abstract>
+			<DeclaredIn>PWAdsVideoInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (void)pwVideoInterstitialAdDidLoad:(PWAdsVideoInterstitialAd *)videoAd</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>videoAd</Name>
+					<Abstract type="html">The video advertisement</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwVideoInterstitialAdDidLoad:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsVideoInterstitialAdDelegate/pwVideoInterstitialAdDidFinish:</TokenIdentifier>
+			<Abstract type="html">Gets called when the video ad has finished playing and the screen returns to your app.</Abstract>
+			<DeclaredIn>PWAdsVideoInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (void)pwVideoInterstitialAdDidFinish:(PWAdsVideoInterstitialAd *)videoAd</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>videoAd</Name>
+					<Abstract type="html">The video advertisement</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwVideoInterstitialAdDidFinish:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsVideoInterstitialAdDelegate/pwVideoInterstitialAdDidFail:withErrorString:</TokenIdentifier>
+			<Abstract type="html">Gets called if there are no ads to display</Abstract>
+			<DeclaredIn>PWAdsVideoInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (void)pwVideoInterstitialAdDidFail:(PWAdsVideoInterstitialAd *)videoAd withErrorString:(NSString *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>videoAd</Name>
+					<Abstract type="html">The video advertisement</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error string</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwVideoInterstitialAdDidFail:withErrorString:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

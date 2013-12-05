@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/PWAdsAdPromptDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/PWAdsAdPromptDelegate</TokenIdentifier>
+			<Abstract type="html">PWAdsAdPromptDelegate is notified of changes from PWAdsAdPrompt`.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsAdPromptDelegate/pwAdPrompt:didFailWithError:</TokenIdentifier>
+			<Abstract type="html">Called when an AdPrompt fails to load a new advertisement. (required)</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>- (void)pwAdPrompt:(PWAdsAdPrompt *)adPrompt didFailWithError:(NSError *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>adPrompt</Name>
+					<Abstract type="html">The AdPrompt that received the error.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error object that describes the problem.
+
+Although the error message informs your application about why the error occurred, normally your application does not need to display the error to the user.
+
+When an error occurs, your delegate should release the ad object.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwAdPrompt:didFailWithError:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsAdPromptDelegate/pwAdPromptWasDeclined:</TokenIdentifier>
+			<Abstract type="html">Called after an AdPrompt is declined</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>- (void)pwAdPromptWasDeclined:(PWAdsAdPrompt *)adPrompt</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>adPrompt</Name>
+					<Abstract type="html">The AdPrompt that was declined.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwAdPromptWasDeclined:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsAdPromptDelegate/pwAdPromptDidLoad:</TokenIdentifier>
+			<Abstract type="html">Called after the AdPrompt is loaded</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>- (void)pwAdPromptDidLoad:(PWAdsAdPrompt *)adPrompt</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>adPrompt</Name>
+					<Abstract type="html">The AdPrompt that loaded a new advertisement.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwAdPromptDidLoad:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsAdPromptDelegate/pwAdPromptWasDisplayed:</TokenIdentifier>
+			<Abstract type="html">Called after the AdPrompt is displayed</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>- (void)pwAdPromptWasDisplayed:(PWAdsAdPrompt *)adPrompt</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>adPrompt</Name>
+					<Abstract type="html">The AdPrompt that was shown.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwAdPromptWasDisplayed:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsAdPromptDelegate/pwAdPromptActionShouldBegin:willLeaveApplication:</TokenIdentifier>
+			<Abstract type="html">Called before an AdPrompt executes an action.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)pwAdPromptActionShouldBegin:(PWAdsAdPrompt *)adPrompt willLeaveApplication:(BOOL)willLeave</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>adPrompt</Name>
+					<Abstract type="html">The AdPrompt that the user tapped.</Abstract>
+				</Parameter><Parameter>
+					<Name>willLeave</Name>
+					<Abstract type="html">YES if another application will be launched to execute the action; NO if the action is going to be executed inside your appliaction.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Your delegate returns YES if the action should execute; NO to prevent the banner action from executing.
+
+When the user taps a presented advertisement, the ad’s delegate is called to inform your application that the user wants to interact with the ad.
+To allow the action to be triggered, your method should return YES; to suppress the action, your method returns NO. Your application should almost
+always allow actions to be triggered; preventing actions may alter the advertisements your application sees and reduce the revenue your application earns through PWAds.
+
+If the value of the willLeave parameter is YES and your delegate allows the advertisement to execute its action, then your application is moved to
+the background shortly after the call to this method completes.
+
+If the value of the willLeave parameter is NO, the advertisement’s interactive experience will run inside your application. To accomodate the advertisement,
+your application should disable activities that require user interaction as well as disabling any tasks or behaviors that may interfere with the advertisement.
+For example, a game might pause its game play and turn off sound effects until the user finishes interacting with the advertisement. Further, while the
+action is running, your application should also be prepared to respond to low-memory warnings by disposing of objects it can easily recreate after the
+advertisement completes its action.</Abstract></ReturnValue>
+			<Anchor>//api/name/pwAdPromptActionShouldBegin:willLeaveApplication:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsAdPromptDelegate/pwAdPromptActionDidFinish:</TokenIdentifier>
+			<Abstract type="html">Called after a AdPrompt finishes executing an action that covered your application&apos;s user interface.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>- (void)pwAdPromptActionDidFinish:(PWAdsAdPrompt *)adPrompt</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>adPrompt</Name>
+					<Abstract type="html">The AdPrompt that finished executing an action.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pwAdPromptActionDidFinish:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

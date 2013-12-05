@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PWAdsAdPrompt.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PWAdsAdPrompt</TokenIdentifier>
+			<Abstract type="html">PWAdsAdPrompt implements a standard PWAdsAdPrompt into your app.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsAdPrompt/initWithRequest:</TokenIdentifier>
+			<Abstract type="html">Once a PWAdsRequest object is created, this function should be called to begin requesting ads for your app.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithRequest:(PWAdsRequest *)request</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>request</Name>
+					<Abstract type="html">The ad request with zone information and any custom parameters.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithRequest:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsAdPrompt/load</TokenIdentifier>
+			<Abstract type="html">Preloads the ad for the current PWAdsRequest.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>- (void)load</Declaration>
+			
+			
+			<Anchor>//api/name/load</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsAdPrompt/showAsAlert</TokenIdentifier>
+			<Abstract type="html">Shows the current PWAdsRequest as a UIAlertView.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>- (void)showAsAlert</Declaration>
+			
+			
+			<Anchor>//api/name/showAsAlert</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsAdPrompt/showAsActionSheet</TokenIdentifier>
+			<Abstract type="html">Shows the current PWAdsRequest as a UIActionSheet.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>- (void)showAsActionSheet</Declaration>
+			
+			
+			<Anchor>//api/name/showAsActionSheet</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsAdPrompt/setDelegate:</TokenIdentifier>
+			<Abstract type="html">An id that is used to identify the &apos;PWAdsAdPromptDelegate&apos; delegate.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) id&lt;PWAdsAdPromptDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsAdPrompt/delegate</TokenIdentifier>
+			<Abstract type="html">An id that is used to identify the &apos;PWAdsAdPromptDelegate&apos; delegate.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) id&lt;PWAdsAdPromptDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsAdPrompt/delegate</TokenIdentifier>
+			<Abstract type="html">An id that is used to identify the &apos;PWAdsAdPromptDelegate&apos; delegate.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) id&lt;PWAdsAdPromptDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsAdPrompt/setLoaded:</TokenIdentifier>
+			<Abstract type="html">A readonly BOOL to signify whether or not the ad has loaded.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL loaded</Declaration>
+			
+			
+			<Anchor>//api/name/loaded</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsAdPrompt/loaded</TokenIdentifier>
+			<Abstract type="html">A readonly BOOL to signify whether or not the ad has loaded.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL loaded</Declaration>
+			
+			
+			<Anchor>//api/name/loaded</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsAdPrompt/loaded</TokenIdentifier>
+			<Abstract type="html">A readonly BOOL to signify whether or not the ad has loaded.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL loaded</Declaration>
+			
+			
+			<Anchor>//api/name/loaded</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsAdPrompt/setShowLoadingOverlay:</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL showLoadingOverlay</Declaration>
+			
+			
+			<Anchor>//api/name/showLoadingOverlay</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsAdPrompt/showLoadingOverlay</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL showLoadingOverlay</Declaration>
+			
+			
+			<Anchor>//api/name/showLoadingOverlay</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsAdPrompt/showLoadingOverlay</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsAdPrompt.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL showLoadingOverlay</Declaration>
+			
+			
+			<Anchor>//api/name/showLoadingOverlay</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/PWAdsBrowserControllerDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/PWAdsBrowserControllerDelegate</TokenIdentifier>
+			<Abstract type="html">This protocol is to be used when trying to handle actions when the user taps on an ad.</Abstract>
+			<DeclaredIn>PWAdsBrowserControllerDelegate.h</DeclaredIn>
+            
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsBrowserControllerDelegate/browserControllerFailedToLoad:withError:</TokenIdentifier>
+			<Abstract type="html">This method is called when the web view fails to load the ad&apos;s landing page.</Abstract>
+			<DeclaredIn>PWAdsBrowserControllerDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)browserControllerFailedToLoad:(PWAdsBrowserController *)browserController withError:(NSError *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>browserController</Name>
+					<Abstract type="html">The current browser controller</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/browserControllerFailedToLoad:withError:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsBrowserControllerDelegate/browserControllerShouldLoad:willLeaveApp:</TokenIdentifier>
+			<Abstract type="html">This method is called when the web view should load the ad&apos;s landing page.</Abstract>
+			<DeclaredIn>PWAdsBrowserControllerDelegate.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)browserControllerShouldLoad:(PWAdsBrowserController *)browserController willLeaveApp:(BOOL)willLeaveApp</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>browserController</Name>
+					<Abstract type="html">The current browser controller</Abstract>
+				</Parameter><Parameter>
+					<Name>willLeaveApp</Name>
+					<Abstract type="html">A BOOL to indicate whether the ad action leaves the app</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/browserControllerShouldLoad:willLeaveApp:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsBrowserControllerDelegate/browserControllerLoaded:willLeaveApp:</TokenIdentifier>
+			<Abstract type="html">This method is called once the web view has loaded ad&apos;s landing page.</Abstract>
+			<DeclaredIn>PWAdsBrowserControllerDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)browserControllerLoaded:(PWAdsBrowserController *)browserController willLeaveApp:(BOOL)willLeaveApp</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>browserController</Name>
+					<Abstract type="html">The current browser controller</Abstract>
+				</Parameter><Parameter>
+					<Name>willLeaveApp</Name>
+					<Abstract type="html">A BOOL to indicate whether the ad action leaves the app</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/browserControllerLoaded:willLeaveApp:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsBrowserControllerDelegate/browserControllerWillDismiss:</TokenIdentifier>
+			<Abstract type="html">This method is called when the done button is pressed on the ad&apos;s landing page.</Abstract>
+			<DeclaredIn>PWAdsBrowserControllerDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)browserControllerWillDismiss:(PWAdsBrowserController *)browserController</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>browserController</Name>
+					<Abstract type="html">The current browser controller</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/browserControllerWillDismiss:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PWAdsBrowserControllerDelegate/browserControllerDismissed:</TokenIdentifier>
+			<Abstract type="html">This method is called after the web view is closed.</Abstract>
+			<DeclaredIn>PWAdsBrowserControllerDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)browserControllerDismissed:(PWAdsBrowserController *)browserController</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>browserController</Name>
+					<Abstract type="html">The current browser controller</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/browserControllerDismissed:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

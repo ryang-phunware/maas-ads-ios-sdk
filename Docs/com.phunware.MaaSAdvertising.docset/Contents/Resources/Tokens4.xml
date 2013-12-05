@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PWAdsInterstitialAd.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PWAdsInterstitialAd</TokenIdentifier>
+			<Abstract type="html">PWAdsInterstitialAd implements a standard PWAdsInterstitialAd into your app.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/loadInterstitialForRequest:</TokenIdentifier>
+			<Abstract type="html">Once a PWAdsRequest object is created, this function should be called to get the interstitial ad ready for your app.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)loadInterstitialForRequest:(PWAdsRequest *)request</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>request</Name>
+					<Abstract type="html">The ad request with zone information and any custom parameters.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loadInterstitialForRequest:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/presentFromViewController:</TokenIdentifier>
+			<Abstract type="html">Once - (BOOL)loadInterstitialForRequest: *)request; has been called and your have received notification that the ad has loaded, this function should be called to present the ad within your app.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>- (void)presentFromViewController:(UIViewController *)contoller</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>contoller</Name>
+					<Abstract type="html">The presenting view controller.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/presentFromViewController:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/setDelegate:</TokenIdentifier>
+			<Abstract type="html">An id that is used to identify the &apos;PWAdsInterstitialAdDelegate&apos; delegate.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) id&lt;PWAdsInterstitialAdDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/delegate</TokenIdentifier>
+			<Abstract type="html">An id that is used to identify the &apos;PWAdsInterstitialAdDelegate&apos; delegate.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) id&lt;PWAdsInterstitialAdDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsInterstitialAd/delegate</TokenIdentifier>
+			<Abstract type="html">An id that is used to identify the &apos;PWAdsInterstitialAdDelegate&apos; delegate.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) id&lt;PWAdsInterstitialAdDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/setAnimated:</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to animate in or not. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL animated</Declaration>
+			
+			
+			<Anchor>//api/name/animated</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/animated</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to animate in or not. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL animated</Declaration>
+			
+			
+			<Anchor>//api/name/animated</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsInterstitialAd/animated</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to animate in or not. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL animated</Declaration>
+			
+			
+			<Anchor>//api/name/animated</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/setAutoReposition:</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to auto reposition to orientation changes. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL autoReposition</Declaration>
+			
+			
+			<Anchor>//api/name/autoReposition</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/autoReposition</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to auto reposition to orientation changes. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL autoReposition</Declaration>
+			
+			
+			<Anchor>//api/name/autoReposition</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsInterstitialAd/autoReposition</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to auto reposition to orientation changes. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL autoReposition</Declaration>
+			
+			
+			<Anchor>//api/name/autoReposition</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/setShowLoadingOverlay:</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL showLoadingOverlay</Declaration>
+			
+			
+			<Anchor>//api/name/showLoadingOverlay</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/showLoadingOverlay</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL showLoadingOverlay</Declaration>
+			
+			
+			<Anchor>//api/name/showLoadingOverlay</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsInterstitialAd/showLoadingOverlay</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL showLoadingOverlay</Declaration>
+			
+			
+			<Anchor>//api/name/showLoadingOverlay</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/setAllowedAdTypes:</TokenIdentifier>
+			<Abstract type="html">Override point for changing the PWAdsAdType. The default value is PWAdsFullscreenAdType|PWAdsOfferWallType|PWAdsVideoAdType.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) PWAdsAdType allowedAdTypes</Declaration>
+			
+			
+			<Anchor>//api/name/allowedAdTypes</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/allowedAdTypes</TokenIdentifier>
+			<Abstract type="html">Override point for changing the PWAdsAdType. The default value is PWAdsFullscreenAdType|PWAdsOfferWallType|PWAdsVideoAdType.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) PWAdsAdType allowedAdTypes</Declaration>
+			
+			
+			<Anchor>//api/name/allowedAdTypes</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsInterstitialAd/allowedAdTypes</TokenIdentifier>
+			<Abstract type="html">Override point for changing the PWAdsAdType. The default value is PWAdsFullscreenAdType|PWAdsOfferWallType|PWAdsVideoAdType.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) PWAdsAdType allowedAdTypes</Declaration>
+			
+			
+			<Anchor>//api/name/allowedAdTypes</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/setLoaded:</TokenIdentifier>
+			<Abstract type="html">A readonly BOOL to signify whether or not the ad has loaded.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL loaded</Declaration>
+			
+			
+			<Anchor>//api/name/loaded</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/loaded</TokenIdentifier>
+			<Abstract type="html">A readonly BOOL to signify whether or not the ad has loaded.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL loaded</Declaration>
+			
+			
+			<Anchor>//api/name/loaded</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsInterstitialAd/loaded</TokenIdentifier>
+			<Abstract type="html">A readonly BOOL to signify whether or not the ad has loaded.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL loaded</Declaration>
+			
+			
+			<Anchor>//api/name/loaded</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/setPresentingController:</TokenIdentifier>
+			<Abstract type="html">The UIViewController that is presenting the interstitial ad.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) UIViewController *presentingController</Declaration>
+			
+			
+			<Anchor>//api/name/presentingController</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsInterstitialAd/presentingController</TokenIdentifier>
+			<Abstract type="html">The UIViewController that is presenting the interstitial ad.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) UIViewController *presentingController</Declaration>
+			
+			
+			<Anchor>//api/name/presentingController</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsInterstitialAd/presentingController</TokenIdentifier>
+			<Abstract type="html">The UIViewController that is presenting the interstitial ad.</Abstract>
+			<DeclaredIn>PWAdsInterstitialAd.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) UIViewController *presentingController</Declaration>
+			
+			
+			<Anchor>//api/name/presentingController</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

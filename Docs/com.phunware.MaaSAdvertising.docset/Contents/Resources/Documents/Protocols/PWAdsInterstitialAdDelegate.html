@@ -1,0 +1,688 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PWAdsInterstitialAdDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">MaaSAdvertising </a></h1>
+				<a id="developerHome" href="../index.html">Phunware, Inc.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PWAdsInterstitialAdDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/pwInterstitialAd:didFailWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- pwInterstitialAd:didFailWithError:</option>
+	
+	<option value="//api/name/pwInterstitialAdActionDidFinish:">&nbsp;&nbsp;&nbsp;&nbsp;- pwInterstitialAdActionDidFinish:</option>
+	
+	<option value="//api/name/pwInterstitialAdActionShouldBegin:willLeaveApplication:">&nbsp;&nbsp;&nbsp;&nbsp;- pwInterstitialAdActionShouldBegin:willLeaveApplication:</option>
+	
+	<option value="//api/name/pwInterstitialAdActionWillFinish:">&nbsp;&nbsp;&nbsp;&nbsp;- pwInterstitialAdActionWillFinish:</option>
+	
+	<option value="//api/name/pwInterstitialAdDidLoad:">&nbsp;&nbsp;&nbsp;&nbsp;- pwInterstitialAdDidLoad:</option>
+	
+	<option value="//api/name/pwInterstitialAdDidUnload:">&nbsp;&nbsp;&nbsp;&nbsp;- pwInterstitialAdDidUnload:</option>
+	
+	<option value="//api/name/pwInterstitialAdWillLoad:">&nbsp;&nbsp;&nbsp;&nbsp;- pwInterstitialAdWillLoad:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwInterstitialAd:didFailWithError:">pwInterstitialAd:didFailWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwInterstitialAdActionDidFinish:">pwInterstitialAdActionDidFinish:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwInterstitialAdActionShouldBegin:willLeaveApplication:">pwInterstitialAdActionShouldBegin:willLeaveApplication:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwInterstitialAdActionWillFinish:">pwInterstitialAdActionWillFinish:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwInterstitialAdDidLoad:">pwInterstitialAdDidLoad:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwInterstitialAdDidUnload:">pwInterstitialAdDidUnload:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwInterstitialAdWillLoad:">pwInterstitialAdWillLoad:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PWAdsInterstitialAdDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PWAdsInterstitialAdDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PWAdsInterstitialAd.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>PWAdsInterstitialAdDelegate</code> is notified of changes from <a href="../Classes/PWAdsInterstitialAd.html"><code>PWAdsInterstitialAd</code></a>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwInterstitialAd:didFailWithError:">&ndash;&nbsp;pwInterstitialAd:didFailWithError:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwInterstitialAdDidUnload:">&ndash;&nbsp;pwInterstitialAdDidUnload:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwInterstitialAdWillLoad:">&ndash;&nbsp;pwInterstitialAdWillLoad:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwInterstitialAdDidLoad:">&ndash;&nbsp;pwInterstitialAdDidLoad:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwInterstitialAdActionShouldBegin:willLeaveApplication:">&ndash;&nbsp;pwInterstitialAdActionShouldBegin:willLeaveApplication:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwInterstitialAdActionWillFinish:">&ndash;&nbsp;pwInterstitialAdActionWillFinish:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwInterstitialAdActionDidFinish:">&ndash;&nbsp;pwInterstitialAdActionDidFinish:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/pwInterstitialAd:didFailWithError:" title="pwInterstitialAd:didFailWithError:"></a>
+	<h3 class="subsubtitle method-title">pwInterstitialAd:didFailWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when an full-screen ad fails to load a new advertisement. (required)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwInterstitialAd:(PWAdsInterstitialAd *)<em>interstitialAd</em> didFailWithError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>interstitialAd</em></dt>
+			<dd><p>The full-screen ad that received the error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>The error object that describes the problem.</p>
+
+<p>Although the error message informs your application about why the error occurred, normally your application does not need to display the error to the user.</p>
+
+<p>When an error occurs, your delegate should release the ad object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsInterstitialAd.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwInterstitialAdActionDidFinish:" title="pwInterstitialAdActionDidFinish:"></a>
+	<h3 class="subsubtitle method-title">pwInterstitialAdActionDidFinish:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called after a banner view finishes executing an action that covered your application&rsquo;s user interface.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwInterstitialAdActionDidFinish:(PWAdsInterstitialAd *)<em>interstitialAd</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>interstitialAd</em></dt>
+			<dd><p>The full-screen ad that finished executing an action.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsInterstitialAd.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwInterstitialAdActionShouldBegin:willLeaveApplication:" title="pwInterstitialAdActionShouldBegin:willLeaveApplication:"></a>
+	<h3 class="subsubtitle method-title">pwInterstitialAdActionShouldBegin:willLeaveApplication:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called before a banner view executes an action.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)pwInterstitialAdActionShouldBegin:(PWAdsInterstitialAd *)<em>interstitialAd</em> willLeaveApplication:(BOOL)<em>willLeave</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>interstitialAd</em></dt>
+			<dd><p>The full-screen ad that the user tapped.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>willLeave</em></dt>
+			<dd><p>YES if another application will be launched to execute the action; NO if the action is going to be executed inside your appliaction.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Your delegate returns YES if the banner action should execute; NO to prevent the banner action from executing.</p>
+
+<p>When the user taps a presented advertisement, the ad’s delegate is called to inform your application that the user wants to interact with the ad.
+To allow the action to be triggered, your method should return YES; to suppress the action, your method returns NO. Your application should almost
+always allow actions to be triggered; preventing actions may alter the advertisements your application sees and reduce the revenue your application earns through PWAds.</p>
+
+<p>If the value of the willLeave parameter is YES and your delegate allows the advertisement to execute its action, then your application is moved to
+the background shortly after the call to this method completes.</p>
+
+<p>If the value of the willLeave parameter is NO, the advertisement’s interactive experience will run inside your application. To accomodate the advertisement,
+your application should disable activities that require user interaction as well as disabling any tasks or behaviors that may interfere with the advertisement.
+For example, a game might pause its game play and turn off sound effects until the user finishes interacting with the advertisement. Further, while the
+action is running, your application should also be prepared to respond to low-memory warnings by disposing of objects it can easily recreate after the
+advertisement completes its action.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsInterstitialAd.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwInterstitialAdActionWillFinish:" title="pwInterstitialAdActionWillFinish:"></a>
+	<h3 class="subsubtitle method-title">pwInterstitialAdActionWillFinish:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called just before uncovering your app after once a cover action has occured.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwInterstitialAdActionWillFinish:(PWAdsInterstitialAd *)<em>interstitialAd</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>interstitialAd</em></dt>
+			<dd><p>The full-screen ad that finished executing an action and will soon oncover your app.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsInterstitialAd.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwInterstitialAdDidLoad:" title="pwInterstitialAdDidLoad:"></a>
+	<h3 class="subsubtitle method-title">pwInterstitialAdDidLoad:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called after the advertisement loads its content.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwInterstitialAdDidLoad:(PWAdsInterstitialAd *)<em>interstitialAd</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>interstitialAd</em></dt>
+			<dd><p>The ad object that loaded a new advertisement.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsInterstitialAd.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwInterstitialAdDidUnload:" title="pwInterstitialAdDidUnload:"></a>
+	<h3 class="subsubtitle method-title">pwInterstitialAdDidUnload:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called after a full-screen ad disposes of its content. (required)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwInterstitialAdDidUnload:(PWAdsInterstitialAd *)<em>interstitialAd</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>interstitialAd</em></dt>
+			<dd><p>The interstitial ad that disposed of its content.</p>
+
+<p>An ad object may unload its content for a number of reasons, including such cases as when an error occurs, after a user dismisses
+an advertisement that was presented modally, or after an advertisement’s contents have been loaded for a long period of time.
+The ad object automatically removes its contents from the screen if it was already presented to the user.
+Your implementation of this method should release the ad object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsInterstitialAd.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwInterstitialAdWillLoad:" title="pwInterstitialAdWillLoad:"></a>
+	<h3 class="subsubtitle method-title">pwInterstitialAdWillLoad:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called before the advertisement loads its content.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwInterstitialAdWillLoad:(PWAdsInterstitialAd *)<em>interstitialAd</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>interstitialAd</em></dt>
+			<dd><p>The ad object that is about to load a new advertisement.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsInterstitialAd.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Phunware, Inc.. All rights reserved. (Last updated: 2013-12-05)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

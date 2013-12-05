@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PWAdsBannerAdView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PWAdsBannerAdView</TokenIdentifier>
+			<Abstract type="html">PWAdsBannerAdView implements a standard PWAdsBannerAdView into your app.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/startServingAdsForRequest:</TokenIdentifier>
+			<Abstract type="html">Once a PWAdsRequest object is created and PWAdsBannerAdView added to your view, this function should be called to begin serving ads in your app.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)startServingAdsForRequest:(PWAdsRequest *)request</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>request</Name>
+					<Abstract type="html">The ad request with zone information and any custom parameters.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/startServingAdsForRequest:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/updateLocation:</TokenIdentifier>
+			<Abstract type="html">Updates the location parameters for the current PWAdsRequest.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>- (void)updateLocation:(CLLocation *)location</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>location</Name>
+					<Abstract type="html">The location to send to the current PWAdsRequest. Should be obtained from the app delegate.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/updateLocation:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/hide</TokenIdentifier>
+			<Abstract type="html">Hides ads from the view (sets the view&apos;s alpha to 0.0).</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>- (void)hide</Declaration>
+			
+			
+			<Anchor>//api/name/hide</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/cancelAds</TokenIdentifier>
+			<Abstract type="html">Cancels the current ad request.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>- (void)cancelAds</Declaration>
+			
+			
+			<Anchor>//api/name/cancelAds</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/pause</TokenIdentifier>
+			<Abstract type="html">Pauses the current ad request.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>- (void)pause</Declaration>
+			
+			
+			<Anchor>//api/name/pause</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/resume</TokenIdentifier>
+			<Abstract type="html">Resumes a paused ad request.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>- (void)resume</Declaration>
+			
+			
+			<Anchor>//api/name/resume</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/repositionToInterfaceOrientation:</TokenIdentifier>
+			<Abstract type="html">Override point to respong to oriention changes.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>- (void)repositionToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>toInterfaceOrientation</Name>
+					<Abstract type="html">The new interface Orientation</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/repositionToInterfaceOrientation:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/setDelegate:</TokenIdentifier>
+			<Abstract type="html">An id that is used to identify the &apos;PWAdsBannerAdViewDelegate&apos; delegate.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) id&lt;PWAdsBannerAdViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/delegate</TokenIdentifier>
+			<Abstract type="html">An id that is used to identify the &apos;PWAdsBannerAdViewDelegate&apos; delegate.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) id&lt;PWAdsBannerAdViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsBannerAdView/delegate</TokenIdentifier>
+			<Abstract type="html">An id that is used to identify the &apos;PWAdsBannerAdViewDelegate&apos; delegate.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) id&lt;PWAdsBannerAdViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/setAnimated:</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to animate in or not. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL animated</Declaration>
+			
+			
+			<Anchor>//api/name/animated</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/animated</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to animate in or not. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL animated</Declaration>
+			
+			
+			<Anchor>//api/name/animated</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsBannerAdView/animated</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to animate in or not. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL animated</Declaration>
+			
+			
+			<Anchor>//api/name/animated</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/setAutoReposition:</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to auto reposition to orientation changes. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL autoReposition</Declaration>
+			
+			
+			<Anchor>//api/name/autoReposition</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/autoReposition</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to auto reposition to orientation changes. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL autoReposition</Declaration>
+			
+			
+			<Anchor>//api/name/autoReposition</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsBannerAdView/autoReposition</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to auto reposition to orientation changes. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL autoReposition</Declaration>
+			
+			
+			<Anchor>//api/name/autoReposition</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/setShowLoadingOverlay:</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL showLoadingOverlay</Declaration>
+			
+			
+			<Anchor>//api/name/showLoadingOverlay</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/showLoadingOverlay</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL showLoadingOverlay</Declaration>
+			
+			
+			<Anchor>//api/name/showLoadingOverlay</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsBannerAdView/showLoadingOverlay</TokenIdentifier>
+			<Abstract type="html">A BOOL to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is TRUE.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL showLoadingOverlay</Declaration>
+			
+			
+			<Anchor>//api/name/showLoadingOverlay</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/setShouldReloadAfterTap:</TokenIdentifier>
+			<Abstract type="html">Deprecated attribute.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL shouldReloadAfterTap</Declaration>
+			
+			
+			<Anchor>//api/name/shouldReloadAfterTap</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/shouldReloadAfterTap</TokenIdentifier>
+			<Abstract type="html">Deprecated attribute.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL shouldReloadAfterTap</Declaration>
+			
+			
+			<Anchor>//api/name/shouldReloadAfterTap</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsBannerAdView/shouldReloadAfterTap</TokenIdentifier>
+			<Abstract type="html">Deprecated attribute.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) BOOL shouldReloadAfterTap</Declaration>
+			
+			
+			<Anchor>//api/name/shouldReloadAfterTap</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/setIsServingAds:</TokenIdentifier>
+			<Abstract type="html">After looking at this property again, I feel this should move to a private header... A BOOL to signify whether or not the ad is currently serving ads.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL isServingAds</Declaration>
+			
+			
+			<Anchor>//api/name/isServingAds</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/isServingAds</TokenIdentifier>
+			<Abstract type="html">After looking at this property again, I feel this should move to a private header... A BOOL to signify whether or not the ad is currently serving ads.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL isServingAds</Declaration>
+			
+			
+			<Anchor>//api/name/isServingAds</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsBannerAdView/isServingAds</TokenIdentifier>
+			<Abstract type="html">After looking at this property again, I feel this should move to a private header... A BOOL to signify whether or not the ad is currently serving ads.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL isServingAds</Declaration>
+			
+			
+			<Anchor>//api/name/isServingAds</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/setHideDirection:</TokenIdentifier>
+			<Abstract type="html">A PWAdsBannerHideDirection that sets the orientations in which you do not want ads displayed.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign) PWAdsBannerHideDirection hideDirection</Declaration>
+			
+			
+			<Anchor>//api/name/hideDirection</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/hideDirection</TokenIdentifier>
+			<Abstract type="html">A PWAdsBannerHideDirection that sets the orientations in which you do not want ads displayed.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign) PWAdsBannerHideDirection hideDirection</Declaration>
+			
+			
+			<Anchor>//api/name/hideDirection</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsBannerAdView/hideDirection</TokenIdentifier>
+			<Abstract type="html">A PWAdsBannerHideDirection that sets the orientations in which you do not want ads displayed.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign) PWAdsBannerHideDirection hideDirection</Declaration>
+			
+			
+			<Anchor>//api/name/hideDirection</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/setPresentingController:</TokenIdentifier>
+			<Abstract type="html">After looking at this property again, I am not sure that it is even used.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) UIViewController *presentingController</Declaration>
+			
+			
+			<Anchor>//api/name/presentingController</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/presentingController</TokenIdentifier>
+			<Abstract type="html">After looking at this property again, I am not sure that it is even used.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) UIViewController *presentingController</Declaration>
+			
+			
+			<Anchor>//api/name/presentingController</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsBannerAdView/presentingController</TokenIdentifier>
+			<Abstract type="html">After looking at this property again, I am not sure that it is even used.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property (assign, nonatomic) UIViewController *presentingController</Declaration>
+			
+			
+			<Anchor>//api/name/presentingController</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/setLocationPrecision:</TokenIdentifier>
+			<Abstract type="html">An NSUInteger that sets the location precision information of the PWAdsRequest.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property NSUInteger locationPrecision</Declaration>
+			
+			
+			<Anchor>//api/name/locationPrecision</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PWAdsBannerAdView/locationPrecision</TokenIdentifier>
+			<Abstract type="html">An NSUInteger that sets the location precision information of the PWAdsRequest.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property NSUInteger locationPrecision</Declaration>
+			
+			
+			<Anchor>//api/name/locationPrecision</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PWAdsBannerAdView/locationPrecision</TokenIdentifier>
+			<Abstract type="html">An NSUInteger that sets the location precision information of the PWAdsRequest.</Abstract>
+			<DeclaredIn>PWAdsBannerAdView.h</DeclaredIn>
+			
+			<Declaration>@property NSUInteger locationPrecision</Declaration>
+			
+			
+			<Anchor>//api/name/locationPrecision</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

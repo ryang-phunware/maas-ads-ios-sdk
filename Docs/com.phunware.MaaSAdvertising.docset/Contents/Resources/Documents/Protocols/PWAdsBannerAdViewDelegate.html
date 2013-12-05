@@ -1,0 +1,620 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PWAdsBannerAdViewDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">MaaSAdvertising </a></h1>
+				<a id="developerHome" href="../index.html">Phunware, Inc.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PWAdsBannerAdViewDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/pwBannerAdView:didFailToReceiveAdWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- pwBannerAdView:didFailToReceiveAdWithError:</option>
+	
+	<option value="//api/name/pwBannerAdViewActionDidFinish:">&nbsp;&nbsp;&nbsp;&nbsp;- pwBannerAdViewActionDidFinish:</option>
+	
+	<option value="//api/name/pwBannerAdViewActionShouldBegin:willLeaveApplication:">&nbsp;&nbsp;&nbsp;&nbsp;- pwBannerAdViewActionShouldBegin:willLeaveApplication:</option>
+	
+	<option value="//api/name/pwBannerAdViewActionWillFinish:">&nbsp;&nbsp;&nbsp;&nbsp;- pwBannerAdViewActionWillFinish:</option>
+	
+	<option value="//api/name/pwBannerAdViewDidLoadAd:">&nbsp;&nbsp;&nbsp;&nbsp;- pwBannerAdViewDidLoadAd:</option>
+	
+	<option value="//api/name/pwBannerAdViewWillLoadAd:">&nbsp;&nbsp;&nbsp;&nbsp;- pwBannerAdViewWillLoadAd:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwBannerAdView:didFailToReceiveAdWithError:">pwBannerAdView:didFailToReceiveAdWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwBannerAdViewActionDidFinish:">pwBannerAdViewActionDidFinish:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwBannerAdViewActionShouldBegin:willLeaveApplication:">pwBannerAdViewActionShouldBegin:willLeaveApplication:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwBannerAdViewActionWillFinish:">pwBannerAdViewActionWillFinish:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwBannerAdViewDidLoadAd:">pwBannerAdViewDidLoadAd:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pwBannerAdViewWillLoadAd:">pwBannerAdViewWillLoadAd:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PWAdsBannerAdViewDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PWAdsBannerAdViewDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PWAdsBannerAdView.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>PWAdsBannerAdViewDelegate</code> is notified of changes from <a href="../Classes/PWAdsBannerAdView.html"><code>PWAdsBannerAdView</code></a>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwBannerAdViewWillLoadAd:">&ndash;&nbsp;pwBannerAdViewWillLoadAd:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwBannerAdViewDidLoadAd:">&ndash;&nbsp;pwBannerAdViewDidLoadAd:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwBannerAdView:didFailToReceiveAdWithError:">&ndash;&nbsp;pwBannerAdView:didFailToReceiveAdWithError:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwBannerAdViewActionShouldBegin:willLeaveApplication:">&ndash;&nbsp;pwBannerAdViewActionShouldBegin:willLeaveApplication:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwBannerAdViewActionWillFinish:">&ndash;&nbsp;pwBannerAdViewActionWillFinish:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pwBannerAdViewActionDidFinish:">&ndash;&nbsp;pwBannerAdViewActionDidFinish:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/pwBannerAdView:didFailToReceiveAdWithError:" title="pwBannerAdView:didFailToReceiveAdWithError:"></a>
+	<h3 class="subsubtitle method-title">pwBannerAdView:didFailToReceiveAdWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when a banner view fils to load a new advertisement.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwBannerAdView:(PWAdsBannerAdView *)<em>bannerView</em> didFailToReceiveAdWithError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>bannerView</em></dt>
+			<dd><p>The banner view that failed to load an advertisement.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>The error object that describes the problem.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsBannerAdView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwBannerAdViewActionDidFinish:" title="pwBannerAdViewActionDidFinish:"></a>
+	<h3 class="subsubtitle method-title">pwBannerAdViewActionDidFinish:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called after a banner view finishes executing an action that covered your application&rsquo;s user interface.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwBannerAdViewActionDidFinish:(PWAdsBannerAdView *)<em>bannerView</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>bannerView</em></dt>
+			<dd><p>The banner view that finished executing an action.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsBannerAdView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwBannerAdViewActionShouldBegin:willLeaveApplication:" title="pwBannerAdViewActionShouldBegin:willLeaveApplication:"></a>
+	<h3 class="subsubtitle method-title">pwBannerAdViewActionShouldBegin:willLeaveApplication:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called before a banner view executes an action.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)pwBannerAdViewActionShouldBegin:(PWAdsBannerAdView *)<em>bannerView</em> willLeaveApplication:(BOOL)<em>willLeave</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>bannerView</em></dt>
+			<dd><p>The banner view that the user tapped.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>willLeave</em></dt>
+			<dd><p>YES if another application will be launched to execute the action; NO if the action is going to be executed inside your appliaction.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Your delegate returns YES if the banner action should execute; NO to prevent the banner action from executing.</p>
+
+<p>This method is called when the user taps the banner view. Your application controls whether the action is triggered. To allow the action to be triggered,
+return YES. To suppress the action, return NO. Your application should almost always allow actions to be triggered; preventing actions may alter the
+advertisements your application sees and reduce the revenue your application earns through PWAds.</p>
+
+<p>If the willLeave parameter is YES, then your application is moved to the background shortly after this method returns. In this situation, your method
+implementation does not need to perform additional work. If willLeave is set to NO, then the triggered action will cover your application’s user
+interface to show the advertising action. Although your application continues to run normally, your implementation of this method should disable
+activities that require user interaction while the action is executing. For example, a game might pause its game play until the user finishes
+watching the advertisement.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsBannerAdView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwBannerAdViewActionWillFinish:" title="pwBannerAdViewActionWillFinish:"></a>
+	<h3 class="subsubtitle method-title">pwBannerAdViewActionWillFinish:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called before a banner view finishes executing an action that covered your application&rsquo;s user interface.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwBannerAdViewActionWillFinish:(PWAdsBannerAdView *)<em>bannerView</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>bannerView</em></dt>
+			<dd><p>The banner view that will finish executing an action.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsBannerAdView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwBannerAdViewDidLoadAd:" title="pwBannerAdViewDidLoadAd:"></a>
+	<h3 class="subsubtitle method-title">pwBannerAdViewDidLoadAd:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when a new banner advertisement is loaded.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwBannerAdViewDidLoadAd:(PWAdsBannerAdView *)<em>bannerView</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>bannerView</em></dt>
+			<dd><p>The banner view that loaded a new advertisement.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsBannerAdView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pwBannerAdViewWillLoadAd:" title="pwBannerAdViewWillLoadAd:"></a>
+	<h3 class="subsubtitle method-title">pwBannerAdViewWillLoadAd:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called before a new banner advertisement is loaded.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pwBannerAdViewWillLoadAd:(PWAdsBannerAdView *)<em>bannerView</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>bannerView</em></dt>
+			<dd><p>The banner view that is about to a new advertisement.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PWAdsBannerAdView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Phunware, Inc.. All rights reserved. (Last updated: 2013-12-05)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
