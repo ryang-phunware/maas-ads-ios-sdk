@@ -44,6 +44,13 @@ CoreLocation.framework
 ````
 CoreLocation is optional, and is used for Geo-targeting ads.  Apple mandates that your app have a good reason for enabling Location services... Apple will deny your app if location is not a core feature for your app.
 
+The following bundles are required:
+
+````
+PWAds.bundle
+````
+
+PWAds.bundle includes files needed for media-rich advertisements that make use of device specific features. It is included with this sample app.
 
 
 Overview
