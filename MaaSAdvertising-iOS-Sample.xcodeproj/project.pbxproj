@@ -33,6 +33,7 @@
 		CD5CA98D184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA98C184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.m */; };
 		CD5CA994184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */; };
 		CD5CA996184D3DCE008B5568 /* MaaSAdvertising.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA995184D3DCE008B5568 /* MaaSAdvertising.framework */; };
+		CD8743491851086A005FBC0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CD8743481851086A005FBC0A /* README.md */; };
 		CDEC25BB184E566B00D7647E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEC25BA184E566B00D7647E /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		CD5CA992184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingVideoExampleViewController.h; sourceTree = "<group>"; };
 		CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingVideoExampleViewController.m; sourceTree = "<group>"; };
 		CD5CA995184D3DCE008B5568 /* MaaSAdvertising.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaaSAdvertising.framework; sourceTree = "<group>"; };
+		CD8743481851086A005FBC0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		CDEC25BA184E566B00D7647E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 		CD5CA934184D11EC008B5568 = {
 			isa = PBXGroup;
 			children = (
+				CD8743481851086A005FBC0A /* README.md */,
 				CD5CA946184D11EC008B5568 /* MaaSAdvertising-iOS-Sample */,
 				CD5CA96B184D11EC008B5568 /* MaaSAdvertising-iOS-SampleTests */,
 				CD5CA93F184D11EC008B5568 /* Frameworks */,
@@ -282,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8743491851086A005FBC0A /* README.md in Resources */,
 				CD5CA98A184D15BE008B5568 /* PWAds.bundle in Resources */,
 				CD5CA957184D11EC008B5568 /* Main_iPad.storyboard in Resources */,
 				CD5CA95F184D11EC008B5568 /* Images.xcassets in Resources */,
@@ -455,7 +459,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MaaSAdvertising-iOS-Sample/MaaSAdvertising-iOS-Sample-Prefix.pch";
 				INFOPLIST_FILE = "MaaSAdvertising-iOS-Sample/MaaSAdvertising-iOS-Sample-Info.plist";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -475,7 +479,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MaaSAdvertising-iOS-Sample/MaaSAdvertising-iOS-Sample-Prefix.pch";
 				INFOPLIST_FILE = "MaaSAdvertising-iOS-Sample/MaaSAdvertising-iOS-Sample-Info.plist";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

@@ -35,7 +35,7 @@ MaaSAdvertising has a dependency on MaaSCore.framework which is available here: 
 
 It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and MaaSAdvertising.framework  as well as any other MaaS frameworks that you are using.
 
-**In the Build Settings for your target, you must include the following "Other Linker Flags:" -all_load**
+**In the Build Settings for your target, you must include the following "Other Linker Flags:" -ObjC**
 
 The following frameworks are optional:
 
