@@ -10,9 +10,9 @@
 #import "MaaSAdvertisingAdPromptExampleViewController.h"
 #import <MaaSAdvertising/PWAds.h>
 
-// This is the zone id for the AdPrompt Example
-// go to http://ads.tapit.com/ to get yours
-#define ZONE_ID @"7980"
+//*************************************
+// Replace with your valid ZONE_ID here.
+#define ZONE_ID @"7980" // for example use only, don't use this zone in your app!
 
 @interface MaaSAdvertisingAdPromptExampleViewController ()
 

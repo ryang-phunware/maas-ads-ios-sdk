@@ -10,8 +10,8 @@
 #import "MaaSAdvertisingBannerExampleViewController.h"
 #import <MaaSAdvertising/PWAds.h>
 
-// This is the zone id for the BannerAd Example
-// go to http://ads.tapit.com/ to get one for your app.
+//*************************************
+// Replace with your valid ZONE_ID here.
 #define ZONE_ID @"7268" // for example use only, don't use this zone in your app!
 
 @interface MaaSAdvertisingBannerExampleViewController ()

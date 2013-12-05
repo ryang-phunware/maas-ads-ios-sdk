@@ -10,9 +10,9 @@
 #import "MaaSAdvertisingInterstitialExampleViewController.h"
 #import <MaaSAdvertising/PWAds.h>
 
-// This is the zone id for the Interstitial Example
-// go to http://ads.tapit.com/ to get yours
-#define ZONE_ID @"7271"
+//*************************************
+// Replace with your valid ZONE_ID here.
+#define ZONE_ID @"7271" // for example use only, don't use this zone in your app!
 
 @interface MaaSAdvertisingInterstitialExampleViewController ()
 

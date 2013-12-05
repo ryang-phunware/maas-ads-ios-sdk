@@ -11,8 +11,8 @@
 #import <MaaSAdvertising/PWAdsVideoInterstitialAd.h>
 
 //*************************************
-// Replace with your valid ZoneId here.
-NSString *const kZoneIdVideo         = @"22219";     // 24839, 22219
+// Replace with your valid ZONE_ID here.
+#define ZONE_ID @"22219" // for example use only, don't use this zone in your app!
 
 @interface MaaSAdvertisingVideoExampleViewController ()
 
@@ -46,8 +46,8 @@ NSString *const kZoneIdVideo         = @"22219";     // 24839, 22219
 }
 
 - (void)requestAds {    
-    // Create an adsRequest object and request ads from the ad server with your own kZoneIdVideo
-    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:kZoneIdVideo];
+    // Create an adsRequest object and request ads from the ad server with your own ZONE_ID
+    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:ZONE_ID];
     [_videoAd requestAdsWithRequestObject:request];
     
     //If you want to specify the type of video ad you are requesting, use the call below.
