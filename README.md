@@ -53,8 +53,9 @@ PWAds.bundle
 PWAds.bundle includes files needed for media-rich advertisements that make use of device specific features. It is included with this sample app.
 
 
-Overview
------------
+
+Integration
+----------
 
 The MaaSAdvertising SDK allows developers to serve many types of ads, including banner, interstitial, AdPrompt and video ads.
 
