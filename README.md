@@ -42,7 +42,7 @@ The following frameworks are optional:
 ````
 CoreLocation.framework
 ````
-CoreLocation is optional, and is used for Geo-targeting ads.  Apple mandates that your app have a good reason for enabling Location services... Apple will deny your app if location is not a core feature for your app.
+CoreLocation is optional and is used for geo-targeting ads.  Apple mandates that your app have a good reason for enabling Location services and will deny your app if location is not a core feature for your app.
 
 The following bundles are required:
 
@@ -56,31 +56,31 @@ PWAds.bundle includes files needed for media-rich advertisements that make use o
 Overview
 -----------
 
-The MaaSAdvertising SDK allows developers to serve many types of ads, including Banner ads, Interstitial ads, AdPrompt Ads and Video ads.
+The MaaSAdvertising SDK allows developers to serve many types of ads, including banner, interstitial, AdPrompt and video ads.
 
 
 ### Banner Usage
 
 ~~~~
-// in your .h file
+// In your .h file:
 #import <MaaSAdvertising/PWAdsBannerAdView.h>
 @property (retain, nonatomic) PWAdsBannerAdView *pwAd;
 
 ...
 
-// in your .m file
+// In your .m file:
 #import <MaaSAdvertising/PWAds.h>
 ...
-// init banner and add to your view
+// Init banner and add to your view:
 pwAd = [[PWAdsBannerAdView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
 [self.view addSubview:self.pwAd];
 
-// kick off banner rotation!
+// To kick off banner rotation:
 [self.pwAd startServingAdsForRequest:[PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"]];
 
 ...
 
-// We don't want to show ads any more...
+// To hide and cancel ads: 
 [self.pwAd hide];
 [self.pwAd cancelAds];
 ~~~~
@@ -89,10 +89,10 @@ pwAd = [[PWAdsBannerAdView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
 
 ### AdPrompt Usage
 
-AdPrompts are a simple ad unit designed to have a native feel.  The user is given the option to download an app/song/video, and if they accept, they are taken to app store.
+AdPrompts are a simple ad unit designed to have a native feel. When the user accepts the option to download an app, song or video, they will be taken to the app store.
 
 ~~~~
-// in your .m file
+// In your .m file:
 #import <MaaSAdvertising/PWAdsAdPrompt.h>
 ...
 PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
@@ -107,17 +107,17 @@ PWAdsAdPrompt *prompt = [[PWAdsAdPrompt alloc] initWithRequest:request];
 #### Show Modally
 
 ~~~~
-// in your .h file
+// In your .h file:
 #import <MaaSAdvertising/PWAdsInterstitialAd.h>
 ...
 @property (retain, nonatomic) PWAdsInterstitialAd *interstitialAd;
 
 ...
 
-// in your .m file
+// In your .m file: 
 #import <MaaSAdvertising/PWAds.h>
 ...
-// init and load interstitial
+// Init and load interstitial:
 self.interstitialAd = [[PWAdsInterstitialAd alloc] init];
 self.interstitialAd.delegate = self; // notify me of the interstitial's state changes
 PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
@@ -139,14 +139,14 @@ PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
 
 ...
 
-// init and load interstitial
+// Init and load interstitial:
 self.interstitialAd = [[PWAdsInterstitialAd alloc] init];
 PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
 [self.interstitialAd loadInterstitialForRequest:request];
 
 ...
 
-// if interstitial is ready, show
+// If interstitial is ready, show:
 if( self.interstitialAd.isLoaded ) {
     [self.interstitialAd presentInView:self.view];
 }
@@ -154,8 +154,7 @@ if( self.interstitialAd.isLoaded ) {
 
 ### Video Ads Usage
 
-In requesting for a video ad from the server, a TVASTAdsRequest object needs to be instantiated and its zoneId parameter specified.  This parameter is required for a successful
-retrieval of the ad.
+When requesting a video ad from the server, a TVASTAdsRequest object must be instantiated and its zoneId parameter specified. This parameter is required for a successful retrieval of the ad.
 
 ~~~~    
     // Create an adsRequest object and request ads from the ad server with your own ZONE_ID
@@ -170,7 +169,7 @@ If you want to specify the type of video ad you are requesting, use the call bel
     [_videoAd requestAdsWithRequestObject:request andVideoType:TapItVideoTypeMidroll];
 ~~~~
 
-Essentially, what needs to be included in the code is as follows:
+(Essentially, what needs to be included in the code is as follows:)
 
 ~~~~
 - (void)viewDidLoad
@@ -180,7 +179,7 @@ Essentially, what needs to be included in the code is as follows:
     _videoAd = [[TapItVideoInterstitialAd alloc] init];
     _videoAd.delegate = self;
     
-    //Optional... override the presentingViewController (defaults to the delegate)
+    //Optional: Override the presentingViewController (defaults to the delegate)
     //_videoAd.presentingViewController = self;
 }
 
@@ -223,7 +222,7 @@ Essentially, what needs to be included in the code is as follows:
 }
 ~~~~
 
-### Listen for location updates
+### Listen for Location Updates
 
 If you want to allow for geo-targeting, listen for location updates:
 
@@ -240,12 +239,12 @@ self.locationManager.delegate = self;
 ...
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    // Notify the TapIt! banner when the location changes.  New location will be used the next time an ad is requested
+    // Notify the TapIt! banner when the location changes.  New location will be used the next time an ad is requested.
     [self.tapitAd updateLocation:newLocation];
 }
 
 ...
 
-// Stop monitoring location when done to conserve battery life
+// To stop monitoring location when complete to conserve battery life:
 [self.locationManager stopMonitoringSignificantLocationChanges];
 ~~~~
