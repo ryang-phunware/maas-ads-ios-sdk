@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B03E55F81868BA0D00AD3CF2 /* MaaSAdvertising.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55F71868BA0D00AD3CF2 /* MaaSAdvertising.framework */; };
+		B03E55FA1868BA3100AD3CF2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55F91868BA3100AD3CF2 /* AVFoundation.framework */; };
+		B03E55FC1868BA4A00AD3CF2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */; };
+		B03E55FE1868BA5900AD3CF2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */; };
 		CD5CA941184D11EC008B5568 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA940184D11EC008B5568 /* Foundation.framework */; };
 		CD5CA943184D11EC008B5568 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA942184D11EC008B5568 /* CoreGraphics.framework */; };
 		CD5CA945184D11EC008B5568 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA944184D11EC008B5568 /* UIKit.framework */; };
@@ -32,7 +36,6 @@
 		CD5CA98A184D15BE008B5568 /* PWAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD5CA989184D15BE008B5568 /* PWAds.bundle */; };
 		CD5CA98D184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA98C184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.m */; };
 		CD5CA994184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */; };
-		CD5CA996184D3DCE008B5568 /* MaaSAdvertising.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA995184D3DCE008B5568 /* MaaSAdvertising.framework */; };
 		CD8743491851086A005FBC0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CD8743481851086A005FBC0A /* README.md */; };
 		CDEC25BB184E566B00D7647E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEC25BA184E566B00D7647E /* MessageUI.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B03E55F71868BA0D00AD3CF2 /* MaaSAdvertising.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaaSAdvertising.framework; path = ../Framework/MaaSAdvertising.framework; sourceTree = "<group>"; };
+		B03E55F91868BA3100AD3CF2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CD5CA93D184D11EC008B5568 /* MaaSAdvertising-iOS-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MaaSAdvertising-iOS-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5CA940184D11EC008B5568 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD5CA942184D11EC008B5568 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,8 +88,7 @@
 		CD5CA98C184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingAdPromptExampleViewController.m; sourceTree = "<group>"; };
 		CD5CA992184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingVideoExampleViewController.h; sourceTree = "<group>"; };
 		CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingVideoExampleViewController.m; sourceTree = "<group>"; };
-		CD5CA995184D3DCE008B5568 /* MaaSAdvertising.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaaSAdvertising.framework; sourceTree = "<group>"; };
-		CD8743481851086A005FBC0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		CD8743481851086A005FBC0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CDEC25BA184E566B00D7647E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -91,8 +97,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03E55FE1868BA5900AD3CF2 /* AudioToolbox.framework in Frameworks */,
+				B03E55FC1868BA4A00AD3CF2 /* CoreMedia.framework in Frameworks */,
+				B03E55FA1868BA3100AD3CF2 /* AVFoundation.framework in Frameworks */,
 				CDEC25BB184E566B00D7647E /* MessageUI.framework in Frameworks */,
-				CD5CA996184D3DCE008B5568 /* MaaSAdvertising.framework in Frameworks */,
 				CD5CA986184D1248008B5568 /* SystemConfiguration.framework in Frameworks */,
 				CD5CA984184D1240008B5568 /* QuartzCore.framework in Frameworks */,
 				CD5CA982184D123B008B5568 /* CoreTelephony.framework in Frameworks */,
@@ -102,6 +110,7 @@
 				CD5CA943184D11EC008B5568 /* CoreGraphics.framework in Frameworks */,
 				CD5CA945184D11EC008B5568 /* UIKit.framework in Frameworks */,
 				CD5CA941184D11EC008B5568 /* Foundation.framework in Frameworks */,
+				B03E55F81868BA0D00AD3CF2 /* MaaSAdvertising.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +150,11 @@
 		CD5CA93F184D11EC008B5568 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B03E55F71868BA0D00AD3CF2 /* MaaSAdvertising.framework */,
+				B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */,
+				B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */,
+				B03E55F91868BA3100AD3CF2 /* AVFoundation.framework */,
 				CDEC25BA184E566B00D7647E /* MessageUI.framework */,
-				CD5CA995184D3DCE008B5568 /* MaaSAdvertising.framework */,
 				CD5CA985184D1248008B5568 /* SystemConfiguration.framework */,
 				CD5CA983184D1240008B5568 /* QuartzCore.framework */,
 				CD5CA981184D123B008B5568 /* CoreTelephony.framework */,
@@ -455,6 +467,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
+					"\"$(SRCROOT)/../Framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MaaSAdvertising-iOS-Sample/MaaSAdvertising-iOS-Sample-Prefix.pch";
@@ -475,6 +488,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
+					"\"$(SRCROOT)/../Framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MaaSAdvertising-iOS-Sample/MaaSAdvertising-iOS-Sample-Prefix.pch";
