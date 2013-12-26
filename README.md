@@ -3,14 +3,14 @@ MaaS Advertising iOS SDK
 
 Version 3.0.10
 
-This Phunware's iOS SDK for the MaaSAdvertising module. Visit http://maas.phunware.com/ for more details and to sign up.
+This Phunware's iOS SDK for the MaaS Advertising module. Visit http://maas.phunware.com/ for more details and to sign up.
 
 
 
 Getting Started
 ---------------
 
-- [Download MaaSAdvertising](https://github.com/phunware/maas-ads-ios-sdk/archive/master.zip) and run the included sample app.
+- [Download MaaS Advertising](https://github.com/phunware/maas-ads-ios-sdk/archive/master.zip) and run the included sample app.
 - Continue reading below for installation and integration instructions.
 - Be sure to read the [documentation](http://phunware.github.io/maas-ads-ios-sdk/) for additional details.
 
@@ -31,7 +31,7 @@ AdSupport.framework - enable support for IDFA
 StoreKit.framework - enable use of SKStoreProductViewController, displays app store ads without leaving your app
 ````
 
-MaaSAdvertising has a dependency on MaaSCore.framework which is available here: https://github.com/phunware/maas-core-ios-sdk
+MaaS Advertising has a dependency on MaaSCore.framework, which is available here: https://github.com/phunware/maas-core-ios-sdk
 
 It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and MaaSAdvertising.framework  as well as any other MaaS frameworks that you are using.
 
@@ -57,7 +57,7 @@ PWAds.bundle includes files needed for media-rich advertisements that make use o
 Integration
 ----------
 
-The MaaSAdvertising SDK allows developers to serve many types of ads, including banner, interstitial, AdPrompt and video ads.
+The MaaS Advertising SDK allows developers to serve many types of ads, including banner, interstitial, AdPrompt and video ads.
 
 
 ### Banner Usage
