@@ -11,6 +11,8 @@
 		B03E55FA1868BA3100AD3CF2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55F91868BA3100AD3CF2 /* AVFoundation.framework */; };
 		B03E55FC1868BA4A00AD3CF2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */; };
 		B03E55FE1868BA5900AD3CF2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */; };
+		CD573B071889D8AE0040BFB8 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD573B061889D8AE0040BFB8 /* EventKit.framework */; };
+		CD573B091889D8EF0040BFB8 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD573B081889D8EF0040BFB8 /* EventKitUI.framework */; };
 		CD5CA941184D11EC008B5568 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA940184D11EC008B5568 /* Foundation.framework */; };
 		CD5CA943184D11EC008B5568 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA942184D11EC008B5568 /* CoreGraphics.framework */; };
 		CD5CA945184D11EC008B5568 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA944184D11EC008B5568 /* UIKit.framework */; };
@@ -55,6 +57,8 @@
 		B03E55F91868BA3100AD3CF2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CD573B061889D8AE0040BFB8 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		CD573B081889D8EF0040BFB8 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		CD5CA93D184D11EC008B5568 /* MaaSAdvertising-iOS-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MaaSAdvertising-iOS-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5CA940184D11EC008B5568 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD5CA942184D11EC008B5568 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD573B091889D8EF0040BFB8 /* EventKitUI.framework in Frameworks */,
+				CD573B071889D8AE0040BFB8 /* EventKit.framework in Frameworks */,
 				B03E55FE1868BA5900AD3CF2 /* AudioToolbox.framework in Frameworks */,
 				B03E55FC1868BA4A00AD3CF2 /* CoreMedia.framework in Frameworks */,
 				B03E55FA1868BA3100AD3CF2 /* AVFoundation.framework in Frameworks */,
@@ -150,6 +156,8 @@
 		CD5CA93F184D11EC008B5568 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD573B081889D8EF0040BFB8 /* EventKitUI.framework */,
+				CD573B061889D8AE0040BFB8 /* EventKit.framework */,
 				B03E55F71868BA0D00AD3CF2 /* MaaSAdvertising.framework */,
 				B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */,
 				B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */,
