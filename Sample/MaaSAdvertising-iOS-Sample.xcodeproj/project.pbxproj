@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B03E55F81868BA0D00AD3CF2 /* MaaSAdvertising.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55F71868BA0D00AD3CF2 /* MaaSAdvertising.framework */; };
 		B03E55FA1868BA3100AD3CF2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55F91868BA3100AD3CF2 /* AVFoundation.framework */; };
 		B03E55FC1868BA4A00AD3CF2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */; };
 		B03E55FE1868BA5900AD3CF2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */; };
@@ -53,7 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B03E55F71868BA0D00AD3CF2 /* MaaSAdvertising.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaaSAdvertising.framework; path = ../Framework/MaaSAdvertising.framework; sourceTree = "<group>"; };
 		B03E55F91868BA3100AD3CF2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -116,7 +114,6 @@
 				CD5CA943184D11EC008B5568 /* CoreGraphics.framework in Frameworks */,
 				CD5CA945184D11EC008B5568 /* UIKit.framework in Frameworks */,
 				CD5CA941184D11EC008B5568 /* Foundation.framework in Frameworks */,
-				B03E55F81868BA0D00AD3CF2 /* MaaSAdvertising.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +155,6 @@
 			children = (
 				CD573B081889D8EF0040BFB8 /* EventKitUI.framework */,
 				CD573B061889D8AE0040BFB8 /* EventKit.framework */,
-				B03E55F71868BA0D00AD3CF2 /* MaaSAdvertising.framework */,
 				B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */,
 				B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */,
 				B03E55F91868BA3100AD3CF2 /* AVFoundation.framework */,
