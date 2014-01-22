@@ -3,7 +3,7 @@ MaaS Advertising iOS SDK
 
 Version 3.0.10
 
-This Phunware's iOS SDK for the MaaS Advertising module. Visit http://maas.phunware.com/ for more details and to sign up.
+This is Phunware's iOS SDK for the MaaS Advertising module. Visit http://maas.phunware.com/ for more details and to sign up.
 
 
 
