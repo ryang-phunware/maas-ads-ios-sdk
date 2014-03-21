@@ -65,6 +65,22 @@ Integration
 
 The MaaS Advertising SDK allows developers to serve many types of ads, including banner, interstitial, AdPrompt and video ads.
 
+### Initialization
+
+~~~~
+//In your AppDelegate.m file:
+#import <MaaSAdvertising/PWAdsAppTracker.h>
+
+...
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    PWAdsAppTracker *appTracker = [PWAdsAppTracker sharedAppTracker];
+    [appTracker reportApplicationOpen];
+    return YES;
+}
+~~~~
+
 
 ### Banner Usage
 
