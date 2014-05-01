@@ -14,6 +14,5 @@
 #import "PWAdsRequest.h"
 #import "PWAdsBannerAdView.h"
 #import "PWAdsInterstitialAd.h"
-#import "PWAdsAdPrompt.h"
 
 #endif

@@ -1,7 +1,7 @@
 MaaS Advertising iOS SDK
 ================
 
-Version 3.0.11
+Version 3.0.12
 
 This is Phunware's iOS SDK for the MaaS Advertising module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -106,21 +106,6 @@ pwAd = [[PWAdsBannerAdView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
 // To hide and cancel ads: 
 [self.pwAd hide];
 [self.pwAd cancelAds];
-~~~~
-
-
-
-### AdPrompt Usage
-
-AdPrompts are a simple ad unit designed to have a native feel. When the user accepts the option to download an app, song or video, they will be taken to the app store.
-
-~~~~
-// In your .m file:
-#import <MaaSAdvertising/PWAdsAdPrompt.h>
-...
-PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
-PWAdsAdPrompt *prompt = [[PWAdsAdPrompt alloc] initWithRequest:request];
-[prompt showAsAlert];
 ~~~~
 
 

@@ -35,8 +35,6 @@
 		CD5CA982184D123B008B5568 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA981184D123B008B5568 /* CoreTelephony.framework */; };
 		CD5CA984184D1240008B5568 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA983184D1240008B5568 /* QuartzCore.framework */; };
 		CD5CA986184D1248008B5568 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA985184D1248008B5568 /* SystemConfiguration.framework */; };
-		CD5CA98A184D15BE008B5568 /* PWAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD5CA989184D15BE008B5568 /* PWAds.bundle */; };
-		CD5CA98D184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA98C184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.m */; };
 		CD5CA994184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */; };
 		CD8743491851086A005FBC0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CD8743481851086A005FBC0A /* README.md */; };
 		CDEC25BB184E566B00D7647E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEC25BA184E566B00D7647E /* MessageUI.framework */; };
@@ -87,9 +85,6 @@
 		CD5CA981184D123B008B5568 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		CD5CA983184D1240008B5568 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CD5CA985184D1248008B5568 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		CD5CA989184D15BE008B5568 /* PWAds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PWAds.bundle; sourceTree = "<group>"; };
-		CD5CA98B184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingAdPromptExampleViewController.h; sourceTree = "<group>"; };
-		CD5CA98C184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingAdPromptExampleViewController.m; sourceTree = "<group>"; };
 		CD5CA992184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingVideoExampleViewController.h; sourceTree = "<group>"; };
 		CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingVideoExampleViewController.m; sourceTree = "<group>"; };
 		CD8743481851086A005FBC0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -180,7 +175,6 @@
 		CD5CA946184D11EC008B5568 /* MaaSAdvertising-iOS-Sample */ = {
 			isa = PBXGroup;
 			children = (
-				CD5CA989184D15BE008B5568 /* PWAds.bundle */,
 				CD5CA952184D11EC008B5568 /* Main_iPhone.storyboard */,
 				CD5CA955184D11EC008B5568 /* Main_iPad.storyboard */,
 				CD5CA94F184D11EC008B5568 /* MaaSAdvertisingAppDelegate.h */,
@@ -189,8 +183,6 @@
 				CD5CA959184D11EC008B5568 /* MaaSAdvertisingBannerExampleViewController.m */,
 				CD5CA95B184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.h */,
 				CD5CA95C184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.m */,
-				CD5CA98B184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.h */,
-				CD5CA98C184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.m */,
 				CD5CA992184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.h */,
 				CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */,
 				CD5CA95E184D11EC008B5568 /* Images.xcassets */,
@@ -306,7 +298,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD8743491851086A005FBC0A /* README.md in Resources */,
-				CD5CA98A184D15BE008B5568 /* PWAds.bundle in Resources */,
 				CD5CA957184D11EC008B5568 /* Main_iPad.storyboard in Resources */,
 				CD5CA95F184D11EC008B5568 /* Images.xcassets in Resources */,
 				CD5CA954184D11EC008B5568 /* Main_iPhone.storyboard in Resources */,
@@ -332,7 +323,6 @@
 				CD5CA994184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m in Sources */,
 				CD5CA94D184D11EC008B5568 /* main.m in Sources */,
 				CD5CA95D184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.m in Sources */,
-				CD5CA98D184D1C00008B5568 /* MaaSAdvertisingAdPromptExampleViewController.m in Sources */,
 				CD5CA95A184D11EC008B5568 /* MaaSAdvertisingBannerExampleViewController.m in Sources */,
 				CD5CA951184D11EC008B5568 /* MaaSAdvertisingAppDelegate.m in Sources */,
 			);
