@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "PWAds"
-  s.version      = "3.0.11"
+  s.version      = "3.0.12”
   s.summary      = "The MaaS Advertising SDK for iOS"
   s.homepage     = "http://phunware.github.io/maas-ads-ios-sdk/"
   s.author       = { 'Phunware, Inc.' => 'http://www.phunware.com' }
   s.social_media_url = 'https://twitter.com/Phunware'
 
   s.platform     = :ios, '5.0'
-  s.source       = { :git => "https://github.com/phunware/maas-ads-ios-sdk.git", :tag => "3.0.11" }
+  s.source       = { :git => "https://github.com/phunware/maas-ads-ios-sdk.git", :tag => "3.0.12” }
   s.license      = { :type => 'Copyright', :text => 'Copyright 2014 by Phunware Inc. All rights reserved.' }
 
   s.public_header_files = 'Framework/MaaSAdvertising.framework/Versions/A/Headers/*.h'
