@@ -63,7 +63,7 @@ PWAds.bundle includes files needed for media-rich advertisements that make use o
 Integration
 ----------
 
-The MaaS Advertising SDK allows developers to serve many types of ads, including banner, interstitial, AdPrompt and video ads.
+The MaaS Advertising SDK allows developers to serve many types of ads, including banner, interstitial and video ads.
 
 ### Initialization
 
