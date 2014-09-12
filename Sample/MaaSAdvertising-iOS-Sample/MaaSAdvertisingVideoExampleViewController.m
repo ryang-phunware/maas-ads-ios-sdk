@@ -12,7 +12,7 @@
 
 //*************************************
 // Replace with your valid ZONE_ID here.
-#define ZONE_ID @"22219" // for example use only, don't use this zone in your app!
+#define ZONE_ID @"59219" // for example use only, don't use this zone in your app!
 
 @interface MaaSAdvertisingVideoExampleViewController ()
 
