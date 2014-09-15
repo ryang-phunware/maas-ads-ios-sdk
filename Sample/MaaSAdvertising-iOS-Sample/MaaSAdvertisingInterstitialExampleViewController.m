@@ -12,7 +12,7 @@
 
 //*************************************
 // Replace with your valid ZONE_ID here.
-#define ZONE_ID @"7271" // for example use only, don't use this zone in your app!
+#define ZONE_ID @"59217" // for example use only, don't use this zone in your app!
 
 @interface MaaSAdvertisingInterstitialExampleViewController ()
 
@@ -41,7 +41,7 @@
     self.interstitialAd.delegate = self;
     self.interstitialAd.animated = YES;
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-    //                            @"test", @"mode", // enable test mode to test banner ads in your app
+                                @"test", @"mode", // enable test mode to test interstitial ads in your app
                             nil];
     PWAdsRequest *request = [PWAdsRequest requestWithAdZone:ZONE_ID andCustomParameters:params];
     MaaSAdvertisingAppDelegate *myAppDelegate = (MaaSAdvertisingAppDelegate *)([[UIApplication sharedApplication] delegate]);
