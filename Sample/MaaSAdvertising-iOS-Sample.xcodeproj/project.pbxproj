@@ -88,6 +88,8 @@
 		CD5CA985184D1248008B5568 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CD5CA992184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingVideoExampleViewController.h; sourceTree = "<group>"; };
 		CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingVideoExampleViewController.m; sourceTree = "<group>"; };
+		CD6C17381A41FA08009FA29E /* TapItMediationAdMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItMediationAdMob.h; sourceTree = SOURCE_ROOT; };
+		CD6C17391A41FA08009FA29E /* TapItMediationAdMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItMediationAdMob.m; sourceTree = SOURCE_ROOT; };
 		CD8743481851086A005FBC0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CDD4BE9619D217EC00922780 /* PWAds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PWAds.bundle; path = MaaSAdvertising.framework/Versions/A/Resources/PWAds.bundle; sourceTree = SOURCE_ROOT; };
 		CDEC25BA184E566B00D7647E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -197,6 +199,8 @@
 		CD5CA947184D11EC008B5568 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD6C17381A41FA08009FA29E /* TapItMediationAdMob.h */,
+				CD6C17391A41FA08009FA29E /* TapItMediationAdMob.m */,
 				CD5CA948184D11EC008B5568 /* MaaSAdvertising-iOS-Sample-Info.plist */,
 				CD5CA949184D11EC008B5568 /* InfoPlist.strings */,
 				CD5CA94C184D11EC008B5568 /* main.m */,

@@ -3,14 +3,14 @@
 //  PWAds iOS SDK
 //
 //  Created by Nick Penteado on 4/13/12.
-//  Updated by Carl Zornes on 10/24/13.
+//  Updated by Carl Zornes on 12/12/14.
 //  Copyright (c) 2013 PWAds!. All rights reserved.
 //
 
 #ifndef PWAds_iOS_Sample_PWAdsConstants_h
 #define PWAds_iOS_Sample_PWAdsConstants_h
 
-#define PWADS_VERSION @"3.0.15"
+#define PWADS_VERSION @"3.1"
 
 /**
  `PWAdsAdType` defines the available ad types for interstitial ads.
