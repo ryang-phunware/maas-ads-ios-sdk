@@ -36,6 +36,7 @@
 		CD5CA984184D1240008B5568 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA983184D1240008B5568 /* QuartzCore.framework */; };
 		CD5CA986184D1248008B5568 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA985184D1248008B5568 /* SystemConfiguration.framework */; };
 		CD5CA994184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */; };
+		CD6C17491A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6C17481A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.m */; };
 		CD8743491851086A005FBC0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CD8743481851086A005FBC0A /* README.md */; };
 		CDD4BE9719D217EC00922780 /* PWAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDD4BE9619D217EC00922780 /* PWAds.bundle */; };
 		CDEC25BB184E566B00D7647E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEC25BA184E566B00D7647E /* MessageUI.framework */; };
@@ -90,6 +91,8 @@
 		CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingVideoExampleViewController.m; sourceTree = "<group>"; };
 		CD6C17381A41FA08009FA29E /* TapItMediationAdMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItMediationAdMob.h; sourceTree = SOURCE_ROOT; };
 		CD6C17391A41FA08009FA29E /* TapItMediationAdMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItMediationAdMob.m; sourceTree = SOURCE_ROOT; };
+		CD6C17471A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingNativeExampleViewController.h; sourceTree = "<group>"; };
+		CD6C17481A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingNativeExampleViewController.m; sourceTree = "<group>"; };
 		CD8743481851086A005FBC0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CDD4BE9619D217EC00922780 /* PWAds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PWAds.bundle; path = MaaSAdvertising.framework/Versions/A/Resources/PWAds.bundle; sourceTree = SOURCE_ROOT; };
 		CDEC25BA184E566B00D7647E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -190,6 +193,8 @@
 				CD5CA95C184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.m */,
 				CD5CA992184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.h */,
 				CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */,
+				CD6C17471A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.h */,
+				CD6C17481A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.m */,
 				CD5CA95E184D11EC008B5568 /* Images.xcassets */,
 				CD5CA947184D11EC008B5568 /* Supporting Files */,
 			);
@@ -331,6 +336,7 @@
 				CD5CA994184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m in Sources */,
 				CD5CA94D184D11EC008B5568 /* main.m in Sources */,
 				CD5CA95D184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.m in Sources */,
+				CD6C17491A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.m in Sources */,
 				CD5CA95A184D11EC008B5568 /* MaaSAdvertisingBannerExampleViewController.m in Sources */,
 				CD5CA951184D11EC008B5568 /* MaaSAdvertisingAppDelegate.m in Sources */,
 			);

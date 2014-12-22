@@ -1,7 +1,7 @@
 MaaS Advertising iOS SDK
 ================
 
-Version 3.0.15
+Version 3.1
 
 This is Phunware's iOS SDK for the MaaS Advertising module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -143,7 +143,7 @@ PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
 #### Include in Paged Navigation
     
 ~~~~
-@property (retain, nonatomic) TapItInterstitialAd *interstitialAd;
+@property (retain, nonatomic) PWAdsInterstitialAd *interstitialAd;
 
 ...
 
@@ -174,7 +174,7 @@ If you want to specify the type of video ad you are requesting, use the call bel
 
 ~~~~    
     TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:**YOUR ZONE ID**];
-    [_videoAd requestAdsWithRequestObject:request andVideoType:TapItVideoTypeMidroll];
+    [_videoAd requestAdsWithRequestObject:request andVideoType:PWAdsVideoTypeMidroll];
 ~~~~
 
 (Essentially, what needs to be included in the code is as follows:)
@@ -184,17 +184,11 @@ If you want to specify the type of video ad you are requesting, use the call bel
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    _videoAd = [[TapItVideoInterstitialAd alloc] init];
+    _videoAd = [[PWAdsVideoInterstitialAd alloc] init];
     _videoAd.delegate = self;
     
     //Optional: Override the presentingViewController (defaults to the delegate)
     //_videoAd.presentingViewController = self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)requestAds {    
@@ -203,14 +197,14 @@ If you want to specify the type of video ad you are requesting, use the call bel
     [_videoAd requestAdsWithRequestObject:request];
     
     //If you want to specify the type of video ad you are requesting, use the call below.
-    //[_videoAd requestAdsWithRequestObject:request andVideoType:TapItVideoTypeMidroll];
+    //[_videoAd requestAdsWithRequestObject:request andVideoType:PWAdsVideoTypeMidroll];
 }
 
 - (IBAction)onRequestAds {
     [self requestAds];
 }
 
-- (void)tapitVideoInterstitialAdDidFinish:(TapItVideoInterstitialAd *)videoAd {
+- (void)pwVideoInterstitialAdDidFinish:(PWAdsVideoInterstitialAd *)videoAd {
     NSLog(@"Override point for resuming your app's content.");
     [_videoAd unloadAdsManager];
 }
@@ -220,14 +214,70 @@ If you want to specify the type of video ad you are requesting, use the call bel
     [super viewDidUnload];
 }
 
-- (void)tapitVideoInterstitialAdDidLoad:(TapItVideoInterstitialAd *)videoAd {
+- (void)pwVideoInterstitialAdDidLoad:(PWAdsVideoInterstitialAd *)videoAd {
     NSLog(@"We received an ad... now show it.");
     [videoAd playVideoFromAdsManager];
 }
 
-- (void)tapitVideoInterstitialAdDidFail:(TapItVideoInterstitialAd *)videoAd withErrorString:(NSString *)error {
+- (void)pwVideoInterstitialAdDidFail:(PWAdsVideoInterstitialAd *)videoAd withErrorString:(NSString *)error {
     NSLog(@"%@", error);
 }
+~~~~
+
+### Native Ad Usage
+
+~~~~
+// in your .h file
+#import <MaaSAdvertising/PWAdsNativeAdManager.h>
+
+@interface MyViewController : UIViewController <PWAdsNativeAdDelegate>
+
+@property (nonatomic, retain) PWAdsNativeAdManager *pwNativeManager;
+...
+
+// in your .m file
+#import <MaaSAdvertising/PWAds.h>
+...
+pwNativeManager = [[PWAdsNativeAdManager alloc] init];
+pwNativeManager.delegate = self;
+PWAdsRequest *request = [PWAdsRequest requestWithAdZone:*YOUR ZONE ID* andCustomParameters:params];
+[pwNativeManager getAdsForRequest:request withRequestedNumberOfAds:10];
+...
+
+- (void)pwNativeAdManagerDidLoad:(PWAdsNativeAdManager *)nativeAdManager {
+    PWAdsNativeAd *newAd = [nativeAdManager.allNativeAds objectAtIndex:0];
+
+    // Get data from `newAd` and add fields to your view
+    ...
+    UILabel *titleLabel = [[UILabel alloc] init];
+    [titleLabel setFrame:CGRectMake(10,50,300,20)];
+    titleLabel.backgroundColor=[UIColor clearColor];
+    titleLabel.textColor=[UIColor blackColor];
+    titleLabel.userInteractionEnabled=YES;
+    titleLabel.text = newAd.adTitle;
+    [self.view addSubview:titleLabel];
+    [titleLabel release];
+    ...
+
+    // Add a touch recognizer to native element(s) to enable landing page access
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTapped)];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    [titleLabel addGestureRecognizer:tapGestureRecognizer];
+    // Log the native ad impression
+
+    [nativeAdManager logNativeAdImpression:newAd];
+}
+
+- (void)labelTapped {
+    PWAdsNativeAd *newAd = [pwNativeManager.allNativeAds objectAtIndex:0];
+    [pwNativeManager nativeAdWasTouched:newAd];
+}
+
+- (void)pwNativeAdManager:(PWAdsNativeAdManager *)nativeAdManager didFailToReceiveAdWithError:(NSError *)error {
+    NSLog(@"Native Ad Manager failed to load with the following error: %@", error.localizedDescription);
+}
+...
+
 ~~~~
 
 ### Listen for Location Updates
@@ -242,13 +292,18 @@ If you want to allow for geo-targeting, listen for location updates:
 // start listening for location updates
 self.locationManager = [[CLLocationManager alloc] init];
 self.locationManager.delegate = self;
-[self.locationManager startMonitoringSignificantLocationChanges];
+
+// iOS 8 check
+if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+    [self.locationManager requestWhenInUseAuthorization];
+}
+[self.locationManager startUpdatingLocation];
 
 ...
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    // Notify the TapIt! banner when the location changes.  New location will be used the next time an ad is requested.
-    [self.tapitAd updateLocation:newLocation];
+    // Notify the PW Ads banner when the location changes.  New location will be used the next time an ad is requested.
+    [self.pwAd updateLocation:newLocation];
 }
 
 ...
