@@ -33,7 +33,7 @@
     pwNativeManager = [[PWAdsNativeAdManager alloc] init];
     pwNativeManager.delegate = self;
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            //                            @"test", @"mode", // enable test mode to test native ads in your app
+//                            @"test", @"mode", // enable test mode to test native ads in your app
                             nil];
     
     PWAdsRequest *request = [PWAdsRequest requestWithAdZone:ZONE_ID andCustomParameters:params];
