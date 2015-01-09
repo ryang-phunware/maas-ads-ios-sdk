@@ -9,7 +9,7 @@
 #import "MaaSAdvertisingNativeExampleViewController.h"
 #import "MaaSAdvertisingAppDelegate.h"
 
-#define ZONE_ID @"64267" // for example use only, don't use this zone in your app!
+#define ZONE_ID @"64477" // for example use only, don't use this zone in your app!
 @interface MaaSAdvertisingNativeExampleViewController ()
 
 @end
