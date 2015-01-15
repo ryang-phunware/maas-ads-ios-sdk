@@ -149,7 +149,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Native" image="third" selectedImage="third" id="CTb-Yn-Wn9"/>
+                    <tabBarItem key="tabBarItem" title="Native" image="third" id="CTb-Yn-Wn9"/>
                     <connections>
                         <outlet property="customTable" destination="DUP-eg-kMU" id="doW-61-PeX"/>
                     </connections>
