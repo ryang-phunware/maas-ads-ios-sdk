@@ -10,7 +10,7 @@
 #ifndef PWAds_iOS_Sample_PWAdsConstants_h
 #define PWAds_iOS_Sample_PWAdsConstants_h
 
-#define PWADS_VERSION @"3.1.3"
+#define PWADS_VERSION @"3.1.4"
 
 /**
  `PWAdsAdType` defines the available ad types for interstitial ads.
