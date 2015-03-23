@@ -39,7 +39,7 @@ StoreKit.framework - enable use of SKStoreProductViewController, displays app st
 
 MaaS Advertising has a dependency on MaaSCore.framework, which is available here: https://github.com/phunware/maas-core-ios-sdk
 
-It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and MaaSAdvertising.framework  as well as any other MaaS frameworks that you are using.
+It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and MaaSAdvertising.framework, as well as any other MaaS frameworks that you are using.
 
 **In the Build Settings for your target, you must include the following "Other Linker Flags:" -ObjC**
 
@@ -48,7 +48,7 @@ The following frameworks are optional:
 ````
 CoreLocation.framework
 ````
-CoreLocation is optional and is used for geo-targeting ads.  Apple mandates that your app have a good reason for enabling Location services and will deny your app if location is not a core feature for your app.
+CoreLocation is optional and is used for geo-targeting ads. Apple mandates that your app have a good reason for enabling location services and will deny your app if location is not a core feature for your app.
 
 The following bundles are required:
 
@@ -56,7 +56,7 @@ The following bundles are required:
 PWAds.bundle
 ````
 
-PWAds.bundle includes files needed for media-rich advertisements that make use of device specific features. It is included with this sample app.
+PWAds.bundle includes files needed for media-rich advertisements that make use of device-specific features. It is included with this sample app.
 
 
 
@@ -68,7 +68,7 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 ### Initialization
 
 ~~~~
-//In your AppDelegate.m file:
+// In your AppDelegate.m file:
 #import <MaaSAdvertising/PWAdsAppTracker.h>
 
 ...
@@ -134,7 +134,7 @@ PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
 ...
 
 - (void)pwInterstitialAdDidLoad:(PWAdsInterstitialAd *)interstitialAd {
-    // Ad is ready for display... show it!
+    // The ad is ready for display. Show it!
     [self.interstitialAd presentFromViewController:self];
 }
 ~~~~
@@ -154,7 +154,7 @@ PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
 
 ...
 
-// If interstitial is ready, show:
+// If the interstitial ad is ready, show it using:
 if( self.interstitialAd.isLoaded ) {
     [self.interstitialAd presentInView:self.view];
 }
@@ -165,7 +165,7 @@ if( self.interstitialAd.isLoaded ) {
 When requesting a video ad from the server, a TVASTAdsRequest object must be instantiated and its zoneId parameter specified. This parameter is required for a successful retrieval of the ad.
 
 ~~~~    
-    // Create an adsRequest object and request ads from the ad server with your own ZONE_ID
+    // Create an adsRequest object and request ads from the ad server with your own ZONE_ID.
     TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:**YOUR ZONE ID**;
     [_videoAd requestAdsWithRequestObject:request];
 ~~~~
@@ -187,17 +187,17 @@ If you want to specify the type of video ad you are requesting, use the call bel
     _videoAd = [[PWAdsVideoInterstitialAd alloc] init];
     _videoAd.delegate = self;
     
-    //Optional: Override the presentingViewController (defaults to the delegate)
-    //_videoAd.presentingViewController = self;
+    // OPTIONAL: Override the presentingViewController (defaults to the delegate).
+    // _videoAd.presentingViewController = self;
 }
 
 - (void)requestAds {    
-    // Create an adsRequest object and request ads from the ad server with your own ZONE_ID
+    // Create an adsRequest object and request ads from the ad server with your own ZONE_ID.
     TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:**YOUR ZONE ID**];
     [_videoAd requestAdsWithRequestObject:request];
     
-    //If you want to specify the type of video ad you are requesting, use the call below.
-    //[_videoAd requestAdsWithRequestObject:request andVideoType:PWAdsVideoTypeMidroll];
+    // If you want to specify the type of video ad you are requesting, use the call below.
+    // [_videoAd requestAdsWithRequestObject:request andVideoType:PWAdsVideoTypeMidroll];
 }
 
 - (IBAction)onRequestAds {
@@ -227,7 +227,7 @@ If you want to specify the type of video ad you are requesting, use the call bel
 ### Native Ad Usage
 
 ~~~~
-// in your .h file
+// In your .h file:
 #import <MaaSAdvertising/PWAdsNativeAdManager.h>
 
 @interface MyViewController : UIViewController <PWAdsNativeAdDelegate>
@@ -235,7 +235,7 @@ If you want to specify the type of video ad you are requesting, use the call bel
 @property (nonatomic, retain) PWAdsNativeAdManager *pwNativeManager;
 ...
 
-// in your .m file
+// In your .m file:
 #import <MaaSAdvertising/PWAds.h>
 ...
 pwNativeManager = [[PWAdsNativeAdManager alloc] init];
@@ -247,7 +247,7 @@ PWAdsRequest *request = [PWAdsRequest requestWithAdZone:*YOUR ZONE ID* andCustom
 - (void)pwNativeAdManagerDidLoad:(PWAdsNativeAdManager *)nativeAdManager {
     PWAdsNativeAd *newAd = [nativeAdManager.allNativeAds objectAtIndex:0];
 
-    // Get data from `newAd` and add fields to your view
+    // Get data from `newAd` and add fields to your view:
     ...
     UILabel *titleLabel = [[UILabel alloc] init];
     [titleLabel setFrame:CGRectMake(10,50,300,20)];
@@ -259,11 +259,11 @@ PWAdsRequest *request = [PWAdsRequest requestWithAdZone:*YOUR ZONE ID* andCustom
     [titleLabel release];
     ...
 
-    // Add a touch recognizer to native element(s) to enable landing page access
+    // Add a touch recognizer to native element(s) to enable landing page access.
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTapped)];
     tapGestureRecognizer.numberOfTapsRequired = 1;
     [titleLabel addGestureRecognizer:tapGestureRecognizer];
-    // Log the native ad impression
+    // Log the native ad impression.
 
     [nativeAdManager logNativeAdImpression:newAd];
 }
@@ -282,18 +282,18 @@ PWAdsRequest *request = [PWAdsRequest requestWithAdZone:*YOUR ZONE ID* andCustom
 
 ### Listen for Location Updates
 
-If you want to allow for geo-targeting, listen for location updates:
+If you want to allow for geotargeting, listen for location updates:
 
 ~~~~
 @property (retain, nonatomic) CLLocationManager *locationManager;
 
 ...
 
-// start listening for location updates
+// Start listening for location updates:
 self.locationManager = [[CLLocationManager alloc] init];
 self.locationManager.delegate = self;
 
-// iOS 8 check
+// iOS 8 check:
 if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
     [self.locationManager requestWhenInUseAuthorization];
 }
@@ -302,7 +302,7 @@ if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthoriza
 ...
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    // Notify the PW Ads banner when the location changes.  New location will be used the next time an ad is requested.
+    // Notify the PW Ads banner when the location changes. New location will be used the next time an ad is requested.
     [self.pwAd updateLocation:newLocation];
 }
 
@@ -316,10 +316,10 @@ if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthoriza
 
 If you want to customize the appearance of the in-app browser controller that appears when a user taps on an ad, follow the below instructions:
 
-1. To customize the background color of the browser controller toolbar, in your app's Info.plist file add the key **pwAdsToolbarBgColor** with the value being the color represented in RGBA format (ex. orange = **255 149 0 1**).
-2. To customize the tint color of the browser controller toolbar items, in your app's Info.plist file add the key **pwAdsToolbarTintColor** with the value being the color represented in RGBA format (ex. blue = **0 0 255 1**).
+1. To customize the background color of the browser controller toolbar, in your app's Info.plist file add the key **pwAdsToolbarBgColor** with a color value represented in RGBA format (ex. orange = **255 149 0 1**).
+2. To customize the tint color of the browser controller toolbar items, in your app's Info.plist file add the key **pwAdsToolbarTintColor** with a color value represented in RGBA format (ex. blue = **0 0 255 1**).
 
-If you want to customize the appearance of the close button for Interstitial ads, follow the below instructions:
+If you want to customize the appearance of the close button for interstitial ads, follow the below instructions:
 
 1. Create close button images at 32x32 @1x and 64x64 @2x.
 2. Name the newly created images **pwCustomClose.png** and **pwCustomClose@2x.png**.
