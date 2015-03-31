@@ -2,12 +2,14 @@
 //  PWAdsNativeAd.h
 //  PWAds iOS SDK
 //
-//  Created by Carl Zornes on 11/20/14.
 //
 //
 
 #import <Foundation/Foundation.h>
 
+/**
+ `PWAdsNativeAd` implements a standard `PWAdsNativeAd` into your app.
+ */
 @interface PWAdsNativeAd : NSObject
 
 /**
