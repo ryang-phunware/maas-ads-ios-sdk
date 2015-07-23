@@ -43,3 +43,7 @@
 
 ##Version 3.1.7 (Wednesday, May 27, 2015)
 * Improved handling of third-party video assets
+
+##Version 3.1.8 (Wednesday, July 23, 2015)
+* Fixed crash when displaying intersitial ad immediately from onLoad delegate callback
+
