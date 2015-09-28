@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import <MaaSAdvertising/PWAdsBannerAdView.h>
+#import <PWAdvertising/PWAds.h>
 
 @interface MaaSAdvertisingBannerExampleViewController : UIViewController<PWAdsBannerAdViewDelegate>
 

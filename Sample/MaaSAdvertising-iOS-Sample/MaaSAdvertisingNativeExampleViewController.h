@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import <MaasAdvertising/PWAds.h>
+#import <PWAdvertising/PWAds.h>
 
 @interface MaaSAdvertisingNativeExampleViewController : UIViewController <PWAdsNativeAdDelegate, UITableViewDelegate, UITableViewDataSource> {
     

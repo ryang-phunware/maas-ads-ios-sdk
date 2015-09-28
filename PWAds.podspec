@@ -1,18 +1,18 @@
 Pod::Spec.new do |s|
   s.name         = 'PWAds'
-  s.version      = '3.1.8'
-  s.summary      = "The MaaS Advertising SDK for iOS"
+  s.version      = '3.2.0'
+  s.summary      = "The Phunware Advertising SDK for iOS"
   s.homepage     = "http://phunware.github.io/maas-ads-ios-sdk/"
   s.author       = { 'Phunware, Inc.' => 'http://www.phunware.com' }
   s.social_media_url = 'https://twitter.com/Phunware'
 
-  s.platform     = :ios, '6.0'
-  s.source       = { :git => "https://github.com/phunware/maas-ads-ios-sdk.git", :tag => '3.1.8' }
+  s.platform     = :ios, '7.0'
+  s.source       = { :git => "https://github.com/phunware/maas-ads-ios-sdk.git", :tag => '3.2.0' }
   s.license      = { :type => 'Copyright', :text => 'Copyright 2015 by Phunware Inc. All rights reserved.' }
 
-  s.public_header_files = 'Framework/MaaSAdvertising.framework/Versions/A/Headers/*.h'
-  s.ios.vendored_frameworks = 'Framework/MaaSAdvertising.framework'
-  s.resource  = 'Framework/MaaSAdvertising.framework/Versions/A/Resources/PWAds.bundle'
+  s.public_header_files = 'Framework/PWAdvertising.framework/Versions/A/Headers/*.h'
+  s.ios.vendored_frameworks = 'Framework/PWAdvertising.framework'
+  s.resource  = 'Framework/PWAds.bundle'
   s.dependency 'PWCore'
 
   s.xcconfig      = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/PWAds/**"'}

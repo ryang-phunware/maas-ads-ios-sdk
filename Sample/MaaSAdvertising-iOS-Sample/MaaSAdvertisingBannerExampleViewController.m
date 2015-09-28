@@ -8,7 +8,7 @@
 
 #import "MaaSAdvertisingAppDelegate.h"
 #import "MaaSAdvertisingBannerExampleViewController.h"
-#import <MaaSAdvertising/PWAds.h>
+#import <PWAdvertising/PWAds.h>
 
 //*************************************
 // Replace with your valid ZONE_ID here.

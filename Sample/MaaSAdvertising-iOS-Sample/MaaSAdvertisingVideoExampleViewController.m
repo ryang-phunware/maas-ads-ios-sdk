@@ -7,8 +7,7 @@
 //
 
 #import "MaaSAdvertisingVideoExampleViewController.h"
-#import <MaaSAdvertising/TVASTAd.h>
-#import <MaaSAdvertising/PWAdsVideoInterstitialAd.h>
+#import <PWAdvertising/PWAds.h>
 
 //*************************************
 // Replace with your valid ZONE_ID here.
@@ -47,7 +46,10 @@
 
 - (void)requestAds {    
     // Create an adsRequest object and request ads from the ad server with your own ZONE_ID
-    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:ZONE_ID];
+    
+    PWAdsVideoAdsRequest *request = [PWAdsVideoAdsRequest requestWithAdZone:ZONE_ID];
+    [request setCustomParameter:@"522003" forKey:@"cid"];
+    
     [_videoAd requestAdsWithRequestObject:request];
     
     //If you want to specify the type of video ad you are requesting, use the call below.

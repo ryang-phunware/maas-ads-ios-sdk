@@ -9,7 +9,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <UIKit/UIKit.h>
-#import <MaaSAdvertising/PWAdsVideoInterstitialAd.h>
+#import <PWAdvertising/PWAds.h>
 
 @interface MaaSAdvertisingVideoExampleViewController : UIViewController<PWAdsVideoInterstitialAdDelegate>
 

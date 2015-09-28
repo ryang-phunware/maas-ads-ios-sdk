@@ -7,7 +7,7 @@
 //
 
 #import "MaaSAdvertisingAppDelegate.h"
-#import <MaaSAdvertising/PWAdsAppTracker.h>
+#import <PWAdvertising/PWAdsAppTracker.h>
 
 @implementation MaaSAdvertisingAppDelegate
 @synthesize locationManager;

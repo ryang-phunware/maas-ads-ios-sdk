@@ -8,11 +8,11 @@
 
 #import "MaaSAdvertisingAppDelegate.h"
 #import "MaaSAdvertisingInterstitialExampleViewController.h"
-#import <MaaSAdvertising/PWAds.h>
+#import <PWAdvertising/PWAds.h>
 
 //*************************************
 // Replace with your valid ZONE_ID here.
-#define ZONE_ID @"59217" // for example use only, don't use this zone in your app!
+#define ZONE_ID @"7271" // for example use only, don't use this zone in your app!
 
 @interface MaaSAdvertisingInterstitialExampleViewController ()
 
@@ -43,7 +43,7 @@
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                                 @"test", @"mode", // enable test mode to test interstitial ads in your app
                             nil];
-    PWAdsRequest *request = [PWAdsRequest requestWithAdZone:ZONE_ID andCustomParameters:params];
+    PWAdsRequest *request = [PWAdsRequest requestWithAdZone:ZONE_ID andCustomParameters:nil];
     MaaSAdvertisingAppDelegate *myAppDelegate = (MaaSAdvertisingAppDelegate *)([[UIApplication sharedApplication] delegate]);
     [request updateLocation:myAppDelegate.locationManager.location];
     [self.interstitialAd loadInterstitialForRequest:request];

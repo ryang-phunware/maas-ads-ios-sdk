@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MaaSAdvertising/PWAdsInterstitialAd.h>
+#import <PWAdvertising/PWAds.h>
 
 enum {
     StateNone       = 0,
