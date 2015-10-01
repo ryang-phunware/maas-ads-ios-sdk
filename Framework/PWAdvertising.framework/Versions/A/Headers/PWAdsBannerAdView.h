@@ -69,7 +69,7 @@
 /**
  An `id` used to identify the 'PWAdsBannerAdViewDelegate' delegate.
  */
-@property (assign, nonatomic) id<PWAdsBannerAdViewDelegate> delegate;
+@property (weak, nonatomic) id<PWAdsBannerAdViewDelegate> delegate;
 
 /**
  A `BOOL` to signify whether or not you want the ad to animate in. The default value is `TRUE`.
