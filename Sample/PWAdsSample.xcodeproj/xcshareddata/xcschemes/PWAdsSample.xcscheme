@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CD5CA963184D11EC008B5568"
+               BuildableName = "MaaSAdvertising-iOS-SampleTests.xctest"
+               BlueprintName = "MaaSAdvertising-iOS-SampleTests"
+               ReferencedContainer = "container:PWAdsSample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

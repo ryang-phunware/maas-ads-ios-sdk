@@ -73,4 +73,8 @@ typedef enum {
 /// occured during ad loading or ad playing.
 @property (nonatomic, readonly) PWAdsVideoAdErrorType errorType;
 
+-(id) initWithErrorType:(PWAdsVideoAdErrorType) errorType errorCode:(PWAdsVideoAdErrorCode) errorCode;
+
+-(id) initWithError:(NSError *) error errorType:(PWAdsVideoAdErrorType) errorType errorCode:(PWAdsVideoAdErrorCode) errorCode;
+
 @end
