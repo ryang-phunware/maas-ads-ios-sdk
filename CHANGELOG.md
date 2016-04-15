@@ -1,5 +1,8 @@
 #MaaSAdvertising Changelog
 
+##Version 3.2.1 (Friday, April 15th, 2016)
+* Bug fixes & improvements
+
 ##Version 3.2.0 (Wednesday, September 30th, 2015)
  * Renaming MaaSAdvertising to PWAdvertising
  * Bug fixes & improvements
