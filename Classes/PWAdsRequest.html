@@ -1,725 +1,974 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>PWAdsRequest Class Reference</title>
-		<meta id="xcode-display" name="xcode-display" content="render"/>
-		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
-		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 961)" />
-	</head>
-	<body>
-		<header id="top_header">
-			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">MaaSAdvertising </a></h1>
-				<a id="developerHome" href="../index.html">Phunware, Inc.</a>
-			</div>
+<head>
+	<meta charset="utf-8">
+
+	<title>PWAdsRequest Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
 			
-			<div id="title" role="banner">
-				<h1 class="hideInXcode">PWAdsRequest Class Reference</h1>
-			</div>
-			<ul id="headerButtons" role="toolbar">
-				<li id="toc_button">
-					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
-				</li>
-				<li id="jumpto_button" role="navigation">
-					<select id="jumpTo">
+			<h1 id="library-title">
+				<a href="../index.html">PWAdvertising </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Phunware,Inc.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
 	<option value="overview">Overview</option>
 	
-	
+
 	
 	
 	<option value="tasks">Tasks</option>
 	
 	
+
 	
 	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/isTestMode">isTestMode</option>
+		
+		<option value="//api/name/keywords">keywords</option>
+		
+		<option value="//api/name/location">location</option>
+		
+		<option value="//api/name/locationPrecision">locationPrecision</option>
+		
+		<option value="//api/name/numberOfAds">numberOfAds</option>
+		
+		<option value="//api/name/testMode">testMode</option>
+		
+		<option value="//api/name/zoneID">zoneID</option>
+		
+	</optgroup>
 	
-	<option value="properties">Properties</option>
+
 	
-	<option value="//api/name/isTestMode">&nbsp;&nbsp;&nbsp;&nbsp;isTestMode</option>
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/requestWithAdZone:">+ requestWithAdZone:</option>
+		
+		<option value="//api/name/requestWithAdZone:andCustomParameters:">+ requestWithAdZone:andCustomParameters:</option>
+		
+		<option value="//api/name/requestWithZoneID:">+ requestWithZoneID:</option>
+		
+	</optgroup>
 	
-	<option value="//api/name/locationPrecision">&nbsp;&nbsp;&nbsp;&nbsp;locationPrecision</option>
+
 	
-	
-	
-	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/requestWithAdZone:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithAdZone:</option>
-	
-	<option value="//api/name/requestWithAdZone:andCustomParameters:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithAdZone:andCustomParameters:</option>
-	
-	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/customParameterForKey:">&nbsp;&nbsp;&nbsp;&nbsp;- customParameterForKey:</option>
-	
-	<option value="//api/name/removeCustomParameterForKey:">&nbsp;&nbsp;&nbsp;&nbsp;- removeCustomParameterForKey:</option>
-	
-	<option value="//api/name/setCustomParameter:forKey:">&nbsp;&nbsp;&nbsp;&nbsp;- setCustomParameter:forKey:</option>
-	
-	<option value="//api/name/updateLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- updateLocation:</option>
-	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/customParameterForKey:">- customParameterForKey:</option>
+		
+		<option value="//api/name/initWithZoneID:">- initWithZoneID:</option>
+		
+		<option value="//api/name/removeCustomParameterForKey:">- removeCustomParameterForKey:</option>
+		
+		<option value="//api/name/setCustomParameter:forKey:">- setCustomParameter:forKey:</option>
+		
+		<option value="//api/name/updateLocation:">- updateLocation:</option>
+		
+	</optgroup>
 	
 	
 </select>
-				</li>
-			</ul>
-		</header>
-		<nav id="tocContainer" class="isShowingTOC">
-			<ul id="toc" role="tree">
-				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
 
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">PWAdsRequest Class Reference</h1>
 
-
-
-<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Optional">Optional</a></span></li>
-	
-</ul></li>
-
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isTestMode">isTestMode</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/locationPrecision">locationPrecision</a></span></li>
-	
-</ul></li>
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithAdZone:">requestWithAdZone:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithAdZone:andCustomParameters:">requestWithAdZone:andCustomParameters:</a></span></li>
-	
-</ul></li>
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/customParameterForKey:">customParameterForKey:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeCustomParameterForKey:">removeCustomParameterForKey:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setCustomParameter:forKey:">setCustomParameter:forKey:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateLocation:">updateLocation:</a></span></li>
-	
-</ul></li>
-
-
-			</ul>
-		</nav>
-		<article>
-			<div id="contents" class="isShowingTOC" role="main">
-				<a title="PWAdsRequest Class Reference" name="top"></a>
-				<div class="main-navigation navigation-top">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="header">
-					<div class="section-header">
-						<h1 class="title title-header">PWAdsRequest Class Reference</h1>
-					</div>		
-				</div>
-				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
+	<th>Inherits from</th>
+	<td>NSObject</td>
 </tr><tr>
-	<td class="specification-title">Declared in</td>
-	<td class="specification-value">PWAdsRequest.h</td>
+	<th>Declared in</th>
+	<td>PWAdsRequest.h</td>
 </tr>
 						</tbody></table></div>
 					
-                    
+
                     
 					
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p><code>PWAdsRequest</code> implements a standard <code>PWAdsRequest</code> into your app. This is required for all ad requests.</p>
+						<p>Class with ad request parameters.</p>
 					</div>
 					
 					
-					
+
 					
 					
 					<div class="section section-tasks">
 						<a title="Tasks" name="tasks"></a>
-						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
-						
-						<a title="Optional" name="task_Optional"></a>
-						
-<h3 class="subsubtitle task-title">Optional</h3>
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/requestWithAdZone:">+&nbsp;requestWithAdZone:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/requestWithAdZone:andCustomParameters:">+&nbsp;requestWithAdZone:andCustomParameters:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/updateLocation:">&ndash;&nbsp;updateLocation:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/customParameterForKey:">&ndash;&nbsp;customParameterForKey:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setCustomParameter:forKey:">&ndash;&nbsp;setCustomParameter:forKey:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/removeCustomParameterForKey:">&ndash;&nbsp;removeCustomParameterForKey:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/locationPrecision">&nbsp;&nbsp;locationPrecision</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/isTestMode">&nbsp;&nbsp;isTestMode</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-					</div>
-					
-					
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/isTestMode" title="isTestMode"></a>
-	<h3 class="subsubtitle method-title">isTestMode</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>A <code>BOOL</code> to indicate whether the <code>PWAdsRequest</code> should run in test mode.</p>
-	</div>		
-	
-    
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, setter=setTestMode:) BOOL isTestMode</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PWAdsRequest.h</code><br />
-	</div>				
-	
-	
-</div>
 						
-						<div class="section-method">
-	<a name="//api/name/locationPrecision" title="locationPrecision"></a>
-	<h3 class="subsubtitle method-title">locationPrecision</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>An <code>NSUInteger</code> that sets the location precision information of the <code>PWAdsRequest</code>.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger locationPrecision</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PWAdsRequest.h</code><br />
-	</div>				
-	
-	
-</div>
 						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/requestWithAdZone:" title="requestWithAdZone:"></a>
-	<h3 class="subsubtitle method-title">requestWithAdZone:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Creates the <code>PWAdsRequest</code> object with the specified Zone ID.</p>
-	</div>		
-	
-    
 
-	<div class="method-subsection method-declaration"><code>+ (PWAdsRequest *)requestWithAdZone:(NSString *)<em>zone</em></code></div>
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/zoneID" title="zoneID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zoneID">&nbsp;&nbsp;zoneID</a></code>
+</h3>
 
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>zone</em></dt>
-			<dd><p>The Zone ID for which you want to request ads.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PWAdsRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/requestWithAdZone:andCustomParameters:" title="requestWithAdZone:andCustomParameters:"></a>
-	<h3 class="subsubtitle method-title">requestWithAdZone:andCustomParameters:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Creates the <code>PWAdsRequest</code> object with the specified Zone ID and any custom parameters.</p>
-	</div>		
-	
-    
+	<div class="method-info">
+		<div class="pointy-thing"></div>
 
-	<div class="method-subsection method-declaration"><code>+ (PWAdsRequest *)requestWithAdZone:(NSString *)<em>zone</em> andCustomParameters:(NSDictionary *)<em>theParams</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>zone</em></dt>
-			<dd><p>The Zone ID for which you want to request ads.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>theParams</em></dt>
-			<dd><p>An <code>NSDictionary</code> with key / value pairs of custom parameters.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PWAdsRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/customParameterForKey:" title="customParameterForKey:"></a>
-	<h3 class="subsubtitle method-title">customParameterForKey:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns the custom parameter that is set in the <code>PWAdsRequest</code> object for the given key.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (id)customParameterForKey:(NSString *)<em>key</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>key</em></dt>
-			<dd><p>The key for which you want to see the value.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PWAdsRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/removeCustomParameterForKey:" title="removeCustomParameterForKey:"></a>
-	<h3 class="subsubtitle method-title">removeCustomParameterForKey:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Removes the custom parameter in the <code>PWAdsRequest</code> object for the given key.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (id)removeCustomParameterForKey:(NSString *)<em>key</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>key</em></dt>
-			<dd><p>The key for which you want to remove the value.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PWAdsRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/setCustomParameter:forKey:" title="setCustomParameter:forKey:"></a>
-	<h3 class="subsubtitle method-title">setCustomParameter:forKey:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Sets the custom parameter in the <code>PWAdsRequest</code> object for the given key.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (id)setCustomParameter:(id)<em>value</em> forKey:(NSString *)<em>key</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>value</em></dt>
-			<dd><p>The value for which you want to set the key.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>key</em></dt>
-			<dd><p>The key for which you want to set the value.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PWAdsRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/updateLocation:" title="updateLocation:"></a>
-	<h3 class="subsubtitle method-title">updateLocation:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Updates the <code>PWAdsRequest</code> object with the user&rsquo;s location information.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)updateLocation:(CLLocation *)<em>location</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>location</em></dt>
-			<dd><p>The user&rsquo;s current location.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PWAdsRequest.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-                    
-                    
-				</div>
-				<div class="main-navigation navigation-bottom">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="footer">
-					<hr />
-					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Phunware, Inc.. All rights reserved. (Last updated: 2015-03-17)</span><br />
-						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
-						
-					</div>
-				</div>
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The id string of the zone of publisher site.</p>
 			</div>
-		</article>
-		<script type="text/javascript">
-			function jumpToChange()
-			{
-				window.location.hash = this.options[this.selectedIndex].value;
-			}
 			
-			function toggleTOC()
-			{
-				var contents = document.getElementById('contents');
-				var tocContainer = document.getElementById('tocContainer');
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *zoneID</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The id string of the zone of publisher site.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/location" title="location"></a>
+	<h3 class="method-title"><code><a href="#//api/name/location">&nbsp;&nbsp;location</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Geolocation for targeted ads.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) CLLocation *location</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Geolocation for targeted ads.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/keywords" title="keywords"></a>
+	<h3 class="method-title"><code><a href="#//api/name/keywords">&nbsp;&nbsp;keywords</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>List of keywords to that describe a request.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *keywords</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>List of keywords to that describe a request.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/numberOfAds" title="numberOfAds"></a>
+	<h3 class="method-title"><code><a href="#//api/name/numberOfAds">&nbsp;&nbsp;numberOfAds</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Number of ads requested. Only supported for requesting native ads.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSInteger numberOfAds</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Number of ads requested. Only supported for requesting native ads.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/testMode" title="testMode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/testMode">&nbsp;&nbsp;testMode</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether request is for test ads. Default is NO.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL testMode</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether request is for test ads. Default is NO.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithZoneID:" title="initWithZoneID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithZoneID:">&ndash;&nbsp;initWithZoneID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Designated initializer for PWAdsRequest.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithZoneID:(NSString *)<em>zoneID</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
 				
-				if (this.getAttribute('class') == 'open')
-				{
-					this.setAttribute('class', '');
-					contents.setAttribute('class', '');
-					tocContainer.setAttribute('class', '');
+					<tr>
+						<th scope="row" class="argument-name"><code>zoneID</code></th>
+						<td><p>The id string of the zone of publisher site</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Designated initializer for PWAdsRequest.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestWithZoneID:" title="requestWithZoneID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestWithZoneID:">+&nbsp;requestWithZoneID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and return a PWAdsRequest instance with given <a href="#//api/name/zoneID">zoneID</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (PWAdsRequest *)requestWithZoneID:(NSString *)<em>zoneID</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>zoneID</code></th>
+						<td><p>The id string of the zone of publisher site.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes and return a PWAdsRequest instance with given <a href="#//api/name/zoneID">zoneID</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isTestMode" title="isTestMode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isTestMode">&nbsp;&nbsp;isTestMode</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether request ads in test mode. Deprecated use <a href="#//api/name/testMode">testMode</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, setter=setTestMode:) BOOL isTestMode</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether request ads in test mode. Deprecated use <a href="#//api/name/testMode">testMode</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/locationPrecision" title="locationPrecision"></a>
+	<h3 class="method-title"><code><a href="#//api/name/locationPrecision">&nbsp;&nbsp;locationPrecision</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An <code>NSUInteger</code> that sets the <a href="#//api/name/location">location</a> precision information of the <code>PWAdsRequest</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger locationPrecision</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>An <code>NSUInteger</code> that sets the <a href="#//api/name/location">location</a> precision information of the <code>PWAdsRequest</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestWithAdZone:" title="requestWithAdZone:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestWithAdZone:">+&nbsp;requestWithAdZone:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates the <code>PWAdsRequest</code> object with the specified zone ID.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (PWAdsRequest *)requestWithAdZone:(NSString *)<em>zone</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>zone</code></th>
+						<td><p>The zone ID for which you want to request ads.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates the <code>PWAdsRequest</code> object with the specified zone ID.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestWithAdZone:andCustomParameters:" title="requestWithAdZone:andCustomParameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestWithAdZone:andCustomParameters:">+&nbsp;requestWithAdZone:andCustomParameters:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates the <code>PWAdsRequest</code> object with the specified zone ID and any custom parameters.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (PWAdsRequest *)requestWithAdZone:(NSString *)<em>zone</em> andCustomParameters:(NSDictionary *)<em>theParams</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>zone</code></th>
+						<td><p>The zone ID for which you want to request ads.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theParams</code></th>
+						<td><p>An <code>NSDictionary</code> with key / value pairs of custom parameters.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates the <code>PWAdsRequest</code> object with the specified zone ID and any custom parameters.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateLocation:" title="updateLocation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateLocation:">&ndash;&nbsp;updateLocation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Updates the <code>PWAdsRequest</code> object with the user&rsquo;s <a href="#//api/name/location">location</a> information.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateLocation:(CLLocation *)<em>location</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>location</code></th>
+						<td><p>The user&rsquo;s current <a href="#//api/name/location">location</a>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Updates the <code>PWAdsRequest</code> object with the user&rsquo;s <a href="#//api/name/location">location</a> information.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/customParameterForKey:" title="customParameterForKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/customParameterForKey:">&ndash;&nbsp;customParameterForKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the custom parameter that is set in the <code>PWAdsRequest</code> object for the given key.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)customParameterForKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The key for which you want to see the value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the custom parameter that is set in the <code>PWAdsRequest</code> object for the given key.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setCustomParameter:forKey:" title="setCustomParameter:forKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCustomParameter:forKey:">&ndash;&nbsp;setCustomParameter:forKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the custom parameter in the <code>PWAdsRequest</code> object for the given key.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)setCustomParameter:(id)<em>value</em> forKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>The value for which you want to set the key.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The key for which you want to set the value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets the custom parameter in the <code>PWAdsRequest</code> object for the given key.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeCustomParameterForKey:" title="removeCustomParameterForKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeCustomParameterForKey:">&ndash;&nbsp;removeCustomParameterForKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes the custom parameter in the <code>PWAdsRequest</code> object for the given key.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)removeCustomParameterForKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The key for which you want to remove the value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Removes the custom parameter in the <code>PWAdsRequest</code> object for the given key.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
 					
-					window.name = "hideTOC";
-				}
-				else
-				{
-					this.setAttribute('class', 'open');
-					contents.setAttribute('class', 'isShowingTOC');
-					tocContainer.setAttribute('class', 'isShowingTOC');
 					
-					window.name = "";
-				}
-				return false;
-			}
-			
-			function toggleTOCEntryChildren(e)
-			{
-				e.stopPropagation();
-				var currentClass = this.getAttribute('class');
-				if (currentClass == 'children') {
-					this.setAttribute('class', 'children open');
-				}
-				else if (currentClass == 'children open') {
-					this.setAttribute('class', 'children');
-				}
-				return false;
-			}
-			
-			function tocEntryClick(e)
-			{
-				e.stopPropagation();
-				return true;
-			}
-			
-			function init()
-			{
-				var selectElement = document.getElementById('jumpTo');
-				selectElement.addEventListener('change', jumpToChange, false);
-				
-				var tocButton = document.getElementById('table_of_contents');
-				tocButton.addEventListener('click', toggleTOC, false);
-				
-				var taskTreeItem = document.getElementById('task_treeitem');
-				if (taskTreeItem.getElementsByTagName('li').length > 0)
-				{
-					taskTreeItem.setAttribute('class', 'children');
-					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
-				}
-				
-				var tocList = document.getElementById('toc');
-				
-				var tocEntries = tocList.getElementsByTagName('li');
-				for (var i = 0; i < tocEntries.length; i++) {
-					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
-				}
-				
-				var tocLinks = tocList.getElementsByTagName('a');
-				for (var i = 0; i < tocLinks.length; i++) {
-					tocLinks[i].addEventListener('click', tocEntryClick, false);
-				}
-				
-				if (window.name == "hideTOC") {
-					toggleTOC.call(tocButton);
-				}
-			}
-			
-			window.onload = init;
-			
-			// If showing in Xcode, hide the TOC and Header
-			if (navigator.userAgent.match(/xcode/i)) {
-				document.getElementById("contents").className = "hideInXcode"
-				document.getElementById("tocContainer").className = "hideInXcode"
-				document.getElementById("top_header").className = "hideInXcode"
-			}
-			
-		</script>
-	</body>
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 Phunware,Inc. All rights reserved. Updated: 2016-06-02</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
 </html>
