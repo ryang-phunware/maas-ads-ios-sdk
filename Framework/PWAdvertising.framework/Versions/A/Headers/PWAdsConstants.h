@@ -10,41 +10,41 @@
 #ifndef PWAds_iOS_Sample_PWAdsConstants_h
 #define PWAds_iOS_Sample_PWAdsConstants_h
 
-#define PWADS_VERSION @"3.2.2"
+#define PWADS_VERSION @"3.3.0"
 
+#import <Foundation/Foundation.h>
 /**
  `PWAdsAdType` defines the available ad types for interstitial ads.
  */
-typedef enum {
+
+typedef NS_OPTIONS(unsigned int, PWAdsAdType) {
     PWAdsBannerAdType       = 0x01,
     PWAdsFullscreenAdType   = 0x02,
     PWAdsVideoAdType        = 0x04,
     PWAdsOfferWallType      = 0x08,
-} PWAdsAdType;
+};
 
 /**
  `PWAdsBannerHideDirection` defines the orientations in which you want to disable displaying ads.
  */
-typedef enum {
+typedef NS_ENUM(unsigned int, PWAdsBannerHideDirection) {
     PWAdsBannerHideNone,
     PWAdsBannerHideLeft,
     PWAdsBannerHideRight,
     PWAdsBannerHideUp,
     PWAdsBannerHideDown,
-} PWAdsBannerHideDirection;
+};
 
 /**
  `PWAdsVideoType` defines the available video types for video ads.
  */
-typedef enum {
+typedef NS_ENUM(unsigned int, PWAdsVideoType) {
     PWAdsVideoTypeAll,
     PWAdsVideoTypePreroll,
     PWAdsVideoTypeMidroll,
     PWAdsVideoTypePostroll,
-} PWAdsVideoType;
+};
 
-#define PWADS_PARAM_KEY_BANNER_ROTATE_INTERVAL @"RotateBannerInterval"
-#define PWADS_PARAM_KEY_BANNER_ERROR_TIMEOUT_INTERVAL @"ErrorRetryInterval"
 
 #define PWAdsDefaultLocationPrecision 6
 

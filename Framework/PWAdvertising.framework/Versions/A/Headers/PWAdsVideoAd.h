@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "PWAdsConstants.h"
 
-@interface PWAdsVideoAd : NSObject {
-
-}
+/**
+ @Deprecated
+ 
+ Class with video ad information.
+ */
+__deprecated_msg("PWAdsVideoAd has been deprecated.")
+@interface PWAdsVideoAd : NSObject
 
 @property(readonly, assign) PWAdsAdType adType;
-@property(readonly, retain) NSString *adId;
+@property(readonly, strong) NSString *adId;
 @property(readonly, assign) float creativeWidth;
 @property(readonly, assign) float creativeHeight;
 
@@ -24,11 +28,12 @@
 
 /// The URL of the media file chosen from the ad to play. Returns null if the
 /// information is not available.
-@property(readonly, retain) NSString *mediaUrl;
+@property(readonly, strong) NSString *mediaUrl;
 
-
-// Returns the current version string of this SDK.
-+(NSString *) getSDKVersionString;
+/**
+ Returns the current version string of this SDK.
+ */
++ (NSString *)getSDKVersionString;
 
 @end
 

@@ -160,7 +160,6 @@ var mraid = {
             // native app is relaying some sort of state change
             for(var param in data) {
                 if(data.hasOwnProperty(param)) {
-                    debugger;
                     if(param in nativeData) {
                         nativeData[param] = data[param];
                         msg += param + ": " + data[param] + " ";

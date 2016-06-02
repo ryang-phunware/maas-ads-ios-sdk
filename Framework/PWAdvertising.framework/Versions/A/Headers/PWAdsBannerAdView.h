@@ -9,33 +9,55 @@
 #import <CoreLocation/CoreLocation.h>
 #import "PWAdsConstants.h"
 
+
 @class PWAdsRequest;
 @protocol PWAdsBannerAdViewDelegate;
 
 /**
+ @Deprecated
  `PWAdsBannerAdView` implements a standard `PWAdsBannerAdView` into your app.
  */
-
+__deprecated_msg("PWAdsBannerAdView has been deprecated. Please use PWAdsBannerView instead.")
 @interface PWAdsBannerAdView : UIView
 
-///-----------------------
-/// @name Required Methods
-///-----------------------
+/// An `id` used to identify the 'PWAdsBannerAdViewDelegate' delegate.
+@property (weak, nonatomic) id<PWAdsBannerAdViewDelegate> delegate;
+
+/// A `BOOL` to signify whether or not you want the ad to animate in. The default value is `TRUE`.
+@property (assign, nonatomic) BOOL animated;
+
+/// A `BOOL` to signify whether or not you want the ad to automatically reposition to orientation changes. The default value is `TRUE`.
+@property (assign, nonatomic) BOOL autoReposition;
+
+/// A `BOOL` to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is `TRUE`.
+@property (assign, nonatomic) BOOL showLoadingOverlay;
+
+@property (assign, nonatomic) BOOL shouldReloadAfterTap DEPRECATED_ATTRIBUTE;
+
+/// A `BOOL` to signify whether or not the ad is currently serving ads.
+@property (readonly) BOOL isServingAds;
+
+/// A `PWAdsBannerHideDirection` that sets the orientations in which you do not want ads displayed.
+@property (assign) PWAdsBannerHideDirection hideDirection;
+
+/// The presenting `UIViewController`.
+@property (weak, nonatomic) UIViewController *presentingController;
+
+/// An `NSUInteger` that sets the location precision information of the `PWAdsRequest`.
+@property NSUInteger locationPrecision;
 
 /**
- Once a `PWAdsRequest` object is created and `PWAdsBannerAdView` is added to your view, this function should be called to begin serving ads in your app.
+ Once a `PWAdsRequest` object is created and `PWAdsBannerAdView` is added to your view, 
+ this function should be called to begin serving ads in your app.
+ 
  @param request The ad request with zone information and any custom parameters.
  */
 - (BOOL)startServingAdsForRequest:(PWAdsRequest *)request;
 
-///---------------
-/// @name Optional
-///---------------
-
 /**
  Updates the location parameters for the current `PWAdsRequest`.
  
- @param location The location to send to the current `PWAdsRequest`. This should be obtained from the app delegate.
+ @param location The location to send to the current `PWAdsRequest`.
  */
 - (void)updateLocation:(CLLocation *)location;
 
@@ -61,61 +83,18 @@
 
 /**
  Overrides a point to respond to orientation changes.
+ 
  @param toInterfaceOrientation The interface orientation to which the device has been repositioned.
  */
 - (void)repositionToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation;
 
-
-/**
- An `id` used to identify the 'PWAdsBannerAdViewDelegate' delegate.
- */
-@property (weak, nonatomic) id<PWAdsBannerAdViewDelegate> delegate;
-
-/**
- A `BOOL` to signify whether or not you want the ad to animate in. The default value is `TRUE`.
- */
-@property (assign, nonatomic) BOOL animated;
-
-/**
- A `BOOL` to signify whether or not you want the ad to automatically reposition to orientation changes. The default value is `TRUE`.
- */
-@property (assign, nonatomic) BOOL autoReposition;
-
-/**
- A `BOOL` to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is `TRUE`.
- */
-@property (assign, nonatomic) BOOL showLoadingOverlay;
-
-/**
- Deprecated attribute.
- */
-@property (assign, nonatomic) BOOL shouldReloadAfterTap DEPRECATED_ATTRIBUTE;
-
-/**
- A `BOOL` to signify whether or not the ad is currently serving ads.
- */
-@property (readonly) BOOL isServingAds;
-
-/**
- A `PWAdsBannerHideDirection` that sets the orientations in which you do not want ads displayed.
- */
-@property (assign) PWAdsBannerHideDirection hideDirection;
-
-/**
- The presenting `UIViewController`.
- */
-@property (assign, nonatomic) UIViewController *presentingController;
-
-/**
- An `NSUInteger` that sets the location precision information of the `PWAdsRequest`.
- */
-@property NSUInteger locationPrecision;
-
 @end
 
 /**
+ @Deprecated
  A `PWAdsBannerAdViewDelegate` is needed to receive notifications about the banner ad status.
  */
+__deprecated_msg("PWAdsBannerAdViewDelegate has been deprecated.")
 @protocol PWAdsBannerAdViewDelegate <NSObject>
 @optional
 

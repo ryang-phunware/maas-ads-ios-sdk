@@ -1,7 +1,7 @@
 MaaS Advertising iOS SDK
 ================
 
-Version 3.2.2
+Version 3.3.0
 
 This is Phunware's iOS SDK for the MaaS Advertising module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -33,13 +33,14 @@ CoreMedia.framework
 AVFoundation.framework
 MediaPlayer.framework
 AudioToolbox.framework
+WebKit.framework
 AdSupport.framework - enable support for IDFA
 StoreKit.framework - enable use of SKStoreProductViewController, displays app store ads without leaving your app
 ````
 
 MaaS Advertising has a dependency on MaaSCore.framework, which is available here: https://github.com/phunware/maas-core-ios-sdk
 
-It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and MaaSAdvertising.framework, as well as any other MaaS frameworks that you are using.
+It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and PWAdvertising.framework, as well as any other MaaS frameworks that you are using.
 
 **In the Build Settings for your target, you must include the following "Other Linker Flags:" -ObjC**
 
@@ -69,12 +70,11 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 
 ~~~~
 // In your AppDelegate.m file:
-#import <MaaSAdvertising/PWAdsAppTracker.h>
-
+#import <PWAdvertising/PWAdsAppTracker.h>
 ...
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     PWAdsAppTracker *appTracker = [PWAdsAppTracker sharedAppTracker];
     [appTracker reportApplicationOpen];
     return YES;
@@ -86,141 +86,110 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 
 ~~~~
 // In your .h file:
-#import <MaaSAdvertising/PWAdsBannerAdView.h>
-@property (retain, nonatomic) PWAdsBannerAdView *pwAd;
-
+#import <PWAdvertising/PWAdsBannerView.h>
+@property (strong, nonatomic) PWAdsBannerView *pwAd;
 ...
 
 // In your .m file:
-#import <MaaSAdvertising/PWAds.h>
-...
-// Init banner and add to your view:
-pwAd = [[PWAdsBannerAdView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-[self.view addSubview:self.pwAd];
+- (void)viewDidLoad
+{
+    self.pwAd = [[PWAdsBannerView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    [self.view addSubview:self.pwAd];
+    // To create adsRequest:
+    PWAdsRequest *adsRequest = [PWAdsRequest requestWithZoneID:@"**YOUR ZONE ID**"];
 
-// To kick off banner rotation:
-[self.pwAd startServingAdsForRequest:[PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"]];
+    //To set customized parameters:
+    [adsRequest setValue:@"**YOUR CREATIVE ID**" forKey:@"creativeID"];
+    adRequest.testMode = YES;//set test mode,Default is NO.
+    
+    // To kick off banner rotation
+    [self.pwAd loadAdsRequest:adsRequest]];
+    ...
+}
 
-...
-
-// To hide and cancel ads: 
-[self.pwAd hide];
-[self.pwAd cancelAds];
 ~~~~
-
-
 
 ### Interstitial Usage
 
-#### Show Modally
-
 ~~~~
 // In your .h file:
-#import <MaaSAdvertising/PWAdsInterstitialAd.h>
-...
-@property (retain, nonatomic) PWAdsInterstitialAd *interstitialAd;
-
+#import <PWAdvertising/PWAdsInterstitial.h>
 ...
 
-// In your .m file: 
-#import <MaaSAdvertising/PWAds.h>
-...
-// Init and load interstitial:
-self.interstitialAd = [[PWAdsInterstitialAd alloc] init];
-self.interstitialAd.delegate = self; // notify me of the interstitial's state changes
-PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
-[self.interstitialAd loadInterstitialForRequest:request];
-
+@property (strong, nonatomic) PWAdsInterstitial *interstitialAd;
 ...
 
-- (void)pwInterstitialAdDidLoad:(PWAdsInterstitialAd *)interstitialAd {
-    // The ad is ready for display. Show it!
+// In your .m file:
+- (void)viewDidLoad 
+{
+    self.interstitialAd = [PWAdsInterstitial new];
+    self.interstitialAd.delegate = self;
+    PWAdsRequest *request = [PWAdsRequest requestWithZoneID:@"**YOUR ZONE ID**"];
+    [self.interstitialAd loadAdsRequest:request];
+    ...
+}
+
+- (void)interstitialDidLoadAd:(PWAdsInterstitial *)interstitialAd
+{
     [self.interstitialAd presentFromViewController:self];
 }
 ~~~~
 
+### Video Interstitial Ads Usage
 
-#### Include in Paged Navigation
-    
-~~~~
-@property (retain, nonatomic) PWAdsInterstitialAd *interstitialAd;
-
+~~~~  
+// In your .h file:
+#import <PWAdvertising/PWAdsVideoInterstitial.h>
 ...
 
-// Init and load interstitial:
-self.interstitialAd = [[PWAdsInterstitialAd alloc] init];
-PWAdsRequest *request = [PWAdsRequest requestWithAdZone:@"**YOUR ZONE ID**"];
-[self.interstitialAd loadInterstitialForRequest:request];
-
+@property (strong, nonatomic) PWAdsVideoInterstitial *videoInterstitial;
 ...
 
-// If the interstitial ad is ready, show it using:
-if( self.interstitialAd.isLoaded ) {
-    [self.interstitialAd presentInView:self.view];
-}
-~~~~
-
-### Video Ads Usage
-
-When requesting a video ad from the server, a TVASTAdsRequest object must be instantiated and its zoneId parameter specified. This parameter is required for a successful retrieval of the ad.
-
-~~~~    
-    // Create an adsRequest object and request ads from the ad server with your own ZONE_ID.
-    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:**YOUR ZONE ID**;
-    [_videoAd requestAdsWithRequestObject:request];
-~~~~
-
-If you want to specify the type of video ad you are requesting, use the call below.
-
-~~~~    
-    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:**YOUR ZONE ID**];
-    [_videoAd requestAdsWithRequestObject:request andVideoType:PWAdsVideoTypeMidroll];
-~~~~
-
-(Essentially, what needs to be included in the code is as follows:)
-
-~~~~
+// In your .m file:
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    _videoAd = [[PWAdsVideoInterstitialAd alloc] init];
-    _videoAd.delegate = self;
-    
-    // OPTIONAL: Override the presentingViewController (defaults to the delegate).
-    // _videoAd.presentingViewController = self;
+    self.videoInterstitial = [PWAdsVideoInterstitial new];
+    self.videoInterstitial.delegate = self;
+    ...
 }
 
-- (void)requestAds {    
-    // Create an adsRequest object and request ads from the ad server with your own ZONE_ID.
-    TVASTAdsRequest *request = [TVASTAdsRequest requestWithAdZone:**YOUR ZONE ID**];
-    [_videoAd requestAdsWithRequestObject:request];
-    
-    // If you want to specify the type of video ad you are requesting, use the call below.
-    // [_videoAd requestAdsWithRequestObject:request andVideoType:PWAdsVideoTypeMidroll];
+- (void)requestAds 
+{    
+    PWAdsRequest *request = [PWAdsRequest requestWithZoneID:**YOUR ZONE ID**];
+    [self.videoInterstitial loadAdsRequest:adsRequest];
 }
 
-- (IBAction)onRequestAds {
+- (IBAction)onRequestAds 
+{
     [self requestAds];
 }
 
-- (void)pwVideoInterstitialAdDidFinish:(PWAdsVideoInterstitialAd *)videoAd {
-    NSLog(@"Override point for resuming your app's content.");
-    [_videoAd unloadAdsManager];
+#pragma mark - PWAdsVideoInterstitialDelegate
+
+- (void)videoInterstitialDidLoadAd:(PWAdsVideoInterstitial *)videoInterstitial 
+{
+    NSLog(@"videoInterstitialDidLoadAd:");
+    [self.videoInterstitial presentFromViewController:self];
 }
 
-- (void)viewDidUnload {
-    [_videoAd unloadAdsManager];
-    [super viewDidUnload];
+- (void)videoInterstitial:(PWAdsVideoInterstitial *)videoInterstitial didFailError:(NSError *)error 
+{
+    NSLog(@"videoInterstitial:didFailError:");
 }
 
-- (void)pwVideoInterstitialAdDidLoad:(PWAdsVideoInterstitialAd *)videoAd {
-    NSLog(@"We received an ad... now show it.");
-    [videoAd playVideoFromAdsManager];
+- (void)videoInterstitialDidPresentModal:(PWAdsVideoInterstitial *)videoInterstitial 
+{
+    NSLog(@"videoInterstitialDidPresentModal:");
 }
 
-- (void)pwVideoInterstitialAdDidFail:(PWAdsVideoInterstitialAd *)videoAd withErrorString:(NSString *)error {
-    NSLog(@"%@", error);
+- (void)videoInterstitialWillDismissModal:(PWAdsVideoInterstitial *)videoInterstitial 
+{
+    NSLog(@"videoInterstitialWillDismissModal:");
+}
+
+- (void)videoInterstitialDidDismissModal:(PWAdsVideoInterstitial *)videoInterstitial 
+{
+    NSLog(@"videoInterstitialDidDismissModal:");
 }
 ~~~~
 
@@ -228,54 +197,52 @@ If you want to specify the type of video ad you are requesting, use the call bel
 
 ~~~~
 // In your .h file:
-#import <MaaSAdvertising/PWAdsNativeAdManager.h>
+#import <PWAdvertising/PWAdsNativeAdLoader.h>
+#import <PWAdvertising/PWAdsRequest.h>
+#import <PWAdvertising/PWAdsNativeAdView.h>
 
-@interface MyViewController : UIViewController <PWAdsNativeAdDelegate>
+@interface MyViewController : UIViewController <PWAdsNativeAdLoaderDelegate>
 
-@property (nonatomic, retain) PWAdsNativeAdManager *pwNativeManager;
+@property (nonatomic, retain) PWAdsNativeAdLoader *nativeAdLoader;
 ...
 
 // In your .m file:
-#import <MaaSAdvertising/PWAds.h>
 ...
-pwNativeManager = [[PWAdsNativeAdManager alloc] init];
-pwNativeManager.delegate = self;
-PWAdsRequest *request = [PWAdsRequest requestWithAdZone:*YOUR ZONE ID* andCustomParameters:params];
-[pwNativeManager getAdsForRequest:request withRequestedNumberOfAds:10];
+_nativeAdLoader = [PWAdsNativeAdLoader new];
+_nativeAdLoader.delegate = self;
+
+// Create ad request with the specified Zone ID.
+PWAdsRequest *adsRequest = [PWAdsRequest requestWithZoneID:_zoneId];
+[_nativeAdLoader loadAdsRequest:adsRequest];
+
 ...
 
-- (void)pwNativeAdManagerDidLoad:(PWAdsNativeAdManager *)nativeAdManager {
-    PWAdsNativeAd *newAd = [nativeAdManager.allNativeAds objectAtIndex:0];
+- (void)nativeAdLoaderDidLoadAds:(NSArray *)nativeAds {
+
+    PWAdsNativeAd *newAd = [nativeAds lastObject]
+
+    // Create new Native Ad View
+    PWAdsNativeAdView *nativeView = (PWAdsNativeAdView *)[[PWAdsNativeAdView alloc] initWithFrame:CGRectMake(x,y,width,height)];
+    nativeView.delegate = self;
+    nativeView.nativeAd = newAd;
+    adView = nativeView;
 
     // Get data from `newAd` and add fields to your view:
     ...
     UILabel *titleLabel = [[UILabel alloc] init];
-    [titleLabel setFrame:CGRectMake(10,50,300,20)];
+    [titleLabel setFrame:CGRectMake(startingPointX,10,300,20)];
     titleLabel.backgroundColor=[UIColor clearColor];
     titleLabel.textColor=[UIColor blackColor];
     titleLabel.userInteractionEnabled=YES;
+    titleLabel.font = [UIFont systemFontOfSize:12];
     titleLabel.text = newAd.adTitle;
-    [self.view addSubview:titleLabel];
-    [titleLabel release];
-    ...
-
-    // Add a touch recognizer to native element(s) to enable landing page access.
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTapped)];
-    tapGestureRecognizer.numberOfTapsRequired = 1;
-    [titleLabel addGestureRecognizer:tapGestureRecognizer];
-    // Log the native ad impression.
-
-    [nativeAdManager logNativeAdImpression:newAd];
+    [adView addSubview:titleLabel];
 }
 
-- (void)labelTapped {
-    PWAdsNativeAd *newAd = [pwNativeManager.allNativeAds objectAtIndex:0];
-    [pwNativeManager nativeAdWasTouched:newAd];
+- (void)nativeAdLoader:(PWAdsNativeAdLoader *)loader didFailWithError:(NSError *)error {
+    NSLog(@"Native Ad Loader failed to load with the following error: %@", error.localizedDescription);
 }
 
-- (void)pwNativeAdManager:(PWAdsNativeAdManager *)nativeAdManager didFailToReceiveAdWithError:(NSError *)error {
-    NSLog(@"Native Ad Manager failed to load with the following error: %@", error.localizedDescription);
-}
 ...
 
 ~~~~
@@ -285,7 +252,7 @@ PWAdsRequest *request = [PWAdsRequest requestWithAdZone:*YOUR ZONE ID* andCustom
 If you want to allow for geotargeting, listen for location updates:
 
 ~~~~
-@property (retain, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 ...
 

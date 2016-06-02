@@ -7,24 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A4538A21D00D1A40005BF9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538901D00D1A40005BF9C /* AppDelegate.m */; };
+		4A4538A31D00D1A40005BF9C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538921D00D1A40005BF9C /* MasterViewController.m */; };
+		4A4538A41D00D1A40005BF9C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538941D00D1A40005BF9C /* DetailViewController.m */; };
+		4A4538A51D00D1A40005BF9C /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538961D00D1A40005BF9C /* BannerViewController.m */; };
+		4A4538A61D00D1A40005BF9C /* MediumRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538981D00D1A40005BF9C /* MediumRectViewController.m */; };
+		4A4538A71D00D1A40005BF9C /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45389A1D00D1A40005BF9C /* InterstitialViewController.m */; };
+		4A4538A81D00D1A40005BF9C /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45389C1D00D1A40005BF9C /* VideoViewController.m */; };
+		4A4538A91D00D1A40005BF9C /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45389E1D00D1A40005BF9C /* NativeViewController.m */; };
+		4A4538AA1D00D1A40005BF9C /* AdUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538A01D00D1A40005BF9C /* AdUnit.m */; };
+		4A4538AB1D00D1A40005BF9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4538A11D00D1A40005BF9C /* Main.storyboard */; };
+		4A4538AE1D00D1B30005BF9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4538AC1D00D1B30005BF9C /* LaunchScreen.storyboard */; };
+		4A4538AF1D00D1B30005BF9C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A4538AD1D00D1B30005BF9C /* Info.plist */; };
+		4A4538B11D00D1C00005BF9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4538B01D00D1C00005BF9C /* Assets.xcassets */; };
+		4A4538B31D00D2A20005BF9C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A4538B21D00D2A20005BF9C /* Default-568h@2x.png */; };
+		4A4538B61D00D5270005BF9C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4538B51D00D5270005BF9C /* WebKit.framework */; };
 		B03E55FA1868BA3100AD3CF2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55F91868BA3100AD3CF2 /* AVFoundation.framework */; };
 		B03E55FC1868BA4A00AD3CF2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */; };
 		B03E55FE1868BA5900AD3CF2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */; };
-		B0C20A5C1BB9D8F400CE417E /* PWAdvertising.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C20A5B1BB9D8F400CE417E /* PWAdvertising.framework */; settings = {ASSET_TAGS = (); }; };
-		B0C20A5E1BB9D92200CE417E /* PWAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0C20A5D1BB9D92200CE417E /* PWAds.bundle */; settings = {ASSET_TAGS = (); }; };
+		B0C20A5C1BB9D8F400CE417E /* PWAdvertising.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C20A5B1BB9D8F400CE417E /* PWAdvertising.framework */; };
+		B0C20A5E1BB9D92200CE417E /* PWAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0C20A5D1BB9D92200CE417E /* PWAds.bundle */; };
 		CD573B071889D8AE0040BFB8 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD573B061889D8AE0040BFB8 /* EventKit.framework */; };
 		CD573B091889D8EF0040BFB8 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD573B081889D8EF0040BFB8 /* EventKitUI.framework */; };
 		CD5CA941184D11EC008B5568 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA940184D11EC008B5568 /* Foundation.framework */; };
 		CD5CA943184D11EC008B5568 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA942184D11EC008B5568 /* CoreGraphics.framework */; };
 		CD5CA945184D11EC008B5568 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA944184D11EC008B5568 /* UIKit.framework */; };
-		CD5CA94B184D11EC008B5568 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD5CA949184D11EC008B5568 /* InfoPlist.strings */; };
 		CD5CA94D184D11EC008B5568 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA94C184D11EC008B5568 /* main.m */; };
-		CD5CA951184D11EC008B5568 /* MaaSAdvertisingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA950184D11EC008B5568 /* MaaSAdvertisingAppDelegate.m */; };
-		CD5CA954184D11EC008B5568 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5CA952184D11EC008B5568 /* Main_iPhone.storyboard */; };
-		CD5CA957184D11EC008B5568 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5CA955184D11EC008B5568 /* Main_iPad.storyboard */; };
-		CD5CA95A184D11EC008B5568 /* MaaSAdvertisingBannerExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA959184D11EC008B5568 /* MaaSAdvertisingBannerExampleViewController.m */; };
-		CD5CA95D184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA95C184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.m */; };
-		CD5CA95F184D11EC008B5568 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5CA95E184D11EC008B5568 /* Images.xcassets */; };
 		CD5CA966184D11EC008B5568 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA965184D11EC008B5568 /* XCTest.framework */; };
 		CD5CA967184D11EC008B5568 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA940184D11EC008B5568 /* Foundation.framework */; };
 		CD5CA968184D11EC008B5568 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA944184D11EC008B5568 /* UIKit.framework */; };
@@ -36,8 +44,6 @@
 		CD5CA982184D123B008B5568 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA981184D123B008B5568 /* CoreTelephony.framework */; };
 		CD5CA984184D1240008B5568 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA983184D1240008B5568 /* QuartzCore.framework */; };
 		CD5CA986184D1248008B5568 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA985184D1248008B5568 /* SystemConfiguration.framework */; };
-		CD5CA994184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */; };
-		CD6C17491A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6C17481A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.m */; };
 		CD8743491851086A005FBC0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CD8743481851086A005FBC0A /* README.md */; };
 		CDEC25BB184E566B00D7647E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEC25BA184E566B00D7647E /* MessageUI.framework */; };
 /* End PBXBuildFile section */
@@ -53,10 +59,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A45388F1D00D1A40005BF9C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4A4538901D00D1A40005BF9C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4A4538911D00D1A40005BF9C /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		4A4538921D00D1A40005BF9C /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		4A4538931D00D1A40005BF9C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4A4538941D00D1A40005BF9C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		4A4538951D00D1A40005BF9C /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
+		4A4538961D00D1A40005BF9C /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		4A4538971D00D1A40005BF9C /* MediumRectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediumRectViewController.h; sourceTree = "<group>"; };
+		4A4538981D00D1A40005BF9C /* MediumRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediumRectViewController.m; sourceTree = "<group>"; };
+		4A4538991D00D1A40005BF9C /* InterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
+		4A45389A1D00D1A40005BF9C /* InterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
+		4A45389B1D00D1A40005BF9C /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		4A45389C1D00D1A40005BF9C /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		4A45389D1D00D1A40005BF9C /* NativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeViewController.h; sourceTree = "<group>"; };
+		4A45389E1D00D1A40005BF9C /* NativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeViewController.m; sourceTree = "<group>"; };
+		4A45389F1D00D1A40005BF9C /* AdUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdUnit.h; sourceTree = "<group>"; };
+		4A4538A01D00D1A40005BF9C /* AdUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdUnit.m; sourceTree = "<group>"; };
+		4A4538A11D00D1A40005BF9C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4A4538AC1D00D1B30005BF9C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A4538AD1D00D1B30005BF9C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A4538B01D00D1C00005BF9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A4538B21D00D2A20005BF9C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4A4538B41D00D2DC0005BF9C /* PWAdsSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PWAdsSample-Prefix.pch"; sourceTree = "<group>"; };
+		4A4538B51D00D5270005BF9C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B03E55F91868BA3100AD3CF2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B03E55FB1868BA4A00AD3CF2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B03E55FD1868BA5900AD3CF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		B0C20A581BB9D38E00CE417E /* PWAdsSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PWAdsSample-Prefix.pch"; sourceTree = "<group>"; };
 		B0C20A5B1BB9D8F400CE417E /* PWAdvertising.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PWAdvertising.framework; path = ../Framework/PWAdvertising.framework; sourceTree = "<group>"; };
 		B0C20A5D1BB9D92200CE417E /* PWAds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PWAds.bundle; path = ../Framework/PWAds.bundle; sourceTree = "<group>"; };
 		CD573B061889D8AE0040BFB8 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -65,18 +95,7 @@
 		CD5CA940184D11EC008B5568 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD5CA942184D11EC008B5568 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CD5CA944184D11EC008B5568 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		CD5CA948184D11EC008B5568 /* MaaSAdvertising-iOS-Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MaaSAdvertising-iOS-Sample-Info.plist"; sourceTree = "<group>"; };
-		CD5CA94A184D11EC008B5568 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CD5CA94C184D11EC008B5568 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CD5CA94F184D11EC008B5568 /* MaaSAdvertisingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingAppDelegate.h; sourceTree = "<group>"; };
-		CD5CA950184D11EC008B5568 /* MaaSAdvertisingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingAppDelegate.m; sourceTree = "<group>"; };
-		CD5CA953184D11EC008B5568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		CD5CA956184D11EC008B5568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		CD5CA958184D11EC008B5568 /* MaaSAdvertisingBannerExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingBannerExampleViewController.h; sourceTree = "<group>"; };
-		CD5CA959184D11EC008B5568 /* MaaSAdvertisingBannerExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingBannerExampleViewController.m; sourceTree = "<group>"; };
-		CD5CA95B184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingInterstitialExampleViewController.h; sourceTree = "<group>"; };
-		CD5CA95C184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingInterstitialExampleViewController.m; sourceTree = "<group>"; };
-		CD5CA95E184D11EC008B5568 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD5CA964184D11EC008B5568 /* MaaSAdvertising-iOS-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MaaSAdvertising-iOS-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5CA965184D11EC008B5568 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CD5CA96D184D11EC008B5568 /* MaaSAdvertising-iOS-SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MaaSAdvertising-iOS-SampleTests-Info.plist"; sourceTree = "<group>"; };
@@ -88,10 +107,6 @@
 		CD5CA981184D123B008B5568 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		CD5CA983184D1240008B5568 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CD5CA985184D1248008B5568 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		CD5CA992184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingVideoExampleViewController.h; sourceTree = "<group>"; };
-		CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingVideoExampleViewController.m; sourceTree = "<group>"; };
-		CD6C17471A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaaSAdvertisingNativeExampleViewController.h; sourceTree = "<group>"; };
-		CD6C17481A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaaSAdvertisingNativeExampleViewController.m; sourceTree = "<group>"; };
 		CD8743481851086A005FBC0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CDEC25BA184E566B00D7647E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -101,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4538B61D00D5270005BF9C /* WebKit.framework in Frameworks */,
 				CD573B091889D8EF0040BFB8 /* EventKitUI.framework in Frameworks */,
 				CD573B071889D8AE0040BFB8 /* EventKit.framework in Frameworks */,
 				B03E55FE1868BA5900AD3CF2 /* AudioToolbox.framework in Frameworks */,
@@ -136,6 +152,7 @@
 		CD5CA934184D11EC008B5568 = {
 			isa = PBXGroup;
 			children = (
+				4A4538B21D00D2A20005BF9C /* Default-568h@2x.png */,
 				CD8743481851086A005FBC0A /* README.md */,
 				B0C20A5D1BB9D92200CE417E /* PWAds.bundle */,
 				CD5CA946184D11EC008B5568 /* MaaSAdvertising-iOS-Sample */,
@@ -157,6 +174,7 @@
 		CD5CA93F184D11EC008B5568 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A4538B51D00D5270005BF9C /* WebKit.framework */,
 				B0C20A5B1BB9D8F400CE417E /* PWAdvertising.framework */,
 				CD573B081889D8EF0040BFB8 /* EventKitUI.framework */,
 				CD573B061889D8AE0040BFB8 /* EventKit.framework */,
@@ -181,19 +199,28 @@
 		CD5CA946184D11EC008B5568 /* MaaSAdvertising-iOS-Sample */ = {
 			isa = PBXGroup;
 			children = (
-				CD5CA952184D11EC008B5568 /* Main_iPhone.storyboard */,
-				CD5CA955184D11EC008B5568 /* Main_iPad.storyboard */,
-				CD5CA94F184D11EC008B5568 /* MaaSAdvertisingAppDelegate.h */,
-				CD5CA950184D11EC008B5568 /* MaaSAdvertisingAppDelegate.m */,
-				CD5CA958184D11EC008B5568 /* MaaSAdvertisingBannerExampleViewController.h */,
-				CD5CA959184D11EC008B5568 /* MaaSAdvertisingBannerExampleViewController.m */,
-				CD5CA95B184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.h */,
-				CD5CA95C184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.m */,
-				CD5CA992184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.h */,
-				CD5CA993184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m */,
-				CD6C17471A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.h */,
-				CD6C17481A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.m */,
-				CD5CA95E184D11EC008B5568 /* Images.xcassets */,
+				4A45388F1D00D1A40005BF9C /* AppDelegate.h */,
+				4A4538901D00D1A40005BF9C /* AppDelegate.m */,
+				4A4538911D00D1A40005BF9C /* MasterViewController.h */,
+				4A4538921D00D1A40005BF9C /* MasterViewController.m */,
+				4A4538931D00D1A40005BF9C /* DetailViewController.h */,
+				4A4538941D00D1A40005BF9C /* DetailViewController.m */,
+				4A4538951D00D1A40005BF9C /* BannerViewController.h */,
+				4A4538961D00D1A40005BF9C /* BannerViewController.m */,
+				4A4538971D00D1A40005BF9C /* MediumRectViewController.h */,
+				4A4538981D00D1A40005BF9C /* MediumRectViewController.m */,
+				4A4538991D00D1A40005BF9C /* InterstitialViewController.h */,
+				4A45389A1D00D1A40005BF9C /* InterstitialViewController.m */,
+				4A45389B1D00D1A40005BF9C /* VideoViewController.h */,
+				4A45389C1D00D1A40005BF9C /* VideoViewController.m */,
+				4A45389D1D00D1A40005BF9C /* NativeViewController.h */,
+				4A45389E1D00D1A40005BF9C /* NativeViewController.m */,
+				4A45389F1D00D1A40005BF9C /* AdUnit.h */,
+				4A4538A01D00D1A40005BF9C /* AdUnit.m */,
+				4A4538A11D00D1A40005BF9C /* Main.storyboard */,
+				4A4538B01D00D1C00005BF9C /* Assets.xcassets */,
+				4A4538AC1D00D1B30005BF9C /* LaunchScreen.storyboard */,
+				4A4538AD1D00D1B30005BF9C /* Info.plist */,
 				CD5CA947184D11EC008B5568 /* Supporting Files */,
 			);
 			path = "MaaSAdvertising-iOS-Sample";
@@ -202,9 +229,7 @@
 		CD5CA947184D11EC008B5568 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B0C20A581BB9D38E00CE417E /* PWAdsSample-Prefix.pch */,
-				CD5CA948184D11EC008B5568 /* MaaSAdvertising-iOS-Sample-Info.plist */,
-				CD5CA949184D11EC008B5568 /* InfoPlist.strings */,
+				4A4538B41D00D2DC0005BF9C /* PWAdsSample-Prefix.pch */,
 				CD5CA94C184D11EC008B5568 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -306,11 +331,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD8743491851086A005FBC0A /* README.md in Resources */,
-				CD5CA957184D11EC008B5568 /* Main_iPad.storyboard in Resources */,
-				CD5CA95F184D11EC008B5568 /* Images.xcassets in Resources */,
-				CD5CA954184D11EC008B5568 /* Main_iPhone.storyboard in Resources */,
-				CD5CA94B184D11EC008B5568 /* InfoPlist.strings in Resources */,
+				4A4538AB1D00D1A40005BF9C /* Main.storyboard in Resources */,
+				4A4538AE1D00D1B30005BF9C /* LaunchScreen.storyboard in Resources */,
 				B0C20A5E1BB9D92200CE417E /* PWAds.bundle in Resources */,
+				4A4538B11D00D1C00005BF9C /* Assets.xcassets in Resources */,
+				4A4538B31D00D2A20005BF9C /* Default-568h@2x.png in Resources */,
+				4A4538AF1D00D1B30005BF9C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,12 +355,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5CA994184D2146008B5568 /* MaaSAdvertisingVideoExampleViewController.m in Sources */,
+				4A4538A21D00D1A40005BF9C /* AppDelegate.m in Sources */,
+				4A4538A61D00D1A40005BF9C /* MediumRectViewController.m in Sources */,
+				4A4538A31D00D1A40005BF9C /* MasterViewController.m in Sources */,
 				CD5CA94D184D11EC008B5568 /* main.m in Sources */,
-				CD5CA95D184D11EC008B5568 /* MaaSAdvertisingInterstitialExampleViewController.m in Sources */,
-				CD6C17491A489D6A009FA29E /* MaaSAdvertisingNativeExampleViewController.m in Sources */,
-				CD5CA95A184D11EC008B5568 /* MaaSAdvertisingBannerExampleViewController.m in Sources */,
-				CD5CA951184D11EC008B5568 /* MaaSAdvertisingAppDelegate.m in Sources */,
+				4A4538AA1D00D1A40005BF9C /* AdUnit.m in Sources */,
+				4A4538A71D00D1A40005BF9C /* InterstitialViewController.m in Sources */,
+				4A4538A41D00D1A40005BF9C /* DetailViewController.m in Sources */,
+				4A4538A81D00D1A40005BF9C /* VideoViewController.m in Sources */,
+				4A4538A51D00D1A40005BF9C /* BannerViewController.m in Sources */,
+				4A4538A91D00D1A40005BF9C /* NativeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,30 +387,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CD5CA949184D11EC008B5568 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD5CA94A184D11EC008B5568 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CD5CA952184D11EC008B5568 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD5CA953184D11EC008B5568 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		CD5CA955184D11EC008B5568 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD5CA956184D11EC008B5568 /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		CD5CA96E184D11EC008B5568 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -469,7 +475,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -478,11 +483,9 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MaaSAdvertising-iOS-Sample/PWAdsSample-Prefix.pch";
-				INFOPLIST_FILE = "MaaSAdvertising-iOS-Sample/MaaSAdvertising-iOS-Sample-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/GoogleAdMobAdsSDK",
-				);
+				INFOPLIST_FILE = "MaaSAdvertising-iOS-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.phunware.${PRODUCT_NAME:rfc1034identifier}";
@@ -495,7 +498,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -504,11 +506,9 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MaaSAdvertising-iOS-Sample/PWAdsSample-Prefix.pch";
-				INFOPLIST_FILE = "MaaSAdvertising-iOS-Sample/MaaSAdvertising-iOS-Sample-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/GoogleAdMobAdsSDK",
-				);
+				INFOPLIST_FILE = "MaaSAdvertising-iOS-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.phunware.${PRODUCT_NAME:rfc1034identifier}";

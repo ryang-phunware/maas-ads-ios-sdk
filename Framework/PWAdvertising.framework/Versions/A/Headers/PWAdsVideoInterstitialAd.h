@@ -16,53 +16,38 @@
 #import "PWAdsVideoAdClickThroughBrowser.h"
 #import "PWAdsConstants.h"
 
-@class PWAdsVideoInterstitialAd, FullScreenVC;
+@class PWAdsVideoInterstitialAd, PWAdsFullScreenVC;
+@protocol PWAdsVideoInterstitialAdDelegate;
 
 /**
- A `PWAdsVideoInterstitialAdDelegate` is needed to receive notifications about video ad status.
- */
-@protocol PWAdsVideoInterstitialAdDelegate <NSObject>
-
-@required
-
-///-----------------------
-/// @name Required Methods
-///-----------------------
-
-/**
- Called when the adsLoader receives a video and is ready to play (required).
- @param videoAd The video ad that was loaded.
- */
-- (void)pwVideoInterstitialAdDidLoad:(PWAdsVideoInterstitialAd *)videoAd;
-
-/**
- Gets called when the video ad has finished playing and the screen returns to your app.
- @param videoAd The video ad that finished playing.
- */
-- (void)pwVideoInterstitialAdDidFinish:(PWAdsVideoInterstitialAd *)videoAd;
-
-/**
- Gets called if there are no ads to display.
- @param videoAd The video ad that failed to load.
- @param error The error string detailing why the video ad failed to play.
- */
-- (void)pwVideoInterstitialAdDidFail:(PWAdsVideoInterstitialAd *)videoAd withErrorString:(NSString *)error;
-@end
-
-/**
+ @Deprecated
  `PWAdsVideoInterstitialAd` implements a standard `PWAdsVideoInterstitialAd` into your app.
  */
+__deprecated_msg("PWAdsVideoInterstitialAd has been deprecated.")
 @interface PWAdsVideoInterstitialAd : NSObject <PWAdsVideoAdsLoaderDelegate,
 PWAdsVideoAdClickTrackingUIViewDelegate, PWAdsVideoManagerDelegate,
 PWAdsVideoAdClickThroughBrowserDelegate>
 
-/**
- `PWAdsVideoInterstitialAd` implements a standard `PWAdsVideoInterstitialAd` into your app.
- */
+/// An `id` used to identify the 'PWAdsVideoInterstitialAdDelegate' delegate.
+@property (weak, nonatomic) id<PWAdsVideoInterstitialAdDelegate> delegate;
 
-///-----------------------
-/// @name Required Methods
-///-----------------------
+/// A `PWAdsVideoManager` is the manager of video ads.
+@property(nonatomic, strong) PWAdsVideoManager *videoAdsManager;
+
+/// A `BOOL` to signify whether or not you want the ad to automatically reposition to orientation changes. The default value is `TRUE`.
+@property (assign, nonatomic) BOOL autoReposition;
+
+/// A `PWAdsVideoAdClickTrackingUIView` handles touch events on the video ad.
+@property(nonatomic, strong) PWAdsVideoAdClickTrackingUIView *clickTrackingView;
+
+/// The `AVPlayer` will display the video ad.
+@property (nonatomic, strong) AVPlayer *adPlayer;
+
+/// The `PWAdsFullScreenVC` will contain the `AVPlayer`.
+@property (nonatomic, strong) PWAdsFullScreenVC *landscapeVC;
+
+/// A `UIViewController` is responsible for presenting the video ad (optional).
+@property (nonatomic, strong) UIViewController *presentingViewController;
 
 /**
  Once an ad has successfully been returned from the server, the `PWAdsVideoManager` is created. You need to stop observing and unload the `PWAdsVideoManager` upon deallocating this object.
@@ -76,54 +61,50 @@ PWAdsVideoAdClickThroughBrowserDelegate>
 
 /**
  Instantiantes the `PWAdsVideoAdsRequest`.
+ 
  @param request The ad request with zone information and any custom parameters.
  */
 -(void)requestAdsWithRequestObject:(PWAdsVideoAdsRequest *)request;
 
-///-----------------------
-/// @name Optional
-///-----------------------
-
 /**
  Instantiantes the `PWAdsVideoAdsRequest` with a specified `PWAdsVideoType`.
+ 
  @param request The ad request with zone information and any custom parameters.
  @param videoType The type of video being requested (all, pre-roll, mid-roll, post-roll).
  */
 -(void)requestAdsWithRequestObject:(PWAdsVideoAdsRequest *)request andVideoType:(PWAdsVideoType)videoType;
 
-/**
- An `id` used to identify the 'PWAdsVideoInterstitialAdDelegate' delegate.
- */
-@property (assign, nonatomic) id<PWAdsVideoInterstitialAdDelegate> delegate;
+@end
 
 /**
- A `PWAdsVideoManager` is the manager of video ads.
+ @Deprecated
+ A `PWAdsVideoInterstitialAdDelegate` is needed to receive notifications about video ad status.
  */
-@property(nonatomic, retain) PWAdsVideoManager *videoAdsManager;
+__deprecated_msg("PWAdsVideoInterstitialAdDelegate has been deprecated.")
+@protocol PWAdsVideoInterstitialAdDelegate <NSObject>
+
+@required
 
 /**
- A `BOOL` to signify whether or not you want the ad to automatically reposition to orientation changes. The default value is `TRUE`.
+ Called when the adsLoader receives a video and is ready to play (required).
+ 
+ @param videoAd The video ad that was loaded.
  */
-@property (assign, nonatomic) BOOL autoReposition;
+- (void)pwVideoInterstitialAdDidLoad:(PWAdsVideoInterstitialAd *)videoAd;
 
 /**
- A `PWAdsVideoAdClickTrackingUIView` handles touch events on the video ad.
+ Gets called when the video ad has finished playing and the screen returns to your app.
+ 
+ @param videoAd The video ad that finished playing.
  */
-@property(nonatomic, retain) PWAdsVideoAdClickTrackingUIView *clickTrackingView;
+- (void)pwVideoInterstitialAdDidFinish:(PWAdsVideoInterstitialAd *)videoAd;
 
 /**
- The `AVPlayer` will display the video ad.
+ Gets called if there are no ads to display.
+ 
+ @param videoAd The video ad that failed to load.
+ @param error The error string detailing why the video ad failed to play.
  */
-@property (nonatomic, retain) AVPlayer *adPlayer;
-
-/**
- The `FullScreenVC` will contain the `AVPlayer`.
- */
-@property (nonatomic, retain) FullScreenVC *landscapeVC;
-
-/**
- A `UIViewController` is responsible for presenting the video ad (optional).
- */
-@property (nonatomic, retain) UIViewController *presentingViewController;
+- (void)pwVideoInterstitialAdDidFail:(PWAdsVideoInterstitialAd *)videoAd withErrorString:(NSString *)error;
 
 @end

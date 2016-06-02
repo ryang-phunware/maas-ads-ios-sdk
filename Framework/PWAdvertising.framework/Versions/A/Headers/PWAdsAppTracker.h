@@ -2,38 +2,20 @@
 //  PWAdsAppTracker.h
 //  PWAds iOS SDK
 //
-//  Copyright (c) 2015 TapIt! by Phunware. All rights reserved.
+//  Copyright © 2015 Phunware, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 /**
- `PWAdsAppTracker` implements a standard `PWAdsAppTracker` into your app. This is required for all ad requests.
+ Class for registering application to ad servers.
  */
-
 @interface PWAdsAppTracker : NSObject
 
-///-----------------------
-/// @name Required Methods
-///-----------------------
-
-/**
- This method creates the shared app tracker.
- */
+/// Create shared app tracker.
 + (PWAdsAppTracker *)sharedAppTracker;
 
-/**
- This method registers your application with the ad server.
- */
+/// Register your application with the ad server.
 - (void)reportApplicationOpen;
-
-///---------------
-/// @name Other Methods
-///---------------
-
-///**
-// Returns 'MaaSAdvertising'.
-// */
-//+ (NSString *)serviceName;
 
 @end

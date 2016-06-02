@@ -11,30 +11,43 @@
 
 #import <UIKit/UIKit.h>
 
-// Protocol that will be used by IMAClickThroughBrowser to signal that it has
-// been opened or closed.
+@protocol PWAdsVideoAdClickThroughBrowserDelegate;
+
+/**
+ @Deprecated
+ This class is used to display clickthrough links in the app.
+ */
+__deprecated_msg("PWAdsVideoAdClickThroughBrowser has been deprecated.")
+@interface PWAdsVideoAdClickThroughBrowser : UIViewController<UIWebViewDelegate, UIActionSheetDelegate>
+
+/**
+ Enables displaying any click through in an in-app browser.
+ By default, clicking/tapping the ad will cause the default iOS browser to be
+ opened, switching away from the app. Call this method to enable a custom
+ in-app browser that will be created in the |viewController| provided.
+ If provided, the |delegate| can be used to track the opening and closing
+ of the in-app browser.
+ */
++ (void)enableInAppBrowserWithViewController:(UIViewController *)viewController
+            delegate:(id<PWAdsVideoAdClickThroughBrowserDelegate>)delegate;
+
+/**
+ Disables displaying any click through in an in-app browser.
+ */
++ (void)disableInAppBrowser;
+
+@end
+
+
+/**
+ Protocol that will be used by IMAClickThroughBrowser to signal that it has
+ been opened or closed.
+ */
+__deprecated_msg("PWAdsVideoAdClickThroughBrowserDelegate has been deprecated.")
 @protocol PWAdsVideoAdClickThroughBrowserDelegate
 
 @required
 - (void)browserDidOpen;
 - (void)browserDidClose;
-
-@end
-
-// This class is used to display clickthrough links in the app.
-@interface PWAdsVideoAdClickThroughBrowser : UIViewController<UIWebViewDelegate, UIActionSheetDelegate>
-
-/// Enables displaying any click through in an in-app browser.
-//
-/// By default, clicking/tapping the ad will cause the default iOS browser to be
-/// opened, switching away from the app. Call this method to enable a custom
-/// in-app browser that will be created in the |viewController| provided.
-/// If provided, the |delegate| can be used to track the opening and closing
-/// of the in-app browser.
-+ (void)enableInAppBrowserWithViewController:(UIViewController *)viewController
-            delegate:(id<PWAdsVideoAdClickThroughBrowserDelegate>)delegate;
-
-/// Disables displaying any click through in an in-app browser.
-+ (void)disableInAppBrowser;
 
 @end

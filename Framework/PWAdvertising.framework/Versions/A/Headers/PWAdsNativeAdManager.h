@@ -14,43 +14,52 @@
 @protocol PWAdsNativeAdDelegate;
 
 /**
+ @Deprecated
  `PWAdsNativeAdManager` creates a standard `PWAdsNativeAdManager` object for your app.
  */
-
+__deprecated_msg("PWAdsNativeAdManager has been deprecated.")
 @interface PWAdsNativeAdManager : NSObject
 
-///-----------------------
-/// @name Required Methods
-///-----------------------
+/// An `id` used to identify the 'PWAdsNativeAdDelegate' delegate.
+@property (weak, nonatomic) id<PWAdsNativeAdDelegate> delegate;
+
+/// The presenting `UIViewController`.
+@property (weak, nonatomic) UIViewController *presentingController;
+
+/// An `NSUInteger` that sets the location precision information of the `PWAdsRequest`.
+@property NSUInteger locationPrecision;
+
+/// An `NSMutableArray` that contains all the native ads for the `PWAdsRequest`.
+@property (strong, nonatomic) NSMutableArray *allNativeAds;
 
 /**
  Once a `PWAdsRequest` object is created, this function should be called to begin requesting ads for your app.
+ 
  @param request The ad request with zone information and any custom parameters.
  */
 - (BOOL)getAdsForRequest:(PWAdsRequest *)request;
 
 /**
+ Once a `PWAdsRequest` object is created, this function should be called to begin requesting ads for your app.
+ 
+ @param request The ad request with zone information and any custom parameters.
+ @param numberOfAds The number of ads desired for the ad request.
+ */
+- (BOOL)getAdsForRequest:(PWAdsRequest *)request withRequestedNumberOfAds:(int)numberOfAds;
+
+/**
  This method should be called when a native advertisement is touched.
+ 
  @param nativeAd The native ad that was touched.
  */
 - (void)nativeAdWasTouched:(PWAdsNativeAd *)nativeAd;
 
 /**
  This method should be called when a native ad is shown to the user.
+ 
  @param nativeAd The native ad that was touched.
  */
 - (void)logNativeAdImpression:(PWAdsNativeAd *)nativeAd;
-
-///---------------
-/// @name Optional
-///---------------
-
-/**
- Once a `PWAdsRequest` object is created, this function should be called to begin requesting ads for your app.
- @param request The ad request with zone information and any custom parameters.
- @param numberOfAds The number of ads desired for the ad request.
- */
-- (BOOL)getAdsForRequest:(PWAdsRequest *)request withRequestedNumberOfAds:(int)numberOfAds;
 
 /**
  Updates the location parameters for the current `PWAdsRequest`.
@@ -74,32 +83,13 @@
  */
 - (void)resume;
 
-/**
- An `id` used to identify the 'PWAdsNativeAdDelegate' delegate.
- */
-@property (assign, nonatomic) id<PWAdsNativeAdDelegate> delegate;
-
-
-/**
- The presenting `UIViewController`.
- */
-@property (assign, nonatomic) UIViewController *presentingController;
-
-/**
- An `NSUInteger` that sets the location precision information of the `PWAdsRequest`.
- */
-@property NSUInteger locationPrecision;
-
-/**
- An `NSMutableArray` that contains all the native ads for the `PWAdsRequest`.
- */
-@property (retain, nonatomic) NSMutableArray *allNativeAds;
-
 @end
 
 /**
+ @Deprecated
  `PWAdsNativeAdDelegate` is needed to receive notifications about native ad status.
  */
+__deprecated_msg("PWAdsNativeAdDelegate has been deprecated.")
 @protocol PWAdsNativeAdDelegate <NSObject>
 @optional
 

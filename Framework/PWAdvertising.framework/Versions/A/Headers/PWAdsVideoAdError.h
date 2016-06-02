@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 
 /// Possible error types while loading or playing ads.
-typedef enum {
+typedef NS_ENUM(unsigned int, PWAdsVideoAdErrorType) {
   /// An unexpected error occured while loading or playing the ads.
   //
   /// This may mean that the SDK wasn't loaded properly.
@@ -19,10 +19,10 @@ typedef enum {
   _PWAdsVideoAdAdLoadingFailed,
   /// An error occured while playing the ads.
   _PWAdsVideoAdAdPlayingFailed,
-} PWAdsVideoAdErrorType;
+};
 
 /// Possible error codes raised while loading or playing ads.
-typedef enum {
+typedef NS_ENUM(unsigned int, PWAdsVideoAdErrorCode) {
   /// Unknown error occured while loading or playing the ad.
   _PWAdsVideoAdUnknownErrorCode = 0,
   /// There was an error playing the video ad.
@@ -62,19 +62,21 @@ typedef enum {
   _PWAdsVideoAdOverlayAdLoadingFailed = 3105,
   /// An overlay ad failed to render.
   _PWAdsVideoAdOverlayAdPlayingFailed = 3106,
-} PWAdsVideoAdErrorCode;
+};
 
-#pragma mark -
-
-/// Surfaces an error that occured during ad loading or playing.
+/**
+ @Deprecated
+ Surfaces an error that occured during ad loading or playing.
+ */
+__deprecated_msg("PWAdsVideoAdError has been deprecated.")
 @interface PWAdsVideoAdError : NSError
 
 /// The |errorType| accessor provides information about whether the error
 /// occured during ad loading or ad playing.
 @property (nonatomic, readonly) PWAdsVideoAdErrorType errorType;
 
--(id) initWithErrorType:(PWAdsVideoAdErrorType) errorType errorCode:(PWAdsVideoAdErrorCode) errorCode;
+- (instancetype)initWithErrorType:(PWAdsVideoAdErrorType) errorType errorCode:(PWAdsVideoAdErrorCode) errorCode NS_DESIGNATED_INITIALIZER;
 
--(id) initWithError:(NSError *) error errorType:(PWAdsVideoAdErrorType) errorType errorCode:(PWAdsVideoAdErrorCode) errorCode;
+- (instancetype)initWithError:(NSError *) error errorType:(PWAdsVideoAdErrorType) errorType errorCode:(PWAdsVideoAdErrorCode) errorCode NS_DESIGNATED_INITIALIZER;
 
 @end

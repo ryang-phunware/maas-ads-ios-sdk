@@ -10,11 +10,58 @@
 #import "PWAdsBrowserControllerDelegate.h"
 #import "PWAdsConstants.h"
 
-@class PWAdsRequest, PWAdsInterstitialAd;
+@class PWAdsRequest;
+@protocol PWAdsInterstitialAdDelegate;
 
 /**
+ @Deprecated
+ `PWAdsInterstitialAd` implements a standard `PWAdsInterstitialAd` into your app.
+ */
+__deprecated_msg("PWAdsInterstitialAd has been deprecated. Please use PWAdsInterstitial instead.")
+@interface PWAdsInterstitialAd : NSObject 
+
+/// An `id` used to identify the 'PWAdsInterstitialAdDelegate' delegate.
+@property (weak, nonatomic) id<PWAdsInterstitialAdDelegate> delegate;
+
+/// A `BOOL` to signify whether or not you want the ad to animate in. The default value is `TRUE`.
+@property (assign, nonatomic) BOOL animated;
+
+/// A `BOOL` to signify whether or not you want the ad to automatically reposition to orientation changes. The default value is `TRUE`.
+@property (assign, nonatomic) BOOL autoReposition;
+
+/// A `BOOL` to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is `TRUE`.
+@property (assign, nonatomic) BOOL showLoadingOverlay;
+
+/// Override point for changing the `PWAdsAdType`. The default value is `PWAdsFullscreenAdType|PWAdsOfferWallType|PWAdsVideoAdType`.
+@property (assign, nonatomic) PWAdsAdType allowedAdTypes;
+
+/// A read-only `BOOL` to signify whether or not the ad has loaded.
+@property (readonly) BOOL loaded;
+
+/// The `UIViewController` that is presenting the interstitial ad.
+@property (weak, nonatomic) UIViewController *presentingController;
+
+/**
+ Once a `PWAdsRequest` object is created, this function should be called to get the interstitial ad ready for your app.
+ 
+ @param request The ad request with zone information and any custom parameters.
+ */
+- (BOOL)loadInterstitialForRequest:(PWAdsRequest *)request;
+
+/**
+ Once `- (BOOL)loadInterstitialForRequest:(PWAdsRequest *)request;` has been called and you have received a notification that the ad has loaded, this function should be called to present the ad within your app.
+ 
+ @param contoller The view controller from which the ad should be displayed.
+ */
+- (void)presentFromViewController:(UIViewController *)contoller;
+
+@end
+
+/**
+ @Deprecated
  A `PWAdsInterstitialAdDelegate` is needed to receive notifications about banner ad status.
  */
+__deprecated_msg("PWAdsInterstitialAdDelegate has been deprecated.")
 @protocol PWAdsInterstitialAdDelegate <NSObject>
 
 @required
@@ -94,69 +141,5 @@
  @param interstitialAd The full-screen ad that finished executing an action.
  */
 - (void)pwInterstitialAdActionDidFinish:(PWAdsInterstitialAd *)interstitialAd;
-
-@end
-
-/**
- `PWAdsInterstitialAd` implements a standard `PWAdsInterstitialAd` into your app.
- */
-
-@interface PWAdsInterstitialAd : NSObject <PWAdsInterstitialAdDelegate, PWAdsBrowserControllerDelegate>
-
-
-///-----------------------
-/// @name Required Methods
-///-----------------------
-
-/**
- Once a `PWAdsRequest` object is created, this function should be called to get the interstitial ad ready for your app.
- @param request The ad request with zone information and any custom parameters.
- */
-- (BOOL)loadInterstitialForRequest:(PWAdsRequest *)request;
-
-/**
- Once `- (BOOL)loadInterstitialForRequest:(PWAdsRequest *)request;` has been called and you have received a notification that the ad has loaded, this function should be called to present the ad within your app.
- @param contoller The view controller from which the ad should be displayed.
- */
-- (void)presentFromViewController:(UIViewController *)contoller;
-//- (void)presentInView:(UIView *)view;
-
-
-/**
- An `id` used to identify the 'PWAdsInterstitialAdDelegate' delegate.
- */
-@property (assign, nonatomic) id<PWAdsInterstitialAdDelegate> delegate;
-
-/**
- A `BOOL` to signify whether or not you want the ad to animate in. The default value is `TRUE`.
- */
-@property (assign, nonatomic) BOOL animated;
-
-/**
- A `BOOL` to signify whether or not you want the ad to automatically reposition to orientation changes. The default value is `TRUE`.
- */
-@property (assign, nonatomic) BOOL autoReposition;
-
-/**
- A `BOOL` to signify whether or not you want the ad to show a loading overlay once the ad is tapped. The default value is `TRUE`.
- */
-@property (assign, nonatomic) BOOL showLoadingOverlay;
-
-/**
- Override point for changing the `PWAdsAdType`. The default value is `PWAdsFullscreenAdType|PWAdsOfferWallType|PWAdsVideoAdType`.
- */
-@property (assign, nonatomic) PWAdsAdType allowedAdTypes;
-
-/**
- A read-only `BOOL` to signify whether or not the ad has loaded.
- */
-@property (readonly) BOOL loaded;
-
-/**
- The `UIViewController` that is presenting the interstitial ad.
- */
-@property (assign, nonatomic) UIViewController *presentingController;
-
-// @property (assign, nonatomic) PWAdsInterstitialControlType controlType;
 
 @end

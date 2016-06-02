@@ -11,13 +11,66 @@
 #import "PWAdsVideoAdClickTrackingUIView.h"
 
 /// Supported AdsManager Types
-typedef enum {
+typedef NS_ENUM(unsigned int, PWAdsVideoAdsManagerType) {
     PWAdsVideoAdsManagerTypeVideo,
-} PWAdsVideoAdsManagerType;
+};
 
-@class PWAdsVideoManager;
+@protocol PWAdsVideoManagerDelegate;
 
-/// Delegate object that gets state change callbacks from PWAdsVideoManager.
+/**
+ @Deprecated
+ The PWAdsVideoManager class is responsible for playing video ads.
+ */
+__deprecated_msg("PWAdsVideoManager has been deprecated.")
+@interface PWAdsVideoManager : NSObject <UIGestureRecognizerDelegate>
+
+/// Returns the AdsManager type.
+@property(readonly, assign) PWAdsVideoAdsManagerType adsManagerType;
+
+/// List of ads managed by the ads manager.
+@property(readonly, strong) NSArray *ads;
+
+/// Sets the click tracking view which will tracks clicks on the player.
+//
+/// Click tracking must be enabled on the video player area before the ad can be
+/// played. Create an instance that is of type PWAdsVideoAdClickTrackingUIView and set it
+/// as a transparent view on top of the video player. If this is not set clicks
+/// will not be tracked by the SDK.
+@property(nonatomic, strong) PWAdsVideoAdClickTrackingUIView *clickTrackingView;
+
+@property(nonatomic, assign) BOOL showFullScreenAd;
+
+/// Delegate object that receives state change notifications.
+//
+/// The caller should implement PWAdsVideoManagerDelegate to get state change
+/// notifications from the ads manager. Remember to nil the delegate before
+/// deallocating this object.
+@property(nonatomic, weak) NSObject<PWAdsVideoManagerDelegate> *delegate;
+
+/**
+ Play the loaded ad in the provided |player|.
+ 
+ The caller should implement PWAdsVideoManagerDelegate and set the delegate
+ before calling this method so the SDK can send notifications about state
+ changes that require player attention.
+ */
+- (void)playWithAVPlayer:(AVPlayer *)player;
+
+/**
+ Stops playing the ad and unloads the ad asset.
+ 
+ Removes ad assets at runtime that need to be properly removed at the time
+ of ad completion amd stops the ad and removes tracking.
+ */
+- (void)unload;
+
+@end
+
+
+/**
+ Delegate object that gets state change callbacks from PWAdsVideoManager.
+ */
+__deprecated_msg("PWAdsVideoManagerDelegate has been deprecated.")
 @protocol PWAdsVideoManagerDelegate<NSObject>
 
 /// Called when content should be paused. This usually happens right before a
@@ -33,6 +86,7 @@ typedef enum {
 - (void)didReportAdError:(PWAdsVideoAdError *)error;
 
 @end
+
 
 #pragma mark -
 #pragma mark TVASTVastEventNotifications
@@ -130,47 +184,3 @@ extern NSString * const TVASTVastEventCloseNotification;
 
 extern NSString * const TVASTVastEventCloseLinearNotification;
 
-#pragma mark -
-
-/// The PWAdsVideoManager class is responsible for playing video ads.
-@interface PWAdsVideoManager : NSObject <UIGestureRecognizerDelegate>
-
-/// Stops playing the ad and unloads the ad asset.
-//
-/// Removes ad assets at runtime that need to be properly removed at the time
-/// of ad completion amd stops the ad and removes tracking.
-- (void)unload;
-
-/// Returns the AdsManager type.
-@property(readonly, assign) PWAdsVideoAdsManagerType adsManagerType;
-
-/// List of ads managed by the ads manager.
-@property(readonly, retain) NSArray *ads;
-
-
-/// Play the loaded ad in the provided |player|.
-//
-/// The caller should implement PWAdsVideoManagerDelegate and set the delegate
-/// before calling this method so the SDK can send notifications about state
-/// changes that require player attention.
-
-- (void)playWithAVPlayer:(AVPlayer *)player;
-
-/// Sets the click tracking view which will tracks clicks on the player.
-//
-/// Click tracking must be enabled on the video player area before the ad can be
-/// played. Create an instance that is of type PWAdsVideoAdClickTrackingUIView and set it
-/// as a transparent view on top of the video player. If this is not set clicks
-/// will not be tracked by the SDK.
-@property(nonatomic, retain) PWAdsVideoAdClickTrackingUIView *clickTrackingView;
-
-@property(nonatomic, assign) BOOL showFullScreenAd;
-
-/// Delegate object that receives state change notifications.
-//
-/// The caller should implement PWAdsVideoManagerDelegate to get state change
-/// notifications from the ads manager. Remember to nil the delegate before
-/// deallocating this object.
-@property(nonatomic, assign) NSObject<PWAdsVideoManagerDelegate> *delegate;
-
-@end
