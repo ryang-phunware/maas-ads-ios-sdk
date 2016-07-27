@@ -66,6 +66,18 @@ static NSString * const kZoneID =  @"7268";
     return YES;
 }
 
+// Called before an advertisment modal is presented. This happens when use taps on an advertisment.
+- (void)bannerViewWillPresentModal:(PWAdsBannerView *)bannerView;
+{
+    NSLog(@"bannerViewWillPresentModal");
+}
+
+// Called after an advertisment modal is presented. This happens when use taps on an advertisment.
+- (void)bannerViewDidPresentModal:(PWAdsBannerView *)bannerView;
+{
+    NSLog(@"bannerViewDidPresentModal:");
+}
+
 // Called before user leaves the application. This happens when user taps on an advertisment.
 - (BOOL)shouldLeaveApplicationForBannerView:(PWAdsBannerView *)bannerView {
     NSLog(@"shouldLeaveApplicationForBannerView:");

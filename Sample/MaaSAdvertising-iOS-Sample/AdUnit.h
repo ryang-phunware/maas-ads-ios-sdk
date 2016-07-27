@@ -13,7 +13,8 @@ typedef NS_ENUM(NSInteger, AdType) {
     AdTypeBanner = 1,
     AdTypeInterstitial = 2,
     AdTypeVideo = 3,
-    AdTypeNative = 4
+    AdTypeNative = 4,
+    AdTypeLandingPage = 5
 };
 
 @interface AdUnit : NSObject

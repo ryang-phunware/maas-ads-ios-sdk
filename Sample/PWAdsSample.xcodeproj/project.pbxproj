@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A4538A21D00D1A40005BF9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538901D00D1A40005BF9C /* AppDelegate.m */; };
-		4A4538A31D00D1A40005BF9C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538921D00D1A40005BF9C /* MasterViewController.m */; };
-		4A4538A41D00D1A40005BF9C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538941D00D1A40005BF9C /* DetailViewController.m */; };
-		4A4538A51D00D1A40005BF9C /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538961D00D1A40005BF9C /* BannerViewController.m */; };
-		4A4538A61D00D1A40005BF9C /* MediumRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538981D00D1A40005BF9C /* MediumRectViewController.m */; };
-		4A4538A71D00D1A40005BF9C /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45389A1D00D1A40005BF9C /* InterstitialViewController.m */; };
-		4A4538A81D00D1A40005BF9C /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45389C1D00D1A40005BF9C /* VideoViewController.m */; };
-		4A4538A91D00D1A40005BF9C /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45389E1D00D1A40005BF9C /* NativeViewController.m */; };
-		4A4538AA1D00D1A40005BF9C /* AdUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4538A01D00D1A40005BF9C /* AdUnit.m */; };
-		4A4538AB1D00D1A40005BF9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4538A11D00D1A40005BF9C /* Main.storyboard */; };
+		4A394ED11D4959EF00F3B56A /* AdUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394EB51D4959EF00F3B56A /* AdUnit.m */; };
+		4A394ED21D4959EF00F3B56A /* AnimatedBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394EB71D4959EF00F3B56A /* AnimatedBannerViewController.m */; };
+		4A394ED31D4959EF00F3B56A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394EB91D4959EF00F3B56A /* AppDelegate.m */; };
+		4A394ED41D4959EF00F3B56A /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394EBB1D4959EF00F3B56A /* BannerViewController.m */; };
+		4A394ED51D4959EF00F3B56A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394EBD1D4959EF00F3B56A /* DetailViewController.m */; };
+		4A394ED61D4959EF00F3B56A /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394EBF1D4959EF00F3B56A /* InterstitialViewController.m */; };
+		4A394ED71D4959EF00F3B56A /* LandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394EC11D4959EF00F3B56A /* LandingPageViewController.m */; };
+		4A394ED81D4959EF00F3B56A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A394EC21D4959EF00F3B56A /* Main.storyboard */; };
+		4A394ED91D4959EF00F3B56A /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394EC41D4959EF00F3B56A /* MasterViewController.m */; };
+		4A394EDA1D4959EF00F3B56A /* MediumRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394EC61D4959EF00F3B56A /* MediumRectViewController.m */; };
+		4A394EDB1D4959EF00F3B56A /* Native3UpAdUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394EC81D4959EF00F3B56A /* Native3UpAdUnitView.m */; };
+		4A394EDC1D4959EF00F3B56A /* NativeCleanAdUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394ECA1D4959EF00F3B56A /* NativeCleanAdUnitView.m */; };
+		4A394EDD1D4959EF00F3B56A /* NativeIconAdUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394ECC1D4959EF00F3B56A /* NativeIconAdUnitView.m */; };
+		4A394EDE1D4959EF00F3B56A /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394ECE1D4959EF00F3B56A /* NativeViewController.m */; };
+		4A394EDF1D4959EF00F3B56A /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A394ED01D4959EF00F3B56A /* VideoViewController.m */; };
 		4A4538AE1D00D1B30005BF9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4538AC1D00D1B30005BF9C /* LaunchScreen.storyboard */; };
 		4A4538AF1D00D1B30005BF9C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A4538AD1D00D1B30005BF9C /* Info.plist */; };
 		4A4538B11D00D1C00005BF9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4538B01D00D1C00005BF9C /* Assets.xcassets */; };
@@ -59,25 +64,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A45388F1D00D1A40005BF9C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4A4538901D00D1A40005BF9C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4A4538911D00D1A40005BF9C /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		4A4538921D00D1A40005BF9C /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		4A4538931D00D1A40005BF9C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		4A4538941D00D1A40005BF9C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		4A4538951D00D1A40005BF9C /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
-		4A4538961D00D1A40005BF9C /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
-		4A4538971D00D1A40005BF9C /* MediumRectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediumRectViewController.h; sourceTree = "<group>"; };
-		4A4538981D00D1A40005BF9C /* MediumRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediumRectViewController.m; sourceTree = "<group>"; };
-		4A4538991D00D1A40005BF9C /* InterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
-		4A45389A1D00D1A40005BF9C /* InterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
-		4A45389B1D00D1A40005BF9C /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
-		4A45389C1D00D1A40005BF9C /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
-		4A45389D1D00D1A40005BF9C /* NativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeViewController.h; sourceTree = "<group>"; };
-		4A45389E1D00D1A40005BF9C /* NativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeViewController.m; sourceTree = "<group>"; };
-		4A45389F1D00D1A40005BF9C /* AdUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdUnit.h; sourceTree = "<group>"; };
-		4A4538A01D00D1A40005BF9C /* AdUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdUnit.m; sourceTree = "<group>"; };
-		4A4538A11D00D1A40005BF9C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4A394EB41D4959EF00F3B56A /* AdUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdUnit.h; sourceTree = "<group>"; };
+		4A394EB51D4959EF00F3B56A /* AdUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdUnit.m; sourceTree = "<group>"; };
+		4A394EB61D4959EF00F3B56A /* AnimatedBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedBannerViewController.h; sourceTree = "<group>"; };
+		4A394EB71D4959EF00F3B56A /* AnimatedBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedBannerViewController.m; sourceTree = "<group>"; };
+		4A394EB81D4959EF00F3B56A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4A394EB91D4959EF00F3B56A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4A394EBA1D4959EF00F3B56A /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
+		4A394EBB1D4959EF00F3B56A /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		4A394EBC1D4959EF00F3B56A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4A394EBD1D4959EF00F3B56A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		4A394EBE1D4959EF00F3B56A /* InterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
+		4A394EBF1D4959EF00F3B56A /* InterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
+		4A394EC01D4959EF00F3B56A /* LandingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingPageViewController.h; sourceTree = "<group>"; };
+		4A394EC11D4959EF00F3B56A /* LandingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingPageViewController.m; sourceTree = "<group>"; };
+		4A394EC21D4959EF00F3B56A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4A394EC31D4959EF00F3B56A /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		4A394EC41D4959EF00F3B56A /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		4A394EC51D4959EF00F3B56A /* MediumRectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediumRectViewController.h; sourceTree = "<group>"; };
+		4A394EC61D4959EF00F3B56A /* MediumRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediumRectViewController.m; sourceTree = "<group>"; };
+		4A394EC71D4959EF00F3B56A /* Native3UpAdUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Native3UpAdUnitView.h; sourceTree = "<group>"; };
+		4A394EC81D4959EF00F3B56A /* Native3UpAdUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Native3UpAdUnitView.m; sourceTree = "<group>"; };
+		4A394EC91D4959EF00F3B56A /* NativeCleanAdUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeCleanAdUnitView.h; sourceTree = "<group>"; };
+		4A394ECA1D4959EF00F3B56A /* NativeCleanAdUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeCleanAdUnitView.m; sourceTree = "<group>"; };
+		4A394ECB1D4959EF00F3B56A /* NativeIconAdUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeIconAdUnitView.h; sourceTree = "<group>"; };
+		4A394ECC1D4959EF00F3B56A /* NativeIconAdUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeIconAdUnitView.m; sourceTree = "<group>"; };
+		4A394ECD1D4959EF00F3B56A /* NativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeViewController.h; sourceTree = "<group>"; };
+		4A394ECE1D4959EF00F3B56A /* NativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeViewController.m; sourceTree = "<group>"; };
+		4A394ECF1D4959EF00F3B56A /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		4A394ED01D4959EF00F3B56A /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		4A4538AC1D00D1B30005BF9C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A4538AD1D00D1B30005BF9C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A4538B01D00D1C00005BF9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,25 +214,35 @@
 		CD5CA946184D11EC008B5568 /* MaaSAdvertising-iOS-Sample */ = {
 			isa = PBXGroup;
 			children = (
-				4A45388F1D00D1A40005BF9C /* AppDelegate.h */,
-				4A4538901D00D1A40005BF9C /* AppDelegate.m */,
-				4A4538911D00D1A40005BF9C /* MasterViewController.h */,
-				4A4538921D00D1A40005BF9C /* MasterViewController.m */,
-				4A4538931D00D1A40005BF9C /* DetailViewController.h */,
-				4A4538941D00D1A40005BF9C /* DetailViewController.m */,
-				4A4538951D00D1A40005BF9C /* BannerViewController.h */,
-				4A4538961D00D1A40005BF9C /* BannerViewController.m */,
-				4A4538971D00D1A40005BF9C /* MediumRectViewController.h */,
-				4A4538981D00D1A40005BF9C /* MediumRectViewController.m */,
-				4A4538991D00D1A40005BF9C /* InterstitialViewController.h */,
-				4A45389A1D00D1A40005BF9C /* InterstitialViewController.m */,
-				4A45389B1D00D1A40005BF9C /* VideoViewController.h */,
-				4A45389C1D00D1A40005BF9C /* VideoViewController.m */,
-				4A45389D1D00D1A40005BF9C /* NativeViewController.h */,
-				4A45389E1D00D1A40005BF9C /* NativeViewController.m */,
-				4A45389F1D00D1A40005BF9C /* AdUnit.h */,
-				4A4538A01D00D1A40005BF9C /* AdUnit.m */,
-				4A4538A11D00D1A40005BF9C /* Main.storyboard */,
+				4A394EB81D4959EF00F3B56A /* AppDelegate.h */,
+				4A394EB91D4959EF00F3B56A /* AppDelegate.m */,
+				4A394EB41D4959EF00F3B56A /* AdUnit.h */,
+				4A394EB51D4959EF00F3B56A /* AdUnit.m */,
+				4A394EB61D4959EF00F3B56A /* AnimatedBannerViewController.h */,
+				4A394EB71D4959EF00F3B56A /* AnimatedBannerViewController.m */,
+				4A394EBA1D4959EF00F3B56A /* BannerViewController.h */,
+				4A394EBB1D4959EF00F3B56A /* BannerViewController.m */,
+				4A394EBC1D4959EF00F3B56A /* DetailViewController.h */,
+				4A394EBD1D4959EF00F3B56A /* DetailViewController.m */,
+				4A394EBE1D4959EF00F3B56A /* InterstitialViewController.h */,
+				4A394EBF1D4959EF00F3B56A /* InterstitialViewController.m */,
+				4A394EC01D4959EF00F3B56A /* LandingPageViewController.h */,
+				4A394EC11D4959EF00F3B56A /* LandingPageViewController.m */,
+				4A394EC21D4959EF00F3B56A /* Main.storyboard */,
+				4A394EC31D4959EF00F3B56A /* MasterViewController.h */,
+				4A394EC41D4959EF00F3B56A /* MasterViewController.m */,
+				4A394EC51D4959EF00F3B56A /* MediumRectViewController.h */,
+				4A394EC61D4959EF00F3B56A /* MediumRectViewController.m */,
+				4A394EC71D4959EF00F3B56A /* Native3UpAdUnitView.h */,
+				4A394EC81D4959EF00F3B56A /* Native3UpAdUnitView.m */,
+				4A394EC91D4959EF00F3B56A /* NativeCleanAdUnitView.h */,
+				4A394ECA1D4959EF00F3B56A /* NativeCleanAdUnitView.m */,
+				4A394ECB1D4959EF00F3B56A /* NativeIconAdUnitView.h */,
+				4A394ECC1D4959EF00F3B56A /* NativeIconAdUnitView.m */,
+				4A394ECD1D4959EF00F3B56A /* NativeViewController.h */,
+				4A394ECE1D4959EF00F3B56A /* NativeViewController.m */,
+				4A394ECF1D4959EF00F3B56A /* VideoViewController.h */,
+				4A394ED01D4959EF00F3B56A /* VideoViewController.m */,
 				4A4538B01D00D1C00005BF9C /* Assets.xcassets */,
 				4A4538AC1D00D1B30005BF9C /* LaunchScreen.storyboard */,
 				4A4538AD1D00D1B30005BF9C /* Info.plist */,
@@ -330,8 +355,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A394ED81D4959EF00F3B56A /* Main.storyboard in Resources */,
 				CD8743491851086A005FBC0A /* README.md in Resources */,
-				4A4538AB1D00D1A40005BF9C /* Main.storyboard in Resources */,
 				4A4538AE1D00D1B30005BF9C /* LaunchScreen.storyboard in Resources */,
 				B0C20A5E1BB9D92200CE417E /* PWAds.bundle in Resources */,
 				4A4538B11D00D1C00005BF9C /* Assets.xcassets in Resources */,
@@ -355,16 +380,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A4538A21D00D1A40005BF9C /* AppDelegate.m in Sources */,
-				4A4538A61D00D1A40005BF9C /* MediumRectViewController.m in Sources */,
-				4A4538A31D00D1A40005BF9C /* MasterViewController.m in Sources */,
+				4A394EDC1D4959EF00F3B56A /* NativeCleanAdUnitView.m in Sources */,
+				4A394ED31D4959EF00F3B56A /* AppDelegate.m in Sources */,
+				4A394EDD1D4959EF00F3B56A /* NativeIconAdUnitView.m in Sources */,
+				4A394ED21D4959EF00F3B56A /* AnimatedBannerViewController.m in Sources */,
+				4A394ED11D4959EF00F3B56A /* AdUnit.m in Sources */,
+				4A394EDF1D4959EF00F3B56A /* VideoViewController.m in Sources */,
+				4A394EDE1D4959EF00F3B56A /* NativeViewController.m in Sources */,
+				4A394EDB1D4959EF00F3B56A /* Native3UpAdUnitView.m in Sources */,
+				4A394EDA1D4959EF00F3B56A /* MediumRectViewController.m in Sources */,
 				CD5CA94D184D11EC008B5568 /* main.m in Sources */,
-				4A4538AA1D00D1A40005BF9C /* AdUnit.m in Sources */,
-				4A4538A71D00D1A40005BF9C /* InterstitialViewController.m in Sources */,
-				4A4538A41D00D1A40005BF9C /* DetailViewController.m in Sources */,
-				4A4538A81D00D1A40005BF9C /* VideoViewController.m in Sources */,
-				4A4538A51D00D1A40005BF9C /* BannerViewController.m in Sources */,
-				4A4538A91D00D1A40005BF9C /* NativeViewController.m in Sources */,
+				4A394ED61D4959EF00F3B56A /* InterstitialViewController.m in Sources */,
+				4A394ED41D4959EF00F3B56A /* BannerViewController.m in Sources */,
+				4A394ED51D4959EF00F3B56A /* DetailViewController.m in Sources */,
+				4A394ED91D4959EF00F3B56A /* MasterViewController.m in Sources */,
+				4A394ED71D4959EF00F3B56A /* LandingPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

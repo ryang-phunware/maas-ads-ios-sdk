@@ -1,7 +1,7 @@
 MaaS Advertising iOS SDK
 ================
 
-Version 3.3.0
+Version 3.4.0
 
 This is Phunware's iOS SDK for the MaaS Advertising module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -22,7 +22,7 @@ Installation
 The following frameworks are required:
 
 ````
-MaaSCore.framework
+PWCore.framework
 SystemConfiguration.framework
 QuartsCore.framework
 CoreTelephony.framework
@@ -38,9 +38,9 @@ AdSupport.framework - enable support for IDFA
 StoreKit.framework - enable use of SKStoreProductViewController, displays app store ads without leaving your app
 ````
 
-MaaS Advertising has a dependency on MaaSCore.framework, which is available here: https://github.com/phunware/maas-core-ios-sdk
+MaaS Advertising has a dependency on PWCore.framework, which is available here: https://github.com/phunware/maas-core-ios-sdk
 
-It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and PWAdvertising.framework, as well as any other MaaS frameworks that you are using.
+It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain PWCore.framework and MaaSAdvertising.framework, as well as any other MaaS frameworks that you are using.
 
 **In the Build Settings for your target, you must include the following "Other Linker Flags:" -ObjC**
 
@@ -95,11 +95,19 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 {
     self.pwAd = [[PWAdsBannerView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
     [self.view addSubview:self.pwAd];
+    
+    ...
+    
+    // To animate the banner transition with 3D effect
+    self.pwAd.loadAnimated = YES;
+    self.pwAd.bannerAnimationTransition = PWAdsBannerAnimationTransition3DRotation;
+    ...
+
     // To create adsRequest:
     PWAdsRequest *adsRequest = [PWAdsRequest requestWithZoneID:@"**YOUR ZONE ID**"];
 
     //To set customized parameters:
-    [adsRequest setValue:@"**YOUR CREATIVE ID**" forKey:@"creativeID"];
+    [adsRequest setValue:@"**YOUR CREATE ID**" forKey:@"creativeID"];
     adRequest.testMode = YES;//set test mode,Default is NO.
     
     // To kick off banner rotation
@@ -193,6 +201,33 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 }
 ~~~~
 
+### Landing Page Usage
+
+~~~~
+// In your .h file:
+#import <PWAdvertising/PWAdsLandingPage.h>
+...
+
+@property (strong, nonatomic) PWAdsLandingPage *landingPageAd;
+...
+
+// In your .m file:
+- (void)viewDidLoad 
+{
+    self.landingPageAd = [PWAdsLandingPage new];
+    self.landingPageAd.delegate = self;
+    PWAdsRequest *request = [PWAdsRequest requestWithZoneID:@"**YOUR ZONE ID**"];
+    [self.landingPageAd loadAdsRequest:request];
+    ...
+}
+
+- (void)landingPageDidLoadAd:(PWAdsLandingPage *)landingPageAd {
+
+    [self.landingPageAd presentFromViewController:self];
+}
+
+~~~~
+
 ### Native Ad Usage
 
 ~~~~
@@ -212,23 +247,32 @@ _nativeAdLoader = [PWAdsNativeAdLoader new];
 _nativeAdLoader.delegate = self;
 
 // Create ad request with the specified Zone ID.
-PWAdsRequest *adsRequest = [PWAdsRequest requestWithZoneID:_zoneId];
+PWAdsRequest *adsRequest = [PWAdsRequest requestWithZoneID:@"**YOUR ZONE ID**"];
+...
+// You can set the number of ad object you want to request, default is 1.
+adsRequest.numberOfAds = 3;
+...
 [_nativeAdLoader loadAdsRequest:adsRequest];
 
 ...
 
 - (void)nativeAdLoaderDidLoadAds:(NSArray *)nativeAds {
 
+    // nativeAds array is going to contain the numberOfAds you requested for if there are ads available for your request.
+
+    // Once the native ads are loaded you can grab an item from nativeAds array and create a custom PWAdsNativeAdView.
+
     PWAdsNativeAd *newAd = [nativeAds lastObject]
 
     // Create new Native Ad View
+    
     PWAdsNativeAdView *nativeView = (PWAdsNativeAdView *)[[PWAdsNativeAdView alloc] initWithFrame:CGRectMake(x,y,width,height)];
     nativeView.delegate = self;
     nativeView.nativeAd = newAd;
     adView = nativeView;
 
     // Get data from `newAd` and add fields to your view:
-    ...
+    
     UILabel *titleLabel = [[UILabel alloc] init];
     [titleLabel setFrame:CGRectMake(startingPointX,10,300,20)];
     titleLabel.backgroundColor=[UIColor clearColor];
@@ -237,6 +281,23 @@ PWAdsRequest *adsRequest = [PWAdsRequest requestWithZoneID:_zoneId];
     titleLabel.font = [UIFont systemFontOfSize:12];
     titleLabel.text = newAd.adTitle;
     [adView addSubview:titleLabel];
+
+    ...
+
+    // By default the whole PWAdsNativeAdView if enabled to user interaction. If you tap anywhere in the PWAdsNativeAdView it'd take you to the ad destination. If you want to customize this behaviour you can specify the views you want to enable for user interation in your PWAdsNativeAdView.
+
+    [adView updateAdActionViews:@[titleLabel]];
+
+    // Then only titleLabel view will react to user's interaction.
+
+    ...
+
+    // Inside the sample app code you are going to find a custom and clean sample of a PWAdsNativeAdView builder: NativeCleanAdUnitView.h
+    
+    NativeCleanAdUnitView *cleanAdView = [[NativeCleanAdUnitView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    cleanAdView.delegate = self;
+    [cleanAdView showCleanAdUnit:newAd];
+    [_adContainerView addSubview:cleanAdView];
 }
 
 - (void)nativeAdLoader:(PWAdsNativeAdLoader *)loader didFailWithError:(NSError *)error {

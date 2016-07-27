@@ -1,5 +1,9 @@
 #MaaSAdvertising Changelog
 
+##Version 3.4.0 (Thursday, July 27th, 2016)
+* **New** landing page ad unit
+* **New** banner ad unit animated transitions
+
 ##Version 3.3.0 (Thursday, June 2nd, 2016)
 * Revised API
 * **New** native ad example views

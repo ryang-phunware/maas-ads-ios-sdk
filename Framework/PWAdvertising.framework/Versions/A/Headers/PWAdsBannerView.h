@@ -6,9 +6,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class PWAdsRequest;
 @protocol PWAdsBannerViewDelegate;
+
+typedef NS_ENUM(NSUInteger, PWAdsBannerAnimationTransition) {
+    PWAdsBannerAnimationTransitionNone = 0,
+    PWAdsBannerAnimationTransitionRandom,
+    PWAdsBannerAnimationTransition3DRotation,
+    PWAdsBannerAnimationTransitionCurlUp,
+    PWAdsBannerAnimationTransitionCurlDown,
+    PWAdsBannerAnimationTransitionFlipFromLeft,
+    PWAdsBannerAnimationTransitionFlipFromRight,
+};
 
 /**
  Class for loading and displaying banner advertisments.
@@ -20,6 +29,9 @@
 
 /// Whether the ad will load with animation. The default value is TRUE.
 @property (nonatomic, assign) BOOL loadAnimated;
+
+///The banner animation transition. The default value is PWAdsBannerAnimationTransitionNone.
+@property (nonatomic, assign)PWAdsBannerAnimationTransition bannerAnimationTransition;
 
 /// Whether to show loading overlay when ad is tapped. The default value is TRUE.
 @property (nonatomic, assign) BOOL showLoadingOverlay;

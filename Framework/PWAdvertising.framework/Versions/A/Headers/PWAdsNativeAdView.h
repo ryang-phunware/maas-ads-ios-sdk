@@ -24,6 +24,9 @@
 /// The view controller to present modal from.
 @property (nonatomic, weak) UIViewController *viewControllerForPresentingModal;
 
+/// Method to update the UIView to handle user interaction.
+- (void)updateAdActionViews:(NSArray *)adActionViews;
+
 @end
 
 /**

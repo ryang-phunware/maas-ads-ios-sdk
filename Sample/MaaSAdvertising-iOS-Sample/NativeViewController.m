@@ -11,13 +11,21 @@
 #import <PWAdvertising/PWAdsRequest.h>
 #import <PWAdvertising/PWAdsNativeAdView.h>
 #import <PWAdvertising/PWAdsNativeAd.h>
-
-// Example zone id, don't use this in your app!
-static NSString * const kZoneIDNative =  @"64477";
+#import "NativeCleanAdUnitView.h"
+#import "Native3UpAdUnitView.h"
+#import "NativeIconAdUnitView.h"
+// Example Zone IDs
+static NSString * const kZoneIDNative =  @"64477"; // for example use only, don't use this zone in your app!
 static NSString * const kNativeContentStream =  @"Content Stream";
 static NSString * const kNativeNewsFeed =  @"News Feed";
 static NSString * const kNativeAppWall =  @"App Wall";
 static NSString * const kNativeContentWall =  @"Content Wall";
+static NSString * const kNativeClean = @"Clean";
+static NSString * const kNative3Up = @"3Up";
+static NSString * const kNative3UpWith2Ads = @"3UpWith2Ads";
+static NSString * const kNative3UpWith1Ad = @"3UpWith1Ad";
+static NSString * const kNativeIcon = @"Single Icon";
+static NSString * const kNativeIcons = @"Multi Icon";
 
 @interface NativeViewController () <PWAdsNativeAdLoaderDelegate, PWAdsNativeAdViewDelegate,UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -29,20 +37,21 @@ static NSString * const kNativeContentWall =  @"Content Wall";
     __weak IBOutlet UIPickerView *_pickerView;
     NSString *_selectedNativeAd;
     NSArray *_nativeAds;
+    NativeAdHorizontalAligment _3UpAdUnitlayoutAligment;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     _selectedNativeAd = kNativeContentStream;
-    _nativeAds = @[kNativeContentStream, kNativeNewsFeed, kNativeAppWall, kNativeContentWall];
-    
     _pickerView.delegate = self;
     _pickerView.dataSource = self;
     
     // Create PWAdsNativeAdLoader instance
     _nativeAdLoader = [PWAdsNativeAdLoader new];
     _nativeAdLoader.delegate = self;
+    
+    _nativeAds = @[kNativeContentStream, kNativeNewsFeed, kNativeAppWall, kNativeContentWall,kNativeIcon,kNativeIcons,kNativeClean,kNative3UpWith1Ad,kNative3UpWith2Ads,kNative3Up];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -99,6 +108,37 @@ static NSString * const kNativeContentWall =  @"Content Wall";
     else if ([_selectedNativeAd isEqualToString:kNativeContentWall]) {
         [self showNativeAdContentWall:[nativeAds lastObject]];
     }
+    else if ([_selectedNativeAd isEqualToString:kNativeClean]) {
+        [self showNativeClean:[nativeAds lastObject]];
+    }
+    else if ([_selectedNativeAd isEqualToString:kNative3Up]) {
+        NSMutableArray *showAds = [NSMutableArray arrayWithArray:nativeAds];
+        while (showAds.count < 3) {
+            [showAds addObjectsFromArray:showAds];
+        }
+        [self show3UpAdUnit:showAds];
+    }
+    else if ([_selectedNativeAd isEqualToString:kNative3UpWith2Ads]) {
+        NSMutableArray *showAds = [NSMutableArray arrayWithArray:nativeAds];
+        if (showAds.count <2) {
+            [showAds addObjectsFromArray:showAds];
+        }
+        [self show3UpAdUnit:showAds];
+    }
+    else if ([_selectedNativeAd isEqualToString:kNative3UpWith1Ad]){
+        [self show3UpAdUnit:nativeAds];
+    }
+    else if ([_selectedNativeAd isEqualToString:kNativeIcon] || [_selectedNativeAd isEqualToString:kNativeIcons]) {
+        NSMutableArray *showAds = [NSMutableArray arrayWithArray:nativeAds];
+        if ([_selectedNativeAd isEqualToString:kNativeIcons]) {
+            if (showAds.count > 0) {
+                while (showAds.count < 3) {
+                    [showAds addObjectsFromArray:nativeAds];
+                }
+            }
+        }
+        [self showIconsAdUnit:showAds];
+    }
 }
 
 //  Called when a native advertisement fails to load.
@@ -142,6 +182,49 @@ static NSString * const kNativeContentWall =  @"Content Wall";
 
 
 #pragma mark - Native ad building methods
+-(void)showIconsAdUnit:(NSArray *)newAds{
+    // Remove all subviews
+    for (UIView *view in _adView.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    CGFloat width = 300, height = newAds.count * 90 + 10;
+    CGFloat x = CGRectGetMidX(_adView.bounds) - width/2;
+    CGFloat y = CGRectGetMidY(_adView.bounds) - height/2;
+    NativeIconAdUnitView *iconAdView = [[NativeIconAdUnitView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    iconAdView.delegate = self;
+    [iconAdView showIconAdUnit:newAds];
+    [_adView addSubview:iconAdView];
+}
+
+-(void)showNativeClean:(PWAdsNativeAd *)newAd {
+    // Remove all subviews
+    for (UIView *view in _adView.subviews) {
+        [view removeFromSuperview];
+    }
+    CGFloat width = 300, height = 70;
+    CGFloat x = CGRectGetMidX(_adView.bounds) - width/2;
+    CGFloat y = CGRectGetMidY(_adView.bounds) - height/2;
+    NativeCleanAdUnitView *cleanAdView = [[NativeCleanAdUnitView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    cleanAdView.delegate = self;
+    [cleanAdView showCleanAdUnit:newAd];
+    [_adView addSubview:cleanAdView];
+}
+
+-(void)show3UpAdUnit:(NSArray *)newAds {
+    for (UIView *view in _adView.subviews) {
+        [view removeFromSuperview];
+    }
+    CGFloat width = 300, height = 210;
+    CGFloat x = CGRectGetMidX(_adView.bounds) - width/2;
+    CGFloat y = CGRectGetMidY(_adView.bounds) - height/2;
+    Native3UpAdUnitView *Native3upAdView = [[Native3UpAdUnitView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    Native3upAdView.delegate =self;
+    [Native3upAdView show3UpAdUnit:newAds layoutType:_3UpAdUnitlayoutAligment];
+    _3UpAdUnitlayoutAligment = (_3UpAdUnitlayoutAligment +1) % 3;
+    [_adView addSubview:Native3upAdView];
+}
+
 
 - (void)showNativeAdContentStream:(PWAdsNativeAd *)newAd{
     // Remove all subviews

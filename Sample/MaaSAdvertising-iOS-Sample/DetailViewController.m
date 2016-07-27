@@ -47,6 +47,9 @@
         case AdTypeNative:
             viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"nativeViewController"];
             break;
+        case AdTypeLandingPage:
+            viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"landingPageViewController"];
+            break;
         default:
             break;
     }
