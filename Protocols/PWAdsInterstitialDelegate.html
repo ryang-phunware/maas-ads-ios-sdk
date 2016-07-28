@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>PWAdsInterstitialDelegate Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">PWAdvertising </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Phunware,Inc.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/interstitial:didFailWithError:">- interstitial:didFailWithError:</option>
+		
+		<option value="//api/name/interstitialDidDismissModal:">- interstitialDidDismissModal:</option>
+		
+		<option value="//api/name/interstitialDidLoadAd:">- interstitialDidLoadAd:</option>
+		
+		<option value="//api/name/interstitialDidPresentModal:">- interstitialDidPresentModal:</option>
+		
+		<option value="//api/name/interstitialWillDismissModal:">- interstitialWillDismissModal:</option>
+		
+		<option value="//api/name/shouldLeaveApplicationForInterstitial:">- shouldLeaveApplicationForInterstitial:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">PWAdsInterstitialDelegate Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>PWAdsInterstitial.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A <code>PWAdsInterstitialDelegate</code> is needed to receive callbacks about banner ad status.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/interstitialDidLoadAd:" title="interstitialDidLoadAd:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interstitialDidLoadAd:">&ndash;&nbsp;interstitialDidLoadAd:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when a new advertisement is loaded.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)interstitialDidLoadAd:(PWAdsInterstitial *)<em>interstitialAd</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>interstitialAd</code></th>
+						<td><p>The ad object that loaded a new advertisement.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called when a new advertisement is loaded.</p><p>Interstitial ad should be presented here by calling presentFromViewController: method.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/interstitial:didFailWithError:" title="interstitial:didFailWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interstitial:didFailWithError:">&ndash;&nbsp;interstitial:didFailWithError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when an interstitial fails to load advertisement.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)interstitial:(PWAdsInterstitial *)<em>interstitial</em> didFailWithError:(NSError *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>interstitial</code></th>
+						<td><p>The full-screen ad that received the error.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error object that describes the problem.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called when an interstitial fails to load advertisement.</p><p>Although the error message informs your application about why the error occurred, your application normally does not need to display the error to the user.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/interstitialDidPresentModal:" title="interstitialDidPresentModal:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interstitialDidPresentModal:">&ndash;&nbsp;interstitialDidPresentModal:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called after interstitial ad is presented.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)interstitialDidPresentModal:(PWAdsInterstitial *)<em>interstitialAd</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>interstitialAd</code></th>
+						<td><p>The full-screen ad that is presented.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called after interstitial ad is presented.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/interstitialWillDismissModal:" title="interstitialWillDismissModal:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interstitialWillDismissModal:">&ndash;&nbsp;interstitialWillDismissModal:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called before interstitial ad is dissmissed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)interstitialWillDismissModal:(PWAdsInterstitial *)<em>interstitialAd</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>interstitialAd</code></th>
+						<td><p>The full-screen ad that will dismiss.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called before interstitial ad is dissmissed.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/interstitialDidDismissModal:" title="interstitialDidDismissModal:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interstitialDidDismissModal:">&ndash;&nbsp;interstitialDidDismissModal:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called after Interstitial ad has been dismissed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)interstitialDidDismissModal:(PWAdsInterstitial *)<em>interstitialAd</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>interstitialAd</code></th>
+						<td><p>The full-screen ad that was dismissed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called after Interstitial ad has been dismissed</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shouldLeaveApplicationForInterstitial:" title="shouldLeaveApplicationForInterstitial:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldLeaveApplicationForInterstitial:">&ndash;&nbsp;shouldLeaveApplicationForInterstitial:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called before user leaves the application. This happens when user taps on an advertisment.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)shouldLeaveApplicationForInterstitial:(PWAdsInterstitial *)<em>interstitial</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>interstitial</code></th>
+						<td><p>The full-screen ad that the user tapped.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Return YES to allow user to leave the appliction; NO to prevent it. YES by default.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called before user leaves the application. This happens when user taps on an advertisment.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 Phunware,Inc. All rights reserved. Updated: 2016-07-27</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
