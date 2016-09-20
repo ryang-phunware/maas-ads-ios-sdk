@@ -1,5 +1,8 @@
 #MaaSAdvertising Changelog
 
+##Version 3.3.0.1 (Thursday, June 2nd, 2016)
+* Bug fixes & improvements
+
 ##Version 3.3.0 (Thursday, June 2nd, 2016)
 * Revised API
 * **New** native ad example views

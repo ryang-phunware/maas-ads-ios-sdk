@@ -10,7 +10,7 @@
 #ifndef PWAds_iOS_Sample_PWAdsConstants_h
 #define PWAds_iOS_Sample_PWAdsConstants_h
 
-#define PWADS_VERSION @"3.3.0"
+#define PWADS_VERSION @"3.3.0.1"
 
 #import <Foundation/Foundation.h>
 /**

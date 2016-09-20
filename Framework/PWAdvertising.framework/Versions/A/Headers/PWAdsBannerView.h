@@ -59,7 +59,7 @@
  @param bannerView The banner view that failed to load an advertisement.
  @param error The error object that describes the problem.
  */
-- (void)bannerView:(PWAdsBannerView *)bannerView didFailWithError:(NSError *)error;
+- (void)bannerView:(PWAdsBannerView *)bannerView pwaDidFailWithError:(NSError *)error;
 
 /**
  Called before an advertisment modal is presented

@@ -55,8 +55,8 @@ static NSString * const kZoneID =  @"7270"; // for example use only, don't use t
 }
 
 // Called when a banner view fails to load a new advertisement.
-- (void)bannerView:(PWAdsBannerView *)bannerView didFailWithError:(NSError *)error {
-    NSLog(@"bannerView:didFailWithError:");
+-(void)bannerView:(PWAdsBannerView *)bannerView pwaDidFailWithError:(NSError *)error {
+    NSLog(@"bannerView:pwaDidFailWithError:");
 }
 
 // Called before a banner view dismisses a modal.
