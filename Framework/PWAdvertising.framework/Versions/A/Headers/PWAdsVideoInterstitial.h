@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PWAdsVideoBase.h"
 
 @class PWAdsRequest;
 @protocol PWAdsVideoInterstitialDelegate;
@@ -13,7 +14,7 @@
 /**
  Class for loading and presenting video interstitial advertisments.
  */
-@interface PWAdsVideoInterstitial : NSObject
+@interface PWAdsVideoInterstitial : PWAdsVideoBase
 
 /// The delegate that implements PWAdsVideoInterstitialDelegate protocol.
 @property (nonatomic, weak) id<PWAdsVideoInterstitialDelegate> delegate;

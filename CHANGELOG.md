@@ -1,5 +1,8 @@
 #MaaSAdvertising Changelog
 
+##Version 3.5.0 (Tuesday, November 8th, 2016)
+* **New** Rewarded video ad unit
+
 ##Version 3.4.0 (Thursday, July 27th, 2016)
 * **New** landing page ad unit
 * **New** banner ad unit animated transitions

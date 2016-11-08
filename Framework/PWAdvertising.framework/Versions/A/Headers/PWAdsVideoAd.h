@@ -21,6 +21,7 @@ __deprecated_msg("PWAdsVideoAd has been deprecated.")
 @property(readonly, strong) NSString *adId;
 @property(readonly, assign) float creativeWidth;
 @property(readonly, assign) float creativeHeight;
+@property(readonly, strong) NSDictionary *adExtensionData;
 
 /// The length of the media file in seconds. Returns -1 if the duration value
 /// is not available.

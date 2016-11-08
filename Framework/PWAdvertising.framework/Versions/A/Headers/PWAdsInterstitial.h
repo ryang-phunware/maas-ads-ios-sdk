@@ -40,7 +40,7 @@
 
 
 /**
- A `PWAdsInterstitialDelegate` is needed to receive callbacks about banner ad status.
+ A `PWAdsInterstitialDelegate` is needed to receive callbacks about video interstitial ad status.
  */
 @protocol PWAdsInterstitialDelegate <NSObject>
 

@@ -184,3 +184,8 @@ extern NSString * const TVASTVastEventCloseNotification;
 
 extern NSString * const TVASTVastEventCloseLinearNotification;
 
+/// Custom point Vast event broadcasted by the ads manager.
+//
+/// This happens when ad playback reaches custom completion percent.
+extern NSString * const TVASTVastEventRVSuccessNotification;
+

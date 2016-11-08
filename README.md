@@ -1,7 +1,7 @@
 MaaS Advertising iOS SDK
 ================
 
-Version 3.4.0
+Version 3.5.0
 
 This is Phunware's iOS SDK for the MaaS Advertising module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -198,6 +198,66 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 - (void)videoInterstitialDidDismissModal:(PWAdsVideoInterstitial *)videoInterstitial 
 {
     NSLog(@"videoInterstitialDidDismissModal:");
+}
+~~~~
+
+### Rewarded Video Ads Usage
+
+~~~~  
+// In your .h file:
+#import <PWAdvertising/PWAdsRewardedVideo.h>
+...
+
+@property (strong, nonatomic) PWAdsRewardedVideo *rewardedVideo;
+...
+
+// In your .m file:
+- (void)viewDidLoad
+{
+    self.rewardedVideo = [PWAdsRewardedVideo new];
+    self.rewardedVideo.delegate = self;
+    ...
+}
+
+- (void)requestAds 
+{    
+    PWAdsRequest *adsRequest = [PWAdsRequest requestWithZoneID:**YOUR ZONE ID**];
+    [self.videoInterstitial loadAdsRequest:adsRequest];
+
+    // Set User ID
+    // You should identify each user with a single ID.
+    adsRequest.userID = **CURRENT USER ID**;
+
+    // Add custom data for the request
+    // This custom data is going to be returned on playback susccess event
+    adsRequest.customData = [NSMutableDictionary dictionaryWithDictionary:@{
+        @"gameCustomKey1"   : @"gameCustomValue1",
+        @"gameCustomKey2"    : @"gameCustomValue2"
+    }];
+
+    [self.rewardedVideo loadAdsRequest:adsRequest];
+}
+
+- (IBAction)onRequestAds 
+{
+    [self requestAds];
+}
+
+#pragma mark - PWAdsVideoInterstitialDelegate
+
+- (void)rewardedVideoDidLoadAd:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData {
+    NSLog(@"rewardedVideoDidLoadAd:withAdExtensionData:");
+    [self.rewardedVideo presentFromViewController:self];
+}
+
+- (void)rewardedVideo:(PWAdsRewardedVideo *)rewardedVideo didFailError:(NSError *)error withAdExtensionData:(NSDictionary *)adExtensionData{
+    NSLog(@"rewardedVideo:didFailError:withAdExtensionData");
+}
+
+- (void)rewardedVideoDidEndPlaybackSuccessfully:(PWAdsRewardedVideo *)rewardedVideo withRVResponseObject:(NSDictionary *)customData andAdExtensionData:(NSDictionary *)adExtensionData {
+    NSLog(@"rewardedVideoDidEndPlaybackSuccessfully:withRVResponseObject:andAdExtensionData:");
+    NSLog(@"customData: %@", customData);
+    NSLog(@"adExtensionData: %@", adExtensionData);
 }
 ~~~~
 

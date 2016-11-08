@@ -44,6 +44,9 @@
         case AdTypeVideo:
             viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"videoViewController"];
             break;
+        case AdTypeRewardedVideo:
+            viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"rewardedVideoViewController"];
+            break;
         case AdTypeNative:
             viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"nativeViewController"];
             break;

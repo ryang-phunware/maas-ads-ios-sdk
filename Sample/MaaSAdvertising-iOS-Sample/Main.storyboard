@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -712,8 +712,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWi-EO-ZKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Rewarded Video View Controller-->
+        <scene sceneID="Ev4-dz-geC">
+            <objects>
+                <viewController storyboardIdentifier="rewardedVideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Sr-1B-Pga" userLabel="Rewarded Video View Controller" customClass="RewardedVideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="khG-2q-fsN"/>
+                        <viewControllerLayoutGuide type="bottom" id="7DA-YD-hJn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bzI-Nv-xjk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsM-th-ayv">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kr-uB-gt8">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKa-VF-dbe" userLabel="Content View">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktf-3K-Cmy">
+                                                        <rect key="frame" x="225" y="8" width="150" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="978-Bk-7mv"/>
+                                                            <constraint firstAttribute="height" constant="30" id="jhT-cf-ZAT"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Load Rewarded Video"/>
+                                                        <connections>
+                                                            <action selector="loadButtonPressed:" destination="7Sr-1B-Pga" eventType="touchUpInside" id="6HG-96-Be7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="ktf-3K-Cmy" firstAttribute="top" secondItem="DKa-VF-dbe" secondAttribute="top" constant="8" id="Fec-yb-IRu"/>
+                                                    <constraint firstItem="ktf-3K-Cmy" firstAttribute="centerX" secondItem="DKa-VF-dbe" secondAttribute="centerX" id="e3A-A9-2MH"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="DKa-VF-dbe" secondAttribute="bottom" id="59f-6O-4jq"/>
+                                            <constraint firstItem="DKa-VF-dbe" firstAttribute="leading" secondItem="6kr-uB-gt8" secondAttribute="leading" id="Pwe-pg-OLa"/>
+                                            <constraint firstItem="DKa-VF-dbe" firstAttribute="top" secondItem="6kr-uB-gt8" secondAttribute="top" id="dwo-Dc-viD"/>
+                                            <constraint firstAttribute="trailing" secondItem="DKa-VF-dbe" secondAttribute="trailing" id="mca-OE-MLZ"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6kr-uB-gt8" firstAttribute="top" secondItem="xsM-th-ayv" secondAttribute="top" id="GWj-07-Dib"/>
+                                    <constraint firstAttribute="bottom" secondItem="6kr-uB-gt8" secondAttribute="bottom" id="JFJ-tm-Leo"/>
+                                    <constraint firstAttribute="trailing" secondItem="6kr-uB-gt8" secondAttribute="trailing" id="a1P-c0-JYS"/>
+                                    <constraint firstItem="DKa-VF-dbe" firstAttribute="width" secondItem="xsM-th-ayv" secondAttribute="width" id="aGj-p4-LDV"/>
+                                    <constraint firstItem="6kr-uB-gt8" firstAttribute="leading" secondItem="xsM-th-ayv" secondAttribute="leading" id="hhp-eW-hou"/>
+                                    <constraint firstItem="DKa-VF-dbe" firstAttribute="height" secondItem="xsM-th-ayv" secondAttribute="height" id="tge-Th-5Nv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7DA-YD-hJn" firstAttribute="top" secondItem="xsM-th-ayv" secondAttribute="bottom" id="31f-Gd-DWK"/>
+                            <constraint firstItem="xsM-th-ayv" firstAttribute="leading" secondItem="bzI-Nv-xjk" secondAttribute="leading" id="BcV-qP-jN1"/>
+                            <constraint firstAttribute="trailing" secondItem="xsM-th-ayv" secondAttribute="trailing" id="Crs-Jg-kms"/>
+                            <constraint firstItem="xsM-th-ayv" firstAttribute="top" secondItem="khG-2q-fsN" secondAttribute="bottom" id="mOL-FP-V3O"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Banner Ad" id="rnb-NV-GHo"/>
+                    <navigationItem key="navigationItem" id="z9C-es-Irz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6p6-VN-nh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="-507"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>

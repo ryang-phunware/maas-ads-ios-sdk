@@ -28,6 +28,12 @@
 /// Whether request is for test ads. Default is NO.
 @property (nonatomic, assign) BOOL testMode;
 
+/// Custom Data object for Rewarded Video ads request.
+@property (nonatomic, copy) NSMutableDictionary *customData;
+
+/// User ID for Rewarded Video ads request.
+@property (nonatomic, copy) NSString *userID;
+
 /**
  Designated initializer for PWAdsRequest.
  

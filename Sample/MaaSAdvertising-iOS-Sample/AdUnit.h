@@ -14,7 +14,8 @@ typedef NS_ENUM(NSInteger, AdType) {
     AdTypeInterstitial = 2,
     AdTypeVideo = 3,
     AdTypeNative = 4,
-    AdTypeLandingPage = 5
+    AdTypeLandingPage = 5,
+    AdTypeRewardedVideo = 6
 };
 
 @interface AdUnit : NSObject

@@ -9,13 +9,37 @@
 @class PWAdsRequest;
 @protocol PWAdsBannerViewDelegate;
 
+/**
+ *  Available banner animation transitions.
+ */
 typedef NS_ENUM(NSUInteger, PWAdsBannerAnimationTransition) {
+    /**
+     *  Banner animation transition none.
+     */
     PWAdsBannerAnimationTransitionNone = 0,
+    /**
+     *  Banner animation transition Random.
+     */
     PWAdsBannerAnimationTransitionRandom,
+    /**
+     *  Banner animation transition 3D rotation.
+     */
     PWAdsBannerAnimationTransition3DRotation,
+    /**
+     *  Banner animation transition Curl Up.
+     */
     PWAdsBannerAnimationTransitionCurlUp,
+    /**
+     *  Banner animation transition Curl Down.
+     */
     PWAdsBannerAnimationTransitionCurlDown,
+    /**
+     *  Banner animation transition Flip from left.
+     */
     PWAdsBannerAnimationTransitionFlipFromLeft,
+    /**
+     *  Banner animation transition Flip from right.
+     */
     PWAdsBannerAnimationTransitionFlipFromRight,
 };
 
