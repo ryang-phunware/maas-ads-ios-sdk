@@ -54,7 +54,7 @@
  Called when the adsLoader receives a video ad and is ready to play (required).
  
  @param rewardedVideo The video ad that was loaded.
- @param adExtensionData Ad Extension Data contains information about the rewarded video. e.g. remaining views count for the current user.
+ @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
  */
 - (void)rewardedVideoDidLoadAd:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData;
 
@@ -63,6 +63,7 @@
  
  @param rewardedVideo The video ad that finished playing.
  @param customData Data provided by the client is returned for confirmation of reward.
+ @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
  */
 - (void)rewardedVideoDidEndPlaybackSuccessfully:(PWAdsRewardedVideo *)rewardedVideo withRVResponseObject:(NSDictionary *)customData andAdExtensionData:(NSDictionary *)adExtensionData;
 
@@ -73,6 +74,7 @@
  
  @param rewardedVideo The rewarded video that failed to load ad.
  @param error The error string detailing why the video ad failed to play.
+ @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
  */
 - (void)rewardedVideo:(PWAdsRewardedVideo *)rewardedVideo didFailError:(NSError *)error withAdExtensionData:(NSDictionary *)adExtensionData;
 
@@ -80,6 +82,7 @@
  Called after rewarded video is presented.
  
  @param rewardedVideo The full-screen video ad that is presented.
+ @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
  */
 - (void)rewardedVideoDidPresentModal:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData;
 
@@ -87,6 +90,7 @@
  Called before rewarded video dismisses video modal.
  
  @param rewardedVideo The video ad that finished playing.
+ @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
  */
 - (void)rewardedVideoWillDismissModal:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData;
 
@@ -94,6 +98,7 @@
  Called after rewarded video dismisses video modal.
  
  @param rewardedVideo The video ad that finished playing.
+ @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
  */
 - (void)rewardedVideoDidDismissModal:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData;
 

@@ -1,8 +1,10 @@
 MaaS Advertising iOS SDK
 ================
 
-Version 3.5.0
+Version 3.5.1
 
+Overview
+------------
 This is Phunware's iOS SDK for the MaaS Advertising module. Visit http://maas.phunware.com/ for more details and to sign up.
 
 
@@ -40,7 +42,7 @@ StoreKit.framework - enable use of SKStoreProductViewController, displays app st
 
 MaaS Advertising has a dependency on PWCore.framework, which is available here: https://github.com/phunware/maas-core-ios-sdk
 
-It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain PWCore.framework and MaaSAdvertising.framework, as well as any other MaaS frameworks that you are using.
+It's recommended that you add the MaaS frameworks to the 'Vendor/Phunware' directory. This directory should contain PWCore.framework and PWAdvertising.framework, as well as any other MaaS frameworks that you are using.
 
 **In the Build Settings for your target, you must include the following "Other Linker Flags:" -ObjC**
 
@@ -87,6 +89,8 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 ~~~~
 // In your .h file:
 #import <PWAdvertising/PWAdsBannerView.h>
+#import <PWAdvertising/PWAdsRequest.h>
+
 @property (strong, nonatomic) PWAdsBannerView *pwAd;
 ...
 
@@ -95,9 +99,9 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 {
     self.pwAd = [[PWAdsBannerView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
     [self.view addSubview:self.pwAd];
-    
+
     ...
-    
+
     // To animate the banner transition with 3D effect
     self.pwAd.loadAnimated = YES;
     self.pwAd.bannerAnimationTransition = PWAdsBannerAnimationTransition3DRotation;
@@ -109,7 +113,7 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
     //To set customized parameters:
     [adsRequest setValue:@"**YOUR CREATE ID**" forKey:@"creativeID"];
     adRequest.testMode = YES;//set test mode,Default is NO.
-    
+
     // To kick off banner rotation
     [self.pwAd loadAdsRequest:adsRequest]];
     ...
@@ -122,13 +126,18 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 ~~~~
 // In your .h file:
 #import <PWAdvertising/PWAdsInterstitial.h>
+#import <PWAdvertising/PWAdsRequest.h>
+...
+
+// Make sure your view controller conforms with 'PWAdsInterstitialDelegate'.
+@interface InterstitialViewController () <PWAdsInterstitialDelegate>
 ...
 
 @property (strong, nonatomic) PWAdsInterstitial *interstitialAd;
 ...
 
 // In your .m file:
-- (void)viewDidLoad 
+- (void)viewDidLoad
 {
     self.interstitialAd = [PWAdsInterstitial new];
     self.interstitialAd.delegate = self;
@@ -148,6 +157,11 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 ~~~~  
 // In your .h file:
 #import <PWAdvertising/PWAdsVideoInterstitial.h>
+#import <PWAdvertising/PWAdsRequest.h>
+...
+
+// Make sure your view controller conforms with 'PWAdsVideoInterstitialDelegate'.
+@interface VideoViewController () <PWAdsVideoInterstitialDelegate>
 ...
 
 @property (strong, nonatomic) PWAdsVideoInterstitial *videoInterstitial;
@@ -161,44 +175,30 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
     ...
 }
 
-- (void)requestAds 
+- (void)requestAds
 {    
     PWAdsRequest *request = [PWAdsRequest requestWithZoneID:**YOUR ZONE ID**];
     [self.videoInterstitial loadAdsRequest:adsRequest];
 }
 
-- (IBAction)onRequestAds 
+- (IBAction)onRequestAds
 {
     [self requestAds];
 }
 
 #pragma mark - PWAdsVideoInterstitialDelegate
 
-- (void)videoInterstitialDidLoadAd:(PWAdsVideoInterstitial *)videoInterstitial 
+- (void)videoInterstitialDidLoadAd:(PWAdsVideoInterstitial *)videoInterstitial
 {
     NSLog(@"videoInterstitialDidLoadAd:");
     [self.videoInterstitial presentFromViewController:self];
 }
 
-- (void)videoInterstitial:(PWAdsVideoInterstitial *)videoInterstitial didFailError:(NSError *)error 
+- (void)videoInterstitial:(PWAdsVideoInterstitial *)videoInterstitial didFailError:(NSError *)error
 {
     NSLog(@"videoInterstitial:didFailError:");
 }
 
-- (void)videoInterstitialDidPresentModal:(PWAdsVideoInterstitial *)videoInterstitial 
-{
-    NSLog(@"videoInterstitialDidPresentModal:");
-}
-
-- (void)videoInterstitialWillDismissModal:(PWAdsVideoInterstitial *)videoInterstitial 
-{
-    NSLog(@"videoInterstitialWillDismissModal:");
-}
-
-- (void)videoInterstitialDidDismissModal:(PWAdsVideoInterstitial *)videoInterstitial 
-{
-    NSLog(@"videoInterstitialDidDismissModal:");
-}
 ~~~~
 
 ### Rewarded Video Ads Usage
@@ -206,6 +206,11 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 ~~~~  
 // In your .h file:
 #import <PWAdvertising/PWAdsRewardedVideo.h>
+#import <PWAdvertising/PWAdsRequest.h>
+...
+
+// Make sure your view controller conforms with 'PWAdsRewardedVideoDelegate'.
+@interface RewardedVideoViewController () <PWAdsRewardedVideoDelegate>
 ...
 
 @property (strong, nonatomic) PWAdsRewardedVideo *rewardedVideo;
@@ -219,7 +224,7 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
     ...
 }
 
-- (void)requestAds 
+- (void)requestAds
 {    
     PWAdsRequest *adsRequest = [PWAdsRequest requestWithZoneID:**YOUR ZONE ID**];
     [self.videoInterstitial loadAdsRequest:adsRequest];
@@ -238,12 +243,12 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
     [self.rewardedVideo loadAdsRequest:adsRequest];
 }
 
-- (IBAction)onRequestAds 
+- (IBAction)onRequestAds
 {
     [self requestAds];
 }
 
-#pragma mark - PWAdsVideoInterstitialDelegate
+#pragma mark - PWAdsRewardedVideoDelegate
 
 - (void)rewardedVideoDidLoadAd:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData {
     NSLog(@"rewardedVideoDidLoadAd:withAdExtensionData:");
@@ -258,7 +263,9 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
     NSLog(@"rewardedVideoDidEndPlaybackSuccessfully:withRVResponseObject:andAdExtensionData:");
     NSLog(@"customData: %@", customData);
     NSLog(@"adExtensionData: %@", adExtensionData);
+
 }
+
 ~~~~
 
 ### Landing Page Usage
@@ -266,13 +273,18 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 ~~~~
 // In your .h file:
 #import <PWAdvertising/PWAdsLandingPage.h>
+#import <PWAdvertising/PWAdsRequest.h>
+...
+
+// Make sure your view controller conforms with 'PWAdsLandingPageDelegate'.
+@interface LandingPageViewController () <PWAdsLandingPageDelegate>
 ...
 
 @property (strong, nonatomic) PWAdsLandingPage *landingPageAd;
 ...
 
 // In your .m file:
-- (void)viewDidLoad 
+- (void)viewDidLoad
 {
     self.landingPageAd = [PWAdsLandingPage new];
     self.landingPageAd.delegate = self;
@@ -325,14 +337,14 @@ adsRequest.numberOfAds = 3;
     PWAdsNativeAd *newAd = [nativeAds lastObject]
 
     // Create new Native Ad View
-    
+
     PWAdsNativeAdView *nativeView = (PWAdsNativeAdView *)[[PWAdsNativeAdView alloc] initWithFrame:CGRectMake(x,y,width,height)];
     nativeView.delegate = self;
     nativeView.nativeAd = newAd;
     adView = nativeView;
 
     // Get data from `newAd` and add fields to your view:
-    
+
     UILabel *titleLabel = [[UILabel alloc] init];
     [titleLabel setFrame:CGRectMake(startingPointX,10,300,20)];
     titleLabel.backgroundColor=[UIColor clearColor];
@@ -353,7 +365,7 @@ adsRequest.numberOfAds = 3;
     ...
 
     // Inside the sample app code you are going to find a custom and clean sample of a PWAdsNativeAdView builder: NativeCleanAdUnitView.h
-    
+
     NativeCleanAdUnitView *cleanAdView = [[NativeCleanAdUnitView alloc] initWithFrame:CGRectMake(x, y, width, height)];
     cleanAdView.delegate = self;
     [cleanAdView showCleanAdUnit:newAd];
