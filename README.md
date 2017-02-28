@@ -1,7 +1,7 @@
-MaaS Advertising iOS SDK
+MaaSAdvertising iOS SDK
 ================
 
-Version 3.5.1
+Version 3.6.0
 
 Overview
 ------------
@@ -24,6 +24,7 @@ Installation
 The following frameworks are required:
 
 ````
+libsqlite3.tbd
 PWCore.framework
 SystemConfiguration.framework
 QuartsCore.framework
@@ -61,6 +62,56 @@ PWAds.bundle
 
 PWAds.bundle includes files needed for media-rich advertisements that make use of device-specific features. It is included with this sample app.
 
+App Transport Security
+----------
+
+[App Transport Security (ATS)](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html) is a privacy feature introduced in iOS 9. It's enabled by default for new applications and enforces secure connections.
+
+UPDATED: Apple has [extended the ATS deadline](https://developer.apple.com/news/?id=12212016b&1482372961) indefinitely. We recommend publishers disable ATS to ensure ads are served correctly.
+
+In order to prevent your ads from being impacted by ATS, please add the following to your plist:
+
+~~~~
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+~~~~
+
+Or add the following to your plist to add domain exceptions for Phunware API endpoints. We do not recommending turning off ATS and allowing all arbitrary requests
+
+~~~~
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSAllowsArbitraryLoads</key>
+  <false/>
+  <key>NSExceptionDomains</key>
+  <dict>
+      <key>r.phunware.com</key>
+      <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+          <key>NSExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+      </dict>
+      <key>i.tapit.com</key>
+      <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+          <key>NSExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+      </dict>
+      <key>d2bgg7rjywcwsy.cloudfront.net</key>
+      <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+          <key>NSExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+      </dict>
+  </dict>
+</dict>
+~~~~
 
 
 Integration
@@ -70,7 +121,7 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 
 ### Initialization
 
-~~~~
+~~~Objective-c
 // In your AppDelegate.m file:
 #import <PWAdvertising/PWAdsAppTracker.h>
 ...
@@ -81,12 +132,12 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
     [appTracker reportApplicationOpen];
     return YES;
 }
-~~~~
+~~~
 
 
 ### Banner Usage
 
-~~~~
+~~~Objective-c
 // In your .h file:
 #import <PWAdvertising/PWAdsBannerView.h>
 #import <PWAdvertising/PWAdsRequest.h>
@@ -119,11 +170,11 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
     ...
 }
 
-~~~~
+~~~
 
 ### Interstitial Usage
 
-~~~~
+~~~Objective-c
 // In your .h file:
 #import <PWAdvertising/PWAdsInterstitial.h>
 #import <PWAdvertising/PWAdsRequest.h>
@@ -150,11 +201,11 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 {
     [self.interstitialAd presentFromViewController:self];
 }
-~~~~
+~~~
 
 ### Video Interstitial Ads Usage
 
-~~~~  
+~~~Objective-c
 // In your .h file:
 #import <PWAdvertising/PWAdsVideoInterstitial.h>
 #import <PWAdvertising/PWAdsRequest.h>
@@ -188,9 +239,21 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 
 #pragma mark - PWAdsVideoInterstitialDelegate
 
+// It is highly recommended to call presentFromViewController: in videoInterstitialDidFinishedPreCaching callback method,
+// or after it's been called. If presentFromViewController: is called in this callback method, the SDK will not pre-cache the
+// video (but still caching it after streaming starts if cache size limit not set to 0).
 - (void)videoInterstitialDidLoadAd:(PWAdsVideoInterstitial *)videoInterstitial
 {
     NSLog(@"videoInterstitialDidLoadAd:");
+    // Only call presentFromViewController: if you don't want to pre-cahce the video ad.
+    // [self.videoInterstitial presentFromViewController:self];
+}
+
+// It is a best practice to ensure a video ad has completed pre-caching before attempting to present it.
+// The videoInterstitialDidFinishedPreCaching callback method is called when a video has been successfully pre-cached.
+// call presentFromViewController: in this callback
+- (void)videoInterstitialDidFinishedPreCaching:(PWAdsVideoInterstitial *)videoInterstitial {
+    NSLog(@"videoInterstitialDidFinishedPreCaching:");
     [self.videoInterstitial presentFromViewController:self];
 }
 
@@ -199,11 +262,11 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
     NSLog(@"videoInterstitial:didFailError:");
 }
 
-~~~~
+~~~
 
 ### Rewarded Video Ads Usage
 
-~~~~  
+~~~Objective-c  
 // In your .h file:
 #import <PWAdvertising/PWAdsRewardedVideo.h>
 #import <PWAdvertising/PWAdsRequest.h>
@@ -227,7 +290,6 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 - (void)requestAds
 {    
     PWAdsRequest *adsRequest = [PWAdsRequest requestWithZoneID:**YOUR ZONE ID**];
-    [self.videoInterstitial loadAdsRequest:adsRequest];
 
     // Set User ID
     // You should identify each user with a single ID.
@@ -240,6 +302,7 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
         @"gameCustomKey2"    : @"gameCustomValue2"
     }];
 
+    // To allow videos to be preloaded, it is highly recommended to call loadAdsRequest: as early as possible
     [self.rewardedVideo loadAdsRequest:adsRequest];
 }
 
@@ -250,9 +313,17 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
 
 #pragma mark - PWAdsRewardedVideoDelegate
 
+
 - (void)rewardedVideoDidLoadAd:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData {
     NSLog(@"rewardedVideoDidLoadAd:withAdExtensionData:");
-    [self.rewardedVideo presentFromViewController:self];
+}
+
+// It is a best practice to ensure a rewarded video ad has completed pre-caching before attempting to present it.
+// The rewardedVideoDidFinishedPreCaching callback method is called when a rewarded video has been successfully pre-cached.
+// call presentFromViewController: in this callback or after this callback method has been called.
+- (void)rewardedVideoDidFinishedPreCaching:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData {
+    NSLog(@"rewardedVideoDidFinishedPreCaching");
+    [rewardedVideo presentFromViewController:self];
 }
 
 - (void)rewardedVideo:(PWAdsRewardedVideo *)rewardedVideo didFailError:(NSError *)error withAdExtensionData:(NSDictionary *)adExtensionData{
@@ -263,14 +334,12 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
     NSLog(@"rewardedVideoDidEndPlaybackSuccessfully:withRVResponseObject:andAdExtensionData:");
     NSLog(@"customData: %@", customData);
     NSLog(@"adExtensionData: %@", adExtensionData);
-
 }
-
-~~~~
+~~~
 
 ### Landing Page Usage
 
-~~~~
+~~~Objective-c
 // In your .h file:
 #import <PWAdvertising/PWAdsLandingPage.h>
 #import <PWAdvertising/PWAdsRequest.h>
@@ -298,11 +367,11 @@ The MaaS Advertising SDK allows developers to serve many types of ads, including
     [self.landingPageAd presentFromViewController:self];
 }
 
-~~~~
+~~~
 
 ### Native Ad Usage
 
-~~~~
+~~~Objective-c
 // In your .h file:
 #import <PWAdvertising/PWAdsNativeAdLoader.h>
 #import <PWAdvertising/PWAdsRequest.h>
@@ -378,13 +447,13 @@ adsRequest.numberOfAds = 3;
 
 ...
 
-~~~~
+~~~
 
 ### Listen for Location Updates
 
 If you want to allow for geotargeting, listen for location updates:
 
-~~~~
+~~~Objective-c
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
 ...
@@ -410,7 +479,7 @@ if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthoriza
 
 // To stop monitoring location when complete to conserve battery life:
 [self.locationManager stopMonitoringSignificantLocationChanges];
-~~~~
+~~~
 
 ### Customization Options
 
@@ -424,3 +493,14 @@ If you want to customize the appearance of the close button for interstitial ads
 1. Create close button images at 32x32 @1x and 64x64 @2x.
 2. Name the newly created images **pwCustomClose.png** and **pwCustomClose@2x.png**.
 3. Add the pwCustomClose.png and pwCustomClose@2x.png images to your Xcode project.
+
+### Cache Size Limit
+
+The default cache size limit is 50 MB if not set. It can be set to zero, or any value between 50 MB to 2 GB. If set to zero, cache will be disabled. After the reaching the limit, the least recently used item(s) will be evicted on background thread.
+
+To set cache size limit in number of bytes:
+
+~~~Objective-c
+// Set cache size limit to 60 MB.
+[PWAds setCacheByteLimit: 60000000];
+~~~

@@ -45,17 +45,24 @@
  */
 @protocol PWAdsVideoBaseDelegate <NSObject>
 
-@required
+@optional
 
 /**
- Called when the adsLoader receives a video ad and is ready to play (required).
+ Called when the adsLoader receives a video ad and is ready to play.
  
  @param videoBase The video ad that was loaded.
  @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
  */
 - (void)videoBaseDidLoadAd:(PWAdsVideoBase *)videoBase withAdExtensionData:(NSDictionary *)adExtensionData;
 
-@optional
+/**
+ Called when the adsLoader finishes pre-caching the video ad.
+ 
+ @param videoBase The video ad that was loaded.
+ @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
+ */
+- (void)videoBaseDidFinishedPreCaching:(PWAdsVideoBase *)videoBase withAdExtensionData:(NSDictionary *)adExtensionData;
+
 
 /**
  Called when a video base fails to load ad.

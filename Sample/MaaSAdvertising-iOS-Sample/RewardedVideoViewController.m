@@ -17,7 +17,7 @@ static NSString *const kRVUserID = @"PWTestUser123";
 
 
 @interface RewardedVideoViewController () <PWAdsRewardedVideoDelegate, UIAlertViewDelegate>
-
+@property (nonatomic, assign) BOOL isRewardedVideoPreCached;
 @end
 
 @implementation RewardedVideoViewController {
@@ -28,7 +28,8 @@ static NSString *const kRVUserID = @"PWTestUser123";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self addObserver:self forKeyPath:@"isRewardedVideoPreCached" options:NSKeyValueObservingOptionNew context:NULL];
+    
     // Create PWAdsRewardedVideo instance
     _rewardedVideo = [PWAdsRewardedVideo new];
     _rewardedVideo.delegate = self;
@@ -42,11 +43,13 @@ static NSString *const kRVUserID = @"PWTestUser123";
 - (IBAction)loadButtonPressed:(id)sender {
     // Create ad request instance
     PWAdsRequest *adsRequest = [PWAdsRequest requestWithZoneID:kZoneIDVideo];
-
+    
     // Set test mode for request. This will fetch test ads.
-//    adsRequest.testMode = YES;
-
+    // adsRequest.testMode = YES;
+    
     // Load video ads request
+    _RVAdIsLoaded = NO;
+    self.isRewardedVideoPreCached = NO;
     [self loadAdsWithRequest:adsRequest];
 }
 
@@ -60,17 +63,15 @@ static NSString *const kRVUserID = @"PWTestUser123";
         adsRequest.userID = kRVUserID;
         // Test additional data
         adsRequest.customData = [NSMutableDictionary dictionaryWithDictionary:@{
-                                     @"rewardType": @"fuel",
-                                     @"levelKind": @"amateur",
-                                     @"points": @"13232321123124432430",
-                                     @"userName": @"ASDasdsADasdasdasdsadasdadasdas",
-                                     @"anotherKey": @"3ASDasdsADasdasdasdsadasdadasdas",
-                                     @"anotherKey1": @"2ASDasdsADasdasdasdsadasdadasdas",
-                                     @"anotherKey2": @"1ASDasdsADasdasdasdsadasdadasdas",
-                                     @"anotherKey3": @"0ASDasdsADasdasdasdsadasdadasdas",
-                                 }];
-        _rewardedVideo = [PWAdsRewardedVideo new];
-        _rewardedVideo.delegate = self;
+                                                                                @"rewardType": @"fuel",
+                                                                                @"levelKind": @"amateur",
+                                                                                @"points": @"13232321123124432430",
+                                                                                @"userName": @"ASDasdsADasdasdasdsadasdadasdas",
+                                                                                @"anotherKey": @"3ASDasdsADasdasdasdsadasdadasdas",
+                                                                                @"anotherKey1": @"2ASDasdsADasdasdasdsadasdadasdas",
+                                                                                @"anotherKey2": @"1ASDasdsADasdasdasdsadasdadasdas",
+                                                                                @"anotherKey3": @"0ASDasdsADasdasdasdsadasdadasdas",
+                                                                                }];
         [_rewardedVideo loadAdsRequest:adsRequest];
     }
 }
@@ -84,6 +85,11 @@ static NSString *const kRVUserID = @"PWTestUser123";
         _RVRemainingViews = [[adExtensionData valueForKey:@"remainingViews"] intValue];
         [self showOfferWallWithRemainingViews:_RVRemainingViews];
     }
+}
+
+- (void)rewardedVideoDidFinishedPreCaching:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData {
+    NSLog(@"rewardedVideoDidFinishedPreCaching:withAdExtensionData:");
+    self.isRewardedVideoPreCached = YES;
 }
 
 - (void)rewardedVideo:(PWAdsRewardedVideo *)rewardedVideo didFailError:(NSError *)error withAdExtensionData:(NSDictionary *)adExtensionData{
@@ -112,31 +118,48 @@ static NSString *const kRVUserID = @"PWTestUser123";
 
 - (NSString *)stringOutputForDictionary:(NSDictionary *)inputDict {
     NSString *str = [NSString stringWithFormat:@"%@", inputDict];
-
+    
     return str;
 }
 
 #pragma mark - Offer Wall
 
 - (void)showOfferWallWithRemainingViews:(int)remainingViews {
-    UIAlertView *offerWall = [[UIAlertView alloc] initWithTitle:@"Phunware"
-                                                        message:[NSString stringWithFormat:@"You have %i Remaining views. Press OK to see the Rewarded Video.", remainingViews]
-                                                       delegate:self
-                                              cancelButtonTitle:@"Dismiss"
-                                              otherButtonTitles:@"OK", nil];
-    [offerWall show];
+    UIAlertController *offerWall = [UIAlertController alertControllerWithTitle:@"Phunware"
+                                                                       message:[NSString stringWithFormat:@"You have %i Remaining views. Press OK to see the Rewarded Video.", remainingViews]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [_rewardedVideo presentFromViewController:self];
+    }];
+    if (!self.isRewardedVideoPreCached) {
+        [ok setEnabled:NO];
+    }
+    
+    UIAlertAction *dismiss = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:nil];
+    
+    [offerWall addAction:ok];
+    [offerWall addAction:dismiss];
+    
+    [self presentViewController:offerWall animated:YES completion:nil];
 }
 
-#pragma mark - UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    switch (buttonIndex) {
-        case 1:
-            [_rewardedVideo presentFromViewController:self];
-            break;
-        default:
-            break;
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    if ([keyPath isEqualToString:@"isRewardedVideoPreCached"]) {
+        if (self.presentedViewController) {
+            if ([self.presentedViewController isKindOfClass:[UIAlertController class]]) {
+                UIAlertController *alert = (UIAlertController *)self.presentedViewController;
+                [alert.actions.firstObject setEnabled:YES];
+            }
+        }
     }
+}
+
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"isRewardedVideoPreCached"];
 }
 
 @end
