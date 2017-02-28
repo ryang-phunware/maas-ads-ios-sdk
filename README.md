@@ -504,3 +504,7 @@ To set cache size limit in number of bytes:
 // Set cache size limit to 60 MB.
 [PWAds setCacheByteLimit: 60000000];
 ~~~
+
+Privacy
+-----------
+You understand and consent to Phunware’s Privacy Policy located at www.phunware.com/privacy. If your use of Phunware’s software requires a Privacy Policy of your own, you also agree to include the terms of Phunware’s Privacy Policy in your Privacy Policy to your end users.
