@@ -44,7 +44,7 @@
  */
 @protocol PWAdsVideoInterstitialDelegate <NSObject>
 
-@required
+@optional
 
 /**
  Called when the adsLoader receives a video ad and is ready to play (required).
@@ -53,7 +53,12 @@
  */
 - (void)videoInterstitialDidLoadAd:(PWAdsVideoInterstitial *)videoInterstitial;
 
-@optional
+/**
+ Called when the adsLoader finishes pre caching the video ad.
+ 
+ @param videoInterstitial The video ad that was loaded.
+ */
+- (void)videoInterstitialDidFinishedPreCaching:(PWAdsVideoInterstitial *)videoInterstitial;
 
 /**
  Called when a video interstitial fails to load ad.

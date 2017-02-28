@@ -49,11 +49,15 @@ static NSString * const kZoneIDVideo =  @"22219";
 
 #pragma mark - PWAdsVideoInterstitialDelegate
 
-// Called when the adsLoader receives a video and is ready to play (required).
+// Called when the adsLoader receives a video and is ready to play.
 - (void)videoInterstitialDidLoadAd:(PWAdsVideoInterstitial *)videoInterstitial {
     NSLog(@"videoInterstitialDidLoadAd:");
+}
+
+- (void)videoInterstitialDidFinishedPreCaching:(PWAdsVideoInterstitial *)videoInterstitial {
+    NSLog(@"videoInterstitialDidFinishedPreCaching:");
     
-    // Video ad is loaded. Now present the video interstitial.
+    // Video ad is pre-cached. Now present the video interstitial.
     [_videoInterstitial presentFromViewController:self];
 }
 

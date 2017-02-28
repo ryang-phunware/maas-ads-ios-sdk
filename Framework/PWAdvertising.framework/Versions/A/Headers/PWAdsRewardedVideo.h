@@ -27,7 +27,7 @@
 @property (nonatomic, readonly) int remainingViews;
 
 /**
- Request Rewarded Video ad using PWAdsRequest instance.
+ Request Rewarded Video ad using PWAdsRequest instance and start pre-caching the video.
  
  @param request The object with zone id, location and other ad information.
  */
@@ -48,15 +48,24 @@
  */
 @protocol PWAdsRewardedVideoDelegate <NSObject>
 
-@required
+@optional
 
 /**
- Called when the adsLoader receives a video ad and is ready to play (required).
+ Called when the adsLoader receives a video ad and is ready to play.
  
  @param rewardedVideo The video ad that was loaded.
  @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
  */
 - (void)rewardedVideoDidLoadAd:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData;
+
+/**
+ Called when the adsLoader finishes pre-caching the video ad.
+ 
+ @param rewardedVideo The video ad that was loaded.
+ @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
+ */
+- (void)rewardedVideoDidFinishedPreCaching:(PWAdsRewardedVideo *)rewardedVideo withAdExtensionData:(NSDictionary *)adExtensionData;
+
 
 /**
  Called after rewarded video playback ends.
@@ -66,8 +75,6 @@
  @param adExtensionData Ad Extension Data contains information about the rewarded video. i.e. remaining views count for the current user.
  */
 - (void)rewardedVideoDidEndPlaybackSuccessfully:(PWAdsRewardedVideo *)rewardedVideo withRVResponseObject:(NSDictionary *)customData andAdExtensionData:(NSDictionary *)adExtensionData;
-
-@optional
 
 /**
  Called when a rewarded video fails to load ad.

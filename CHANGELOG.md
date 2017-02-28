@@ -1,4 +1,8 @@
 #MaaSAdvertising Changelog
+##Version 3.6.0 (Monday, February 27th, 2016)
+* **New** Caching for Video Interstitial and Rewarded Video
+* Add App Transport Security Configuration guidance
+
 ##Version 3.5.1 (Tuesday, December 13th, 2016)
 * Fixed bugs with rewarded videos
 * Fixed bugs with end cards on video ads
@@ -66,4 +70,4 @@
 * Improved handling of third-party video assets
 
 ##Version 3.1.8 (Wednesday, July 23, 2015)
-* Fixed crash when displaying intersitial ad immediately from onLoad delegate callback
+* Fixed crash when displaying interstitial ad immediately from onLoad delegate callback
