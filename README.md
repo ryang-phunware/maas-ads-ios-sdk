@@ -20,7 +20,13 @@ Getting Started
 
 Installation
 ------------
+### CocoaPods
+Phunware recommends using [CocoaPods](http://www.cocoapods.org) to integrate the framework. To integrate PWAds into your Xcode project using CocoaPods, specify it in your `Podfile`:
+~~~
+pod 'PWAds'
+~~~
 
+### Manually
 The following frameworks are required:
 
 ````
