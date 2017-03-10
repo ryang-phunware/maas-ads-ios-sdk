@@ -54,6 +54,7 @@
 		CD5CA986184D1248008B5568 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5CA985184D1248008B5568 /* SystemConfiguration.framework */; };
 		CD8743491851086A005FBC0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CD8743481851086A005FBC0A /* README.md */; };
 		CDEC25BB184E566B00D7647E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEC25BA184E566B00D7647E /* MessageUI.framework */; };
+		FBE7EFBA1E71DC1800B98BE2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBE7EFB91E71DC1800B98BE2 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		CD5CA985184D1248008B5568 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CD8743481851086A005FBC0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CDEC25BA184E566B00D7647E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		FBE7EFB91E71DC1800B98BE2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 			children = (
 				4A4538B41D00D2DC0005BF9C /* PWAdsSample-Prefix.pch */,
 				CD5CA94C184D11EC008B5568 /* main.m */,
+				FBE7EFB91E71DC1800B98BE2 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE7EFBA1E71DC1800B98BE2 /* Settings.bundle in Resources */,
 				209F84AC1E008A2F00A9A868 /* Main.storyboard in Resources */,
 				CD8743491851086A005FBC0A /* README.md in Resources */,
 				4A4538AE1D00D1B30005BF9C /* LaunchScreen.storyboard in Resources */,
