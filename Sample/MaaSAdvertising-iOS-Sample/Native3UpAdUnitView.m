@@ -2,7 +2,7 @@
 //  Native3UpAdUnitView.m
 //  PWAdvertising
 //
-//  Created by John Zhao on 4/29/16.
+//  Created on 4/29/16.
 //  Copyright © 2016 Phunware, Inc. All rights reserved.
 //
 

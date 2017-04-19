@@ -2,7 +2,7 @@
 //  NativeIconAdUnitView.h
 //  PWAdvertising
 //
-//  Created by John Zhao on 5/2/16.
+//  Created on 5/2/16.
 //  Copyright © 2016 Phunware, Inc. All rights reserved.
 //
 

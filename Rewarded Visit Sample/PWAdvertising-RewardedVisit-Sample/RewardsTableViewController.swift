@@ -2,7 +2,7 @@
 //  RewardsTableViewController.swift
 //  PWAdvertising
 //
-//  Created by Rongbo Yang on 3/9/17.
+//  Created on 3/9/17.
 //  Copyright © 2017 Phunware, Inc. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  LandingPageViewController.m
 //  PWAdvertising
 //
-//  Created by Ricardo Guillen on 5/25/16.
+//  Created on 5/25/16.
 //  Copyright © 2016 Phunware, Inc. All rights reserved.
 //
 

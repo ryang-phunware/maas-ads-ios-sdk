@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PWAdsRewardedVisitSample
 //
-//  Created by Rongbo Yang on 3/8/17.
+//  Created on 3/8/17.
 //  Copyright © 2017 Phunware, Inc. All rights reserved.
 //
 

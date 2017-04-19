@@ -2,7 +2,7 @@
 //  NativeCleanAdUnitView.m
 //  PWAdvertising
 //
-//  Created by John on 4/28/16.
+//  Created on 4/28/16.
 //  Copyright © 2016 Phunware, Inc. All rights reserved.
 //
 
