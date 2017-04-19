@@ -3,11 +3,11 @@ Rewarded Visit - Integration Guide (iOS)
 Overview
 ------------
 Rewarded Visit Ad uses the features provided by both Mobile Engagement (ME) SDK and Advertising SDK.
-To use Rewarded visit Ad in an app both these SDKs needs to be integrated. Please follow the steps below to integrate Rewarded visit Ad in an App.
+To use Rewarded visit Ad in an app both these SDKs need to be integrated. Please follow the steps below to integrate Rewarded visit Ad in an App.
 
 Installation
 ------------
-### CocoaPodsÂ
+### CocoaPods
 To integrate PWAds and PWMessaging into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ~~~
@@ -70,7 +70,7 @@ In application:didFailToRegisterForRemoteNotificationsWithError:, add:
 PWMessaging.didFailToRegisterForRemoteNotificationsWithError(error)
 ~~~
 
-Please visit [Phunware Messaging SDK for iOS](https://github.com/phunware/maas-messaging-ios-sdk) for more details.
+Please visit [Phunware Messaging SDK for iOS](https://github.com/phunware/maas-messaging-ios-sdk) for more details.
 
 ### PWAdvertising SDK
 1. App Transport Security: In order to prevent your ads from being impacted by ATS, please add the following to your plist:
@@ -107,7 +107,7 @@ class ViewController: UIViewController, PWAdsRewardedVideoDelegate {
 }
 ~~~
 
-Please visit [Phunware Advertising SDK for iOS](https://github.com/phunware/maas-ads-ios-sdk) for more details.
+Please visit [Phunware Advertising SDK for iOS](https://github.com/phunware/maas-ads-ios-sdk) for more details.
 
 ### Run the app
 Watch the video ad, an end card with Rewarded Visit details will be shown at the end of the video. Once the user visits the location that was specified in the end card, he will get a notification with the reward that was set up earlier.
