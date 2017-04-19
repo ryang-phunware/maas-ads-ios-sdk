@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>PWAdsInterstitial Class Reference</title>
+	<title>PWAdsRewardedVideo Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -60,6 +60,8 @@
 		
 		<option value="//api/name/delegate">delegate</option>
 		
+		<option value="//api/name/remainingViews">remainingViews</option>
+		
 	</optgroup>
 	
 
@@ -87,16 +89,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">PWAdsInterstitial Class Reference</h1>
+					<h1 class="title">PWAdsRewardedVideo Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>NSObject</td>
+	<td><a href="../Classes/PWAdsVideoBase.html">PWAdsVideoBase</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>PWAdsInterstitial.h</td>
+	<td>PWAdsRewardedVideo.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +108,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Class for loading and presenting interstitial advertisments.</p>
+						<p>Class for loading and presenting rewarded video advertisments.</p>
 					</div>
 					
 					
@@ -133,12 +135,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The delegate that implements <a href="../Protocols/PWAdsInterstitialDelegate.html">PWAdsInterstitialDelegate</a> protocol.</p>
+				<p>The delegate that implements <a href="../Protocols/PWAdsRewardedVideoDelegate.html">PWAdsRewardedVideoDelegate</a> protocol.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;PWAdsInterstitialDelegate&gt; delegate</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;PWAdsRewardedVideoDelegate&gt; delegate</code></div>
 
 		    
 			
@@ -150,7 +152,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The delegate that implements <a href="../Protocols/PWAdsInterstitialDelegate.html">PWAdsInterstitialDelegate</a> protocol.</p>
+				<p>The delegate that implements <a href="../Protocols/PWAdsRewardedVideoDelegate.html">PWAdsRewardedVideoDelegate</a> protocol.</p>
 			</div>
 			
 
@@ -161,7 +163,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+				<p><code class="declared-in-ref">PWAdsRewardedVideo.h</code></p>
 			</div>
 			
 			
@@ -207,7 +209,53 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+				<p><code class="declared-in-ref">PWAdsRewardedVideo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/remainingViews" title="remainingViews"></a>
+	<h3 class="method-title"><code><a href="#//api/name/remainingViews">&nbsp;&nbsp;remainingViews</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The current ad remaining views for user.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) int remainingViews</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The current ad remaining views for user.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PWAdsRewardedVideo.h</code></p>
 			</div>
 			
 			
@@ -225,7 +273,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Request Interstitial ads using <a href="../Classes/PWAdsRequest.html">PWAdsRequest</a> instance.</p>
+				<p>Request Rewarded Video ad using <a href="../Classes/PWAdsRequest.html">PWAdsRequest</a> instance and start pre-caching the video.</p>
 			</div>
 			
 		    
@@ -254,7 +302,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Request Interstitial ads using <a href="../Classes/PWAdsRequest.html">PWAdsRequest</a> instance.</p>
+				<p>Request Rewarded Video ad using <a href="../Classes/PWAdsRequest.html">PWAdsRequest</a> instance and start pre-caching the video.</p>
 			</div>
 			
 
@@ -265,7 +313,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+				<p><code class="declared-in-ref">PWAdsRewardedVideo.h</code></p>
 			</div>
 			
 			
@@ -283,7 +331,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Called to present full screen interstitial advertisment.</p>
+				<p>Called to present full screen video advertisment.</p>
 			</div>
 			
 		    
@@ -312,7 +360,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Called to present full screen interstitial advertisment.</p><p>This method should be called only after interstitial advertisment is loaded.</p>
+				<p>Called to present full screen video advertisment.</p><p>This method should be called only after rewarded video advertisment is loaded.</p>
 			</div>
 			
 
@@ -323,7 +371,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+				<p><code class="declared-in-ref">PWAdsRewardedVideo.h</code></p>
 			</div>
 			
 			

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>PWAdsInterstitial Class Reference</title>
+	<title>PWAdsVideoBase Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,9 +56,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/currentAdsRequest">currentAdsRequest</option>
+		<option value="//api/name/baseCurrentAdsRequest">baseCurrentAdsRequest</option>
 		
-		<option value="//api/name/delegate">delegate</option>
+		<option value="//api/name/baseDelegate">baseDelegate</option>
 		
 	</optgroup>
 	
@@ -68,9 +68,9 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/loadAdsRequest:">- loadAdsRequest:</option>
+		<option value="//api/name/baseLoadAdsRequest:">- baseLoadAdsRequest:</option>
 		
-		<option value="//api/name/presentFromViewController:">- presentFromViewController:</option>
+		<option value="//api/name/basePresentFromViewController:">- basePresentFromViewController:</option>
 		
 	</optgroup>
 	
@@ -87,7 +87,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">PWAdsInterstitial Class Reference</h1>
+					<h1 class="title">PWAdsVideoBase Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -96,7 +96,7 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>PWAdsInterstitial.h</td>
+	<td>PWAdsVideoBase.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +106,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Class for loading and presenting interstitial advertisments.</p>
+						<p>Base Class for loading and presenting rewarded/interstitial video advertisments.</p>
 					</div>
 					
 					
@@ -122,8 +122,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/delegate" title="delegate"></a>
-	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+	<a name="//api/name/baseDelegate" title="baseDelegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/baseDelegate">&nbsp;&nbsp;baseDelegate</a></code>
 </h3>
 
 	<div class="method-info">
@@ -133,12 +133,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The delegate that implements <a href="../Protocols/PWAdsInterstitialDelegate.html">PWAdsInterstitialDelegate</a> protocol.</p>
+				<p>The delegate that implements <a href="../Protocols/PWAdsVideoBaseDelegate.html">PWAdsVideoBaseDelegate</a> protocol.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;PWAdsInterstitialDelegate&gt; delegate</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;PWAdsVideoBaseDelegate&gt; baseDelegate</code></div>
 
 		    
 			
@@ -150,7 +150,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The delegate that implements <a href="../Protocols/PWAdsInterstitialDelegate.html">PWAdsInterstitialDelegate</a> protocol.</p>
+				<p>The delegate that implements <a href="../Protocols/PWAdsVideoBaseDelegate.html">PWAdsVideoBaseDelegate</a> protocol.</p>
 			</div>
 			
 
@@ -161,15 +161,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+				<p><code class="declared-in-ref">PWAdsVideoBase.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/currentAdsRequest" title="currentAdsRequest"></a>
-	<h3 class="method-title"><code><a href="#//api/name/currentAdsRequest">&nbsp;&nbsp;currentAdsRequest</a></code>
+	<a name="//api/name/baseCurrentAdsRequest" title="baseCurrentAdsRequest"></a>
+	<h3 class="method-title"><code><a href="#//api/name/baseCurrentAdsRequest">&nbsp;&nbsp;baseCurrentAdsRequest</a></code>
 </h3>
 
 	<div class="method-info">
@@ -179,12 +179,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The current ad request object.</p>
+				<p>The current video ad request object.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) PWAdsRequest *currentAdsRequest</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) PWAdsRequest *baseCurrentAdsRequest</code></div>
 
 		    
 			
@@ -196,7 +196,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The current ad request object.</p>
+				<p>The current video ad request object.</p>
 			</div>
 			
 
@@ -207,15 +207,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+				<p><code class="declared-in-ref">PWAdsVideoBase.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/loadAdsRequest:" title="loadAdsRequest:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/loadAdsRequest:">&ndash;&nbsp;loadAdsRequest:</a></code>
+	<a name="//api/name/baseLoadAdsRequest:" title="baseLoadAdsRequest:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/baseLoadAdsRequest:">&ndash;&nbsp;baseLoadAdsRequest:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -225,12 +225,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Request Interstitial ads using <a href="../Classes/PWAdsRequest.html">PWAdsRequest</a> instance.</p>
+				<p>Request video ads using <a href="../Classes/PWAdsRequest.html">PWAdsRequest</a> instance.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)loadAdsRequest:(PWAdsRequest *)<em>request</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)baseLoadAdsRequest:(PWAdsRequest *)<em>request</em></code></div>
 
 		    
 			
@@ -254,7 +254,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Request Interstitial ads using <a href="../Classes/PWAdsRequest.html">PWAdsRequest</a> instance.</p>
+				<p>Request video ads using <a href="../Classes/PWAdsRequest.html">PWAdsRequest</a> instance.</p>
 			</div>
 			
 
@@ -265,15 +265,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+				<p><code class="declared-in-ref">PWAdsVideoBase.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/presentFromViewController:" title="presentFromViewController:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/presentFromViewController:">&ndash;&nbsp;presentFromViewController:</a></code>
+	<a name="//api/name/basePresentFromViewController:" title="basePresentFromViewController:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/basePresentFromViewController:">&ndash;&nbsp;basePresentFromViewController:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -283,12 +283,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Called to present full screen interstitial advertisment.</p>
+				<p>Called to present full screen video ad advertisment.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)presentFromViewController:(UIViewController *)<em>contoller</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)basePresentFromViewController:(UIViewController *)<em>controller</em></code></div>
 
 		    
 			
@@ -297,7 +297,7 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>contoller</code></th>
+						<th scope="row" class="argument-name"><code>controller</code></th>
 						<td><p>The view controller from which the ad should be displayed.</p></td>
 					</tr>
 				
@@ -312,7 +312,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Called to present full screen interstitial advertisment.</p><p>This method should be called only after interstitial advertisment is loaded.</p>
+				<p>Called to present full screen video ad advertisment.</p><p>This method should be called only after video ad advertisment is loaded.</p>
 			</div>
 			
 
@@ -323,7 +323,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PWAdsInterstitial.h</code></p>
+				<p><code class="declared-in-ref">PWAdsVideoBase.h</code></p>
 			</div>
 			
 			
