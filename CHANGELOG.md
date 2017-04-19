@@ -1,5 +1,8 @@
 #MaaSAdvertising Changelog
-##Version 3.6.0 (Monday, February 27th, 2016)
+##Version 3.6.1 (Wednesday, April 19th, 2017)
+* **New** Rewarded Visit
+
+##Version 3.6.0 (Monday, February 27th, 2017)
 * **New** Caching for Video Interstitial and Rewarded Video
 * Add App Transport Security Configuration guidance
 

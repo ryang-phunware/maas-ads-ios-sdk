@@ -1,13 +1,16 @@
 MaaS Advertising iOS SDK
 ================
 
-Version 3.6.0
+Version 3.6.1
 
 Overview
 ------------
 This is Phunware's iOS SDK for the MaaS Advertising module. Visit https://ads.tapit.com/ and https://maas.phunware.com/ for more details and to sign up.
 
-
+Requirements
+------------
+* iOS 9.0 or greater
+* Xcode 8 or greater
 
 Getting Started
 ---------------

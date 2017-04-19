@@ -1,0 +1,7 @@
+platform :iOS, '9.0'
+
+target 'PWAdvertising-RewardedVisit-Sample' do
+    pod 'PWCore'
+    pod 'PWAds'
+    pod 'PWMessaging'
+end
