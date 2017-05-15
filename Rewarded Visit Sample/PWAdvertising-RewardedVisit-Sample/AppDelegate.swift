@@ -20,17 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let accessKey = "fbaea7125552076eaef41f10de4aee9b2ca12a82"
         let signatureKey = "53d4482c93cbf82c04a5ee23126e20f71a1e12bf"
         
-        PWMessaging.start(withMaasAppId: appID, accessKey: accessKey, signatureKey: signatureKey, encryptionKey: "") { (error) in
+        PWEngagement.start(withMaasAppId: appID, accessKey: accessKey, signatureKey: signatureKey, encryptionKey: "") { (error) in
             if let error = error {
                 print(error)
             }
         }
         
-        PWMessaging.didFinishLaunching(options: launchOptions) { (notification) -> Bool in
+        PWEngagement.didFinishLaunching(options: launchOptions) { (notification) -> Bool in
             return true
         }
         
-        PWMessaging.setLocalNotificationHandler { (notification) -> Bool in
+        PWEngagement.setLocalNotificationHandler { (notification) -> Bool in
             return true
         }
         
@@ -42,11 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        PWMessaging.didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
+        PWEngagement.didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        PWMessaging.didFailToRegisterForRemoteNotificationsWithError(error)
+        PWEngagement.didFailToRegisterForRemoteNotificationsWithError(error)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -72,14 +72,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        PWMessaging.didReceive(notification) { (notification) in
+        PWEngagement.didReceive(notification) { (notification) in
             if let n = notification {
                 self.showReward(notification: n)
             }
         }
     }
     
-    func showReward(notification: PWMSGLocalNotification) {
+    func showReward(notification: PWMELocalNotification) {
         if let tabBarController = self.window?.rootViewController as? UITabBarController,
             let nav = tabBarController.viewControllers?[1] as? UINavigationController,
             let rewardsVC = nav.viewControllers.first as? RewardsTableViewController

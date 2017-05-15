@@ -21,13 +21,13 @@ class RewardsTableViewController: UITableViewController {
     
     // MARK: Model
     
-    var messages: [PWMSGZoneMessage]? {
+    var messages: [PWMEZoneMessage]? {
         didSet {
             tableView.reloadData()
         }
     }
     
-    var message: PWMSGZoneMessage? = nil
+    var message: PWMEZoneMessage? = nil
     
     // MARK: View Controller Lifecycle
     
@@ -46,7 +46,7 @@ class RewardsTableViewController: UITableViewController {
     }
     
     @IBAction func refreshMessages(_ sender: UIRefreshControl) {
-        if let msgs = PWMessaging.messages() as? [PWMSGZoneMessage] {
+        if let msgs = PWEngagement.messages() as? [PWMEZoneMessage] {
             messages = msgs
         }
         refresh.endRefreshing()

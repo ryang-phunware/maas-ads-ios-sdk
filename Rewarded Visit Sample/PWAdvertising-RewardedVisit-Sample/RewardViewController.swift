@@ -10,7 +10,7 @@ import UIKit
 
 class RewardViewController: UIViewController {
 
-    var message: PWMSGZoneMessage? = nil
+    var message: PWMEZoneMessage? = nil
     let queue = DispatchQueue.global(qos: .userInteractive)
     
     @IBOutlet weak var titleLabel: UILabel!
