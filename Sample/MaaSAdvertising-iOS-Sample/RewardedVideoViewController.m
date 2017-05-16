@@ -12,7 +12,7 @@
 #import <PWAdvertising/PWAdsRequest.h>
 
 // Example zone id, don't use this in your app!
-static NSString *const kZoneIDVideo = @"78393";
+static NSString *const kZoneIDVideo = @"82643";
 static NSString *const kRVUserID = @"PWTestUser123";
 
 
