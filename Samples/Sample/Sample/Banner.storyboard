@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Regular Banner-->
+        <scene sceneID="41V-im-Nbi">
+            <objects>
+                <viewController storyboardIdentifier="RegularBannerAd" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9co-jV-Fh0" userLabel="Regular Banner" customClass="BannerViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rRp-8f-pJq"/>
+                        <viewControllerLayoutGuide type="bottom" id="JQ3-YV-a97"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I4v-6J-qmz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jr4-wd-s73">
+                                <rect key="frame" x="190" y="8" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="load:" destination="9co-jV-Fh0" eventType="touchUpInside" id="Lfn-pb-CBN"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fG3-DN-0Jc" userLabel="Banner View" customClass="PWAdsBannerView">
+                                <rect key="frame" x="0.0" y="558.33333333333348" width="414" height="64.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fG3-DN-0Jc" secondAttribute="height" multiplier="320:50" id="XEL-9c-6jZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jr4-wd-s73" firstAttribute="centerX" secondItem="I4v-6J-qmz" secondAttribute="centerX" id="16n-ZJ-R0z"/>
+                            <constraint firstItem="JQ3-YV-a97" firstAttribute="top" secondItem="fG3-DN-0Jc" secondAttribute="bottom" id="Iu5-Lj-DQD"/>
+                            <constraint firstItem="fG3-DN-0Jc" firstAttribute="leading" secondItem="I4v-6J-qmz" secondAttribute="leadingMargin" constant="-20" id="KAg-6I-KhM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fG3-DN-0Jc" secondAttribute="trailing" constant="-20" id="VZ7-5x-81h"/>
+                            <constraint firstItem="Jr4-wd-s73" firstAttribute="top" secondItem="rRp-8f-pJq" secondAttribute="bottom" constant="8" symbolic="YES" id="js6-BY-xlw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Banner Ad" id="FsR-ma-0ib"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="bannerView" destination="fG3-DN-0Jc" id="NKy-it-14d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXn-o3-y6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2877" y="-3391"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VAe-c1-yD8">
+            <objects>
+                <tabBarController storyboardIdentifier="Banner" id="26T-kD-4GX" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="1lh-Mo-IbN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9co-jV-Fh0" kind="relationship" relationship="viewControllers" id="2gX-8g-yGY"/>
+                        <segue destination="ZBU-Ni-7iL" kind="relationship" relationship="viewControllers" id="G2j-ep-go8"/>
+                        <segue destination="gc9-cN-WAu" kind="relationship" relationship="viewControllers" id="Kyy-Yo-LJu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qx-ys-u9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888" y="-2493"/>
+        </scene>
+        <!--Medium Rect Ad-->
+        <scene sceneID="mku-BK-7PR">
+            <objects>
+                <viewController storyboardIdentifier="MediumRectBannerAd" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZBU-Ni-7iL" customClass="BannerViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tD4-w4-x3y"/>
+                        <viewControllerLayoutGuide type="bottom" id="4EX-Nr-VaQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="isI-zN-Kki">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2f-hn-VV8">
+                                <rect key="frame" x="190" y="8" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="load:" destination="ZBU-Ni-7iL" eventType="touchUpInside" id="j4l-mH-bP2"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wv-Ov-fNm" userLabel="Banner View" customClass="PWAdsBannerView">
+                                <rect key="frame" x="0.0" y="299.66666666666674" width="414" height="323.33333333333326"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1wv-Ov-fNm" secondAttribute="height" multiplier="320:250" id="xgf-AI-iN9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1wv-Ov-fNm" firstAttribute="leading" secondItem="isI-zN-Kki" secondAttribute="leadingMargin" constant="-20" id="8y1-4x-lQX"/>
+                            <constraint firstItem="f2f-hn-VV8" firstAttribute="top" secondItem="tD4-w4-x3y" secondAttribute="bottom" constant="8" symbolic="YES" id="N6s-2I-20I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1wv-Ov-fNm" secondAttribute="trailing" constant="-20" id="hv7-UU-ltq"/>
+                            <constraint firstItem="4EX-Nr-VaQ" firstAttribute="top" secondItem="1wv-Ov-fNm" secondAttribute="bottom" id="tEG-AD-34t"/>
+                            <constraint firstItem="f2f-hn-VV8" firstAttribute="centerX" secondItem="isI-zN-Kki" secondAttribute="centerX" id="y5Q-bm-DZ2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Medium Rect Ad" id="jiA-cm-gyy"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="bannerView" destination="1wv-Ov-fNm" id="2C2-aa-QWp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRU-2w-Zb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2877" y="-2647"/>
+        </scene>
+        <!--Animated Banner-->
+        <scene sceneID="SEt-ir-HUj">
+            <objects>
+                <viewController storyboardIdentifier="AnimatedBannerAd" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gc9-cN-WAu" userLabel="Animated Banner" customClass="BannerViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dRY-AR-yJI"/>
+                        <viewControllerLayoutGuide type="bottom" id="LcN-HG-mHo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Jq-3U-mXv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDq-JC-XzG">
+                                <rect key="frame" x="190" y="8" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="load:" destination="gc9-cN-WAu" eventType="touchUpInside" id="U5Q-BN-GAc"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFJ-L5-PLh" userLabel="Banner View" customClass="PWAdsBannerView">
+                                <rect key="frame" x="0.0" y="558.33333333333348" width="414" height="64.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HFJ-L5-PLh" secondAttribute="height" multiplier="320:50" id="Adm-Wb-JPj"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKs-tJ-EyY">
+                                <rect key="frame" x="20" y="334.33333333333337" width="374" height="216.00000000000011"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KDq-JC-XzG" firstAttribute="top" secondItem="dRY-AR-yJI" secondAttribute="bottom" constant="8" symbolic="YES" id="1q0-cs-uVc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HFJ-L5-PLh" secondAttribute="trailing" constant="-20" id="COE-KT-RIn"/>
+                            <constraint firstItem="KDq-JC-XzG" firstAttribute="centerX" secondItem="4Jq-3U-mXv" secondAttribute="centerX" id="Knf-in-Xhm"/>
+                            <constraint firstItem="LcN-HG-mHo" firstAttribute="top" secondItem="HFJ-L5-PLh" secondAttribute="bottom" id="Oju-jh-GMS"/>
+                            <constraint firstItem="HFJ-L5-PLh" firstAttribute="top" secondItem="VKs-tJ-EyY" secondAttribute="bottom" constant="8" symbolic="YES" id="Qxt-bW-lGE"/>
+                            <constraint firstAttribute="trailing" secondItem="VKs-tJ-EyY" secondAttribute="trailing" constant="20" symbolic="YES" id="bhC-Fg-S4E"/>
+                            <constraint firstItem="HFJ-L5-PLh" firstAttribute="leading" secondItem="4Jq-3U-mXv" secondAttribute="leadingMargin" constant="-20" id="cP0-kX-hE0"/>
+                            <constraint firstItem="VKs-tJ-EyY" firstAttribute="leading" secondItem="4Jq-3U-mXv" secondAttribute="leading" constant="20" symbolic="YES" id="gXm-13-hQA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Banner Ad" id="IBF-tN-mss"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="animationTypePicker" destination="VKs-tJ-EyY" id="JZ0-uB-vi0"/>
+                        <outlet property="bannerView" destination="HFJ-L5-PLh" id="Fe8-T0-xL6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjU-0n-yM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2877" y="-1732"/>
+        </scene>
+    </scenes>
+</document>

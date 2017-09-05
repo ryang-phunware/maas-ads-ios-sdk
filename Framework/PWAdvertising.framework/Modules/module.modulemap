@@ -1,0 +1,6 @@
+framework module PWAdvertising {
+  umbrella header "PWAdvertising.h"
+
+  export *
+  module * { export * }
+}

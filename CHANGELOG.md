@@ -1,4 +1,9 @@
 # MaaSAdvertising Changelog
+## Version 3.6.3 (Tuesday, September 5th, 2017)
+* Bug fix: the Rewarded Video end card external link will work
+* Support bitcode
+* Sample Apps are now in Swift
+
 ## Version 3.6.2 (Monday, May 15th, 2017)
 * Upgrade to Engagement SDK for Rewarded Visit
 

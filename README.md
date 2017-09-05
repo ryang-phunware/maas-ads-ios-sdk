@@ -1,7 +1,7 @@
 MaaS Advertising iOS SDK
 ================
 
-Version 3.6.2
+Version 3.6.3
 
 Overview
 ------------
@@ -505,13 +505,13 @@ If you want to customize the appearance of the close button for interstitial ads
 
 ### Cache Size Limit
 
-The default cache size limit is 50 MB if not set. It can be set to zero, or any value between 50 MB to 2 GB. If set to zero, cache will be disabled. After the reaching the limit, the least recently used item(s) will be evicted on background thread.
+The default cache size limit is 50 MB if not set. It can be set to zero, or any value between 50 MB to 2 GB. If set to zero, cache will be disabled. After reaching the limit, the least recently used item(s) will be evicted on background thread.
 
 To set cache size limit in number of bytes:
 
 ~~~Objective-c
-// Set cache size limit to 60 MB.
-[PWAds setCacheByteLimit: 60000000];
+// Set cache size limit to 60 MB. Default is 50 MB.
+[PWAdvertising setCacheByteLimit: 60000000];
 ~~~
 
 Privacy

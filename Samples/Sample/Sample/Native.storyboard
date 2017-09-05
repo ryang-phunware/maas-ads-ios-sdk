@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interstitial View Controller-->
+        <scene sceneID="4RY-UA-35m">
+            <objects>
+                <viewController storyboardIdentifier="Native" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M0D-qU-GA0" userLabel="Interstitial View Controller" customClass="NativeViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e6i-7A-ytf"/>
+                        <viewControllerLayoutGuide type="bottom" id="u5R-xr-Emf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ui4-yf-Ixz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmV-FN-jYE">
+                                <rect key="frame" x="170" y="8" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="load:" destination="M0D-qU-GA0" eventType="touchUpInside" id="apt-CF-r3L"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" translatesAutoresizingMaskIntoConstraints="NO" id="525-DD-94R">
+                                <rect key="frame" x="20" y="189.5" width="335" height="223.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="525-DD-94R" secondAttribute="height" multiplier="300:200" id="9Xj-7R-Mhc"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCd-mw-zap">
+                                <rect key="frame" x="20" y="445" width="335" height="150"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="86j-G3-d4W"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sCd-mw-zap" secondAttribute="trailing" constant="20" symbolic="YES" id="5nt-W8-DBj"/>
+                            <constraint firstAttribute="trailing" secondItem="525-DD-94R" secondAttribute="trailing" constant="20" symbolic="YES" id="6PQ-Zo-dPo"/>
+                            <constraint firstItem="525-DD-94R" firstAttribute="leading" secondItem="ui4-yf-Ixz" secondAttribute="leading" constant="20" symbolic="YES" id="8MA-1w-1eP"/>
+                            <constraint firstItem="dmV-FN-jYE" firstAttribute="top" secondItem="e6i-7A-ytf" secondAttribute="bottom" constant="8" symbolic="YES" id="9c9-eF-9K1"/>
+                            <constraint firstItem="525-DD-94R" firstAttribute="centerX" secondItem="ui4-yf-Ixz" secondAttribute="centerX" id="BIF-M9-ZMf"/>
+                            <constraint firstItem="sCd-mw-zap" firstAttribute="leading" secondItem="ui4-yf-Ixz" secondAttribute="leading" constant="20" symbolic="YES" id="LPx-wx-TJE"/>
+                            <constraint firstItem="525-DD-94R" firstAttribute="centerY" secondItem="ui4-yf-Ixz" secondAttribute="centerY" id="OIP-Uq-WWX"/>
+                            <constraint firstItem="dmV-FN-jYE" firstAttribute="centerX" secondItem="ui4-yf-Ixz" secondAttribute="centerX" id="eiR-WJ-AGL"/>
+                            <constraint firstItem="u5R-xr-Emf" firstAttribute="top" secondItem="sCd-mw-zap" secondAttribute="bottom" constant="8" symbolic="YES" id="vUP-rg-QRk"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="nativeAdTypePicker" destination="sCd-mw-zap" id="pzP-aP-Fwk"/>
+                        <outlet property="nativeAdView" destination="525-DD-94R" id="7gR-ic-wne"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1F-5j-axb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3494" y="-1580"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video View Controller-->
+        <scene sceneID="MT1-1l-kz3">
+            <objects>
+                <viewController storyboardIdentifier="Video" useStoryboardIdentifierAsRestorationIdentifier="YES" id="coM-Ht-uuS" userLabel="Video View Controller" customClass="VideoViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SDw-MN-6YG"/>
+                        <viewControllerLayoutGuide type="bottom" id="0o8-mv-raP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tve-pX-al9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IB-d2-SHJ">
+                                <rect key="frame" x="170" y="8" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="load:" destination="coM-Ht-uuS" eventType="touchUpInside" id="Nl2-yu-W3O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8IB-d2-SHJ" firstAttribute="top" secondItem="SDw-MN-6YG" secondAttribute="bottom" constant="8" symbolic="YES" id="f9u-Wa-0kI"/>
+                            <constraint firstItem="8IB-d2-SHJ" firstAttribute="centerX" secondItem="tve-pX-al9" secondAttribute="centerX" id="fDx-fT-bHC"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5B-hw-tbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="-1576"/>
+        </scene>
+    </scenes>
+</document>
